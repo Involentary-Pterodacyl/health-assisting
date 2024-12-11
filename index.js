@@ -1,5 +1,3 @@
-
-
 // let date1 = document.getElementById("date1").value;
 // let date2 = document.getElementById("date2").value;
 // let date3 = document.getElementById("date3").value;
@@ -32,9 +30,9 @@ let button5 = document.getElementById("b5");
 let button6 = document.getElementById("b6");
 let button7 = document.getElementById("b7");
 
-    // noinspection JSAnnotator
-button1.click() = function() {
-    const axios = require('axios');
+import axios from 'axios';
+
+button1.onclick = function() {
     axios.post('http://localhost:3000/data', document.getElementById("date1").value)
         .then(response => {
             console.log('Response:', response.data);

@@ -1,13 +1,13 @@
 import express from "express";
-var mysql = require('mysql2');
-
-let con = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "Ipk@mom925"//,
-    // database: "helthassisting"
-});
+// var mysql = require('mysql2');
+//
+// let con = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     password: "Ipk@mom925"//,
+//     // database: "helthassisting"
+// });
 
 
 const app = express();
