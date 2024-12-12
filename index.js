@@ -1,5 +1,5 @@
 import axios from 'axios';
-console.log("test2");
+
 let date1 = document.getElementById("date1");
 // let date2 = document.getElementById("date2").value;
 // let date3 = document.getElementById("date3").value;
