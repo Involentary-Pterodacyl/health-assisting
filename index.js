@@ -1,4 +1,7 @@
-import axios from 'axios';
+console.log("test");
+import cors from '/cors';
+// import axios from '/axios';
+app.use(cors());
 
 let date1 = document.getElementById("date1");
 // let date2 = document.getElementById("date2").value;

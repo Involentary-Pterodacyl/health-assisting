@@ -26,7 +26,7 @@ function getData() {
     var str = '';
 
     var options = {
-        host: 'https//localhost3000',
+        host: 'http://localhost:3000',
         path: '/'
     };
     var callback = function (response) {
@@ -39,6 +39,8 @@ function getData() {
             console.log(req.data);
             console.log(str);
             // your code here if you want to use the results !
+            res.send(req.data);
+            res.send(str);
         });
     }
 
