@@ -1,5 +1,8 @@
 import express from "express";
-import mysql from "mysql2"
+import mysql from "mysql2";
+import cors from "cors";
+const app = express();
+
 
 let con = mysql.createConnection({
     host: "localhost",
@@ -9,8 +12,13 @@ let con = mysql.createConnection({
     // database: "helthassisting"
 });
 
+app.use(cors());
 
-const app = express();
+const options = {
+    origin: 'http://localhost:63342',
+}
+app.use(cors(options))
+
 const port = 3000;
 
 app.get('/', (req, res) => {
