@@ -1,6 +1,8 @@
 import express from "express";
 import mysql from "mysql2";
 import cors from "cors";
+import res from "express/lib/response.js";
+import http from "http";
 const app = express();
 
 
@@ -30,7 +32,6 @@ app.listen(port, () => {
 });
 
 function getData() {
-    var http = require('http');
     var str = '';
 
     var options = {
@@ -54,3 +55,4 @@ function getData() {
 
     var req = http.request(options, callback).end();
 }
+getData();
