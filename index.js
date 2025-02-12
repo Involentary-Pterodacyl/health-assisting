@@ -1,8 +1,10 @@
+import axios from "/axios";
 
 console.log("test");
 // import cors from '/cors';
 // import express from "express";
-// import axios from '/axios';
+//// import axios from 'axios';
+//const axios = require("axios");
 
 
 let date1 = document.getElementById("date1");
@@ -42,7 +44,7 @@ button2.onclick = function() {
 };
 button1.onclick = function() {
     console.log("test");
-    axios.post('http://localhost:3000', date1.value)
+    axios.post('http://localhost:3000/', date1.value)
         .then(response => {
             console.log('Response:', response.data);
         })
