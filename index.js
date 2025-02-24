@@ -1,9 +1,7 @@
-import axios from "/axios";
-
 console.log("test");
-// import cors from '/cors';
-// import express from "express";
-//// import axios from 'axios';
+
+// import "https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js";
+// import axios from 'axios';
 //const axios = require("axios");
 
 
@@ -44,7 +42,7 @@ button2.onclick = function() {
 };
 button1.onclick = function() {
     console.log("test");
-    axios.post('http://localhost:3000/', date1.value)
+    axios.post('http://localhost:3000/submit', date1.value)
         .then(response => {
             console.log('Response:', response.data);
         })
