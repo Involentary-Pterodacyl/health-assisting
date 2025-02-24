@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="day 7, daily pushes - pd 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,15 +38,6 @@
     &quot;accountId&quot;: &quot;71adca24-98d7-44ef-a7e7-6ca8414c5187&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/index.js">
-      <ranges>
-        <range start1="0" end1="2" start2="0" end2="0" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="3" end1="6" start2="1" end2="4" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="46" end1="47" start2="44" end2="45" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -135,6 +122,7 @@
       <workItem from="1738953268055" duration="83000" />
       <workItem from="1739467484354" duration="1851000" />
       <workItem from="1739469578097" duration="2179000" />
+      <workItem from="1740417220259" duration="806000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />

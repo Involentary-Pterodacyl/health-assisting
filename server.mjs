@@ -7,15 +7,6 @@ import { Buffer } from 'node:buffer';
 // const express = require('express');
 const app = express();
 
-
-// let con = mysql.createConnection({
-//     host: "localhost",
-//     port: 3306,
-//     user: "root",
-//     password:
-//     // database: "helthassisting"
-// });
-
 app.use(cors());
 
 const corsOrigin = {
@@ -42,63 +33,3 @@ app.post('/submit', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-function getData() {
-    //let str = '';
-
-    // const options = {
-    //     host: 'http://localhost:3000',
-    //     path: '/'
-    // };
-
-    // let callback = function (response) {
-    //
-    //     response.on('data', function (chunk) {
-    //         str += chunk;
-    //     });
-    //
-    //     response.on('end', function () {
-    //         console.log(req.data);
-    //         console.log(str);
-    //         // your code here if you want to use the results !
-    //         res.send(req.data);
-    //         res.send(str);
-    //     });
-    // }
-    //let req = http.request(options, callback).end();
-
-    const postData = JSON.stringify({
-        'msg': 'Hello World!',
-    });
-
-    const options = {
-        hostname: 'www.google.com',
-        port: port,
-        path: '/upload',
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Content-Length': Buffer.byteLength(postData),
-        },
-    };
-
-    const req = http.request(options, (res) => {
-        console.log(`STATUS: ${res.statusCode}`);
-        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
-        res.setEncoding('utf8');
-        res.on('data', (chunk) => {
-            console.log(`BODY: ${chunk}`);
-        });
-        res.on('end', () => {
-            console.log('No more data in response.');
-        });
-    });
-
-    req.on('error', (e) => {
-        console.error(`problem with request: ${e.message}`);
-    });
-
-// Write data to request body
-    req.write(postData);
-    req.end();
-}
