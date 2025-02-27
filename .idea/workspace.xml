@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="day 5, daily pushes">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +57,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.BLADDER.html.executor": "Debug",
     "JavaScript Debug.index.html.executor": "Run",
     "Node.js.index.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
@@ -127,7 +123,7 @@
       <workItem from="1739467484354" duration="1851000" />
       <workItem from="1739469578097" duration="2179000" />
       <workItem from="1740417220259" duration="806000" />
-      <workItem from="1740589816966" duration="3241000" />
+      <workItem from="1740589816966" duration="5032000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
