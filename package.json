@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "http": "^0.0.1-security",
+    "mariadb": "^3.4.0",
     "mysql2": "^3.11.4"
   },
   "keywords": [],
