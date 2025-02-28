@@ -61,6 +61,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
     "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+    "JavaScript Debug.Vital Signs.html.executor": "Debug",
     "JavaScript Debug.index.html.executor": "Run",
     "Node.js.index.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
@@ -207,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740766815394</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2/28/25">
+      <option name="closed" value="true" />
+      <created>1740766868264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740766868264</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
