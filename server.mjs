@@ -1,10 +1,14 @@
 import express from "express";
-import mysql from "mysql2";
 import cors from "cors";
-import res from "express/lib/response.js";
-import http from "http";
-import { Buffer } from 'node:buffer';
-// const express = require('express');
+import mariadb from "mariadb";
+
+const pool = mariadb.createPool({
+    host: "localhost",
+    user: "root",
+    password: "HA-db",
+    connectionLimit: 5
+});
+
 const app = express();
 
 app.use(cors());
@@ -28,6 +32,27 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 app.post('/submit', (req, res) => {
     console.log('Received POST Data:', req.body); // Access the POST data
     res.json({ message: 'Data received', data: req.body });
+
+    /*
+    async function asyncFunction() {
+  let conn;
+  try {
+	conn = await pool.getConnection();
+	const rows = await conn.query("SELECT 1 as val");
+	console.log(rows); //[ {val: 1}, meta: ... ]
+	const res = await conn.query("INSERT INTO myTable value (?, ?)", [1, "mariadb"]);
+	console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
+
+  } catch (err) {
+	throw err;
+  } finally {
+	if (conn) conn.end();
+  }
+}
+asyncFunction().then(() => {
+  pool.end();
+});
+     */
 });
 
 app.listen(port, () => {
