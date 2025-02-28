@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Dietary Intake</title>
-  <h1> Dietary Intake </h1>
 </head>
 
 <body>
+<h1> Dietary Intake </h1>
 <p>Ate at least 75% of chosen meal</p>
 <p>Chart <strong> Y </strong> for yes or <strong> N </strong> for no</p>
 <p> If less than 50% of meal eaten, provide the substitute</p>
@@ -18,43 +18,119 @@
   }
 </style> -->
 <section>
-  <table style="width:100%">
-    <tr>
-      <th>DATE</th>
-      <td><label  aria-label="dateinput1" for="dateinput1"> </label><input type="text" id="dateinput1" name="date input"><br><br></td>
-      <td><label  aria-label="dateinput2" for="dateinput2" > </label><input type="text" id="dateinput2" name="date input"><br><br></td>
-      <td><label  aria-label="dateinput3" for="dateinput3"> </label><input type="text" id="dateinput3" name="date input"><br><br></td>
-      <td><label  aria-label="dateinput4" for="dateinput4"> </label><input type="text" id="dateinput4" name="date input"><br><br></td>
-    </tr>
-    <tr>
-      <th>Brkfst</th>
-      <td><label  aria-label="brkfst1" for="brkfst1"> </label><input type="text" id="brkfst1" name="brkfst input"><br><br></td>
-      <td><label  aria-label="brkfst2" for="brkfst2" > </label><input type="text" id="brkfst2" name="brkfst input"><br><br></td>
-      <td><label  aria-label="brkfst3" for="brkfst3"> </label><input type="text" id="brkfst3" name="brkfst input"><br><br></td>
-      <td><label  aria-label="brkfstt4" for="brkfst4"> </label><input type="text" id="brkfst4" name="brkfst input"><br><br></td>
-    </tr>
-    <tr>
-      <th>Lunch</th>
-      <td><label  aria-label="lunch1" for="lunch1"> </label><input type="text" id="lunch1" name="lunch input"><br><br></td>
-      <td><label  aria-label="lunch2" for="lunch2" > </label><input type="text" id="lunch2" name="lunch input"><br><br></td>
-      <td><label  aria-label="lunch3" for="lunch3"> </label><input type="text" id="lunch3" name="lunch input"><br><br></td>
-      <td><label  aria-label="lunch4" for="lunch4"> </label><input type="text" id="lunch4" name="lunch input"><br><br></td>
-    </tr>
-    <tr>
-      <th>Dinner</th>
-      <td><label  aria-label="dinn1" for="dinn1"> </label><input type="text" id="dinn1" name="dinn input"><br><br></td>
-      <td><label  aria-label="dinn2" for="dinn2" > </label><input type="text" id="dinn2" name="dinn input"><br><br></td>
-      <td><label  aria-label="dinn3" for="dinn3"> </label><input type="text" id="dinn3" name="dinn input"><br><br></td>
-      <td><label  aria-label="dinn4" for="dinn4"> </label><input type="text" id="dinn4" name="dinn input"><br><br></td>
-    </tr>
-  </table>
+    <table border="1">
 
-
-
-
-
-
+      <tr>
+        <th>DATE</th>
+        <td><label  aria-label="dateinput1" for="dateinput1"> </label><input type="text" id="dateinput1" name="date input"></td>
+        <td><label  aria-label="dateinput2" for="dateinput2" > </label><input type="text" id="dateinput2" name="date input"></td>
+        <td><label  aria-label="dateinput3" for="dateinput3" > </label><input type="text" id="dateinput3" name="date input"></td>
+        <td><label  aria-label="dateinput4" for="dateinput4" > </label><input type="text" id="dateinput4" name="date input"></td>
+      </tr>
+      <tr>
+        <th>Brkfst</th>
+        <td><label  aria-label="brkfst1" for="brkfst1"> </label><input type="text" id="brkfst1" name="brkfst input"></td>
+        <td><label  aria-label="brkfst2" for="brkfst2" > </label><input type="text" id="brkfst2" name="brkfst input"></td>
+        <td><label  aria-label="brkfst3" for="brkfst3" > </label><input type="text" id="brkfst3" name="brkfst input"></td>
+        <td><label  aria-label="brkfst4" for="brkfst4" > </label><input type="text" id="brkfst4" name="brkfst input"></td>
+      </tr>
+      <tr>
+        <th>Lunch</th>
+        <td><label  aria-label="lunch1" for="lunch1"> </label><input type="text" id="lunch1" name="lunch input"></td>
+        <td><label  aria-label="lunch2" for="lunch2" > </label><input type="text" id="lunch2" name="lunch input"></td>
+        <td><label  aria-label="lunch3" for="lunch3" > </label><input type="text" id="lunch3" name="lunch input"></td>
+        <td><label  aria-label="lunch4" for="lunch4" > </label><input type="text" id="lunch4" name="lunch input"></td>
+      </tr>
+      <tr>
+        <th>Dinner</th>
+        <td><label  aria-label="dinn1" for="dinn1"> </label><input type="text" id="dinn1" name="dinn input"></td>
+        <td><label  aria-label="dinn2" for="dinn2" > </label><input type="text" id="dinn2" name="dinn input"></td>
+        <td><label  aria-label="dinn3" for="dinn3" > </label><input type="text" id="dinn3" name="dinn input"></td>
+        <td><label  aria-label="dinn4" for="dinn4" > </label><input type="text" id="dinn4" name="dinn input"></td>
+      </tr>
+    </table>
 
 </section>
+
+<section>
+  <p> Intake and output record.</p>
+  <p> <strong>Equivilants:</strong>1oz = 30cc</p>
+  <p> <strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
+  ice cream, gelatin, and IV fluids.</p>
+  <p> <strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
+</section>
+
+<table border="1">
+  <tr>
+
+
+    <th>TIME</th>
+    <th>INTAKE AMOUNT IN CCs</th>
+    <th>TYPE OF INTAKE</th>
+    <th>TIME</th>
+    <th>OUTPUT AMOUNT IN CCs</th>
+    <th>TYPE OF OUTPUT</th>
+  </tr>
+  <tr>
+
+    <td><label  aria-label="timeinput1" for="timeinput1"> </label><input type="text" id="timeinput1" name="time input"></td>
+    <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input"></td>
+    <td><label  aria-label="itypeinput1" for="itypeinput1"> </label><input type="text" id="itypeinput1" name="itype input"></td>
+    <td><label  aria-label="time2input1" for="time2input1"> </label><input type="text" id="time2input1" name="time2 input"></td>
+    <td><label  aria-label="outputinput1" for="outputinput1"> </label><input type="text" id="outputinput1" name="output input"></td>
+    <td><label  aria-label="otypeinput1" for="otypeinput1"> </label><input type="text" id="otypeinput1" name="otype input"></td>
+
+  </tr>
+  <tr>
+    <td><label  aria-label="timeinput2" for="timeinput2"> </label><input type="text" id="timeinput2" name="time input"></td>
+    <td><label  aria-label="intakeinput2" for="intakeinput2"> </label><input type="text" id="intakeinput2" name="intake input"></td>
+    <td><label  aria-label="itypeinput2" for="itypeinput2"> </label><input type="text" id="itypeinput2" name="itype input"></td>
+    <td><label  aria-label="time2input2" for="time2input2"> </label><input type="text" id="time2input2" name="time2 input"></td>
+    <td><label  aria-label="outputinput2" for="outputinput2"> </label><input type="text" id="outputinput2" name="output input"></td>
+    <td><label  aria-label="otypeinput2" for="otypeinput2"> </label><input type="text" id="otypeinput2" name="otype input"></td>
+  </tr>
+  <tr>
+
+    <td><label  aria-label="timeinput3" for="timeinput3"> </label><input type="text" id="timeinput3" name="time input"></td>
+    <td><label  aria-label="intakeinput3" for="intakeinput3"> </label><input type="text" id="intakeinput3" name="intake input"></td>
+    <td><label  aria-label="itypeinput3" for="itypeinput3"> </label><input type="text" id="itypeinput3" name="itype input"></td>
+    <td><label  aria-label="time2input3" for="time2input3"> </label><input type="text" id="time2input3" name="time2 input"></td>
+    <td><label  aria-label="outputinput3" for="outputinput3"> </label><input type="text" id="outputinput3" name="output input"></td>
+    <td><label  aria-label="otypeinput3" for="otypeinput3"> </label><input type="text" id="otypeinput3" name="otype input"></td>
+  </tr>
+
+  <tr>
+
+    <td><label  aria-label="timeinput4" for="timeinput4"> </label><input type="text" id="timeinput4" name="time input"></td>
+    <td><label  aria-label="intakeinput4" for="intakeinput4"> </label><input type="text" id="intakeinput4" name="intake input"></td>
+    <td><label  aria-label="itypeinput4" for="itypeinput4"> </label><input type="text" id="itypeinput4" name="itype input"></td>
+    <td><label  aria-label="time2input4" for="time2input4"> </label><input type="text" id="time2input4" name="time2 input"></td>
+    <td><label  aria-label="outputinput4" for="outputinput4"> </label><input type="text" id="outputinput4" name="output input"></td>
+    <td><label  aria-label="otypeinput4" for="otypeinput4"> </label><input type="text" id="otypeinput4" name="otype input"></td>
+  </tr>
+
+  <tr>
+
+    <td><label  aria-label="timeinput5" for="timeinput5"> </label><input type="text" id="timeinput5" name="time input"></td>
+    <td><label  aria-label="intakeinput5" for="intakeinput5"> </label><input type="text" id="intakeinput5" name="intake input"></td>
+    <td><label  aria-label="itypeinput5" for="itypeinput5"> </label><input type="text" id="itypeinput5" name="itype input"></td>
+    <td><label  aria-label="time2input5" for="time2input5"> </label><input type="text" id="time2input5" name="time2 input"></td>
+    <td><label  aria-label="outputinput5" for="outputinput5"> </label><input type="text" id="outputinput5" name="output input"></td>
+    <td><label  aria-label="otypeinput5" for="otypeinput5"> </label><input type="text" id="otypeinput5" name="otype input"></td>
+  </tr>
+
+
+  <tr>
+
+    <td><label  aria-label="timeinput6" for="timeinput6"> </label><input type="text" id="timeinput6" name="time input"></td>
+    <td><label  aria-label="intakeinput6" for="intakeinput6"> </label><input type="text" id="intakeinput6" name="intake input"></td>
+    <td><label  aria-label="itypeinput6" for="itypeinput6"> </label><input type="text" id="itypeinput6" name="itype input"></td>
+    <td><label  aria-label="time2input6" for="time2input6"> </label><input type="text" id="time2input6" name="time2 input"></td>
+    <td><label  aria-label="outputinput6" for="outputinput6"> </label><input type="text" id="outputinput6" name="output input"></td>
+    <td><label  aria-label="otypeinput6" for="otypeinput6"> </label><input type="text" id="otypeinput6" name="otype input"></td>
+  </tr>
+
+  <p><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
+</table>
 </body>
 </html>
