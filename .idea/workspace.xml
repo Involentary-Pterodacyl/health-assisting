@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="day 7, daily pushes - pd 3">
-      <change afterPath="$PROJECT_DIR$/front end/Vital Signs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front end/js/css/Vital.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="day 7, daily pushes - pd 3" />
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="ee19574e-f3ad-478c-b973-69723031c3ba" name="Changes by 8000496" comment="">
       <change beforePath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" afterDir="false" />
@@ -131,7 +127,7 @@
       <workItem from="1739469578097" duration="2179000" />
       <workItem from="1740417220259" duration="806000" />
       <workItem from="1740678242408" duration="30000" />
-      <workItem from="1740678285662" duration="3157000" />
+      <workItem from="1740678285662" duration="3436000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -205,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738002194733</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="day 7, daily pushes - pd 3">
+      <option name="closed" value="true" />
+      <created>1740681745861</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740681745861</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
