@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="working on being able to select buttons on bed mobility page.">
       <change afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
@@ -13,7 +14,14 @@
       <change beforePath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
     </list>
+=======
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="2/28/25" />
+>>>>>>> b07d43610fcc323798ec5582cdf08cd06a519a3f
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="">
+      <change beforePath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/js/css/mood.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/mood.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +32,6 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -64,8 +71,14 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
+<<<<<<< HEAD
     "JavaScript Debug.BLADDER.html.executor": "Debug",
     "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+=======
+    "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
+    "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+    "JavaScript Debug.Vital Signs.html.executor": "Debug",
+>>>>>>> b07d43610fcc323798ec5582cdf08cd06a519a3f
     "JavaScript Debug.index.html.executor": "Run",
     "Node.js.index.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
@@ -73,18 +86,23 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "javascript.nodejs.core.library.configured.version": "22.14.0",
+<<<<<<< HEAD
     "javascript.nodejs.core.library.typings.version": "22.13.5",
     "last_opened_file_path": "C:/Users/2102400/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/node_modules",
+=======
+    "javascript.nodejs.core.library.typings.version": "22.13.1",
+    "last_opened_file_path": "C:/Users/2102400/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions",
+>>>>>>> b07d43610fcc323798ec5582cdf08cd06a519a3f
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/2102400/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_interpreter_path": "C:/Users/2104663/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -101,7 +119,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
       </set>
     </attachedChunks>
   </component>
@@ -131,8 +149,11 @@
       <workItem from="1739467484354" duration="1851000" />
       <workItem from="1739469578097" duration="2179000" />
       <workItem from="1740417220259" duration="806000" />
+<<<<<<< HEAD
       <workItem from="1740589816966" duration="6518000" />
       <workItem from="1740763657493" duration="3485000" />
+=======
+>>>>>>> b07d43610fcc323798ec5582cdf08cd06a519a3f
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -206,15 +227,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738002194733</updated>
     </task>
-    <task id="LOCAL-00010" summary="working on being able to select buttons on bed mobility page.">
+    <task id="LOCAL-00010" summary="2/28/25">
       <option name="closed" value="true" />
-      <created>1740681802874</created>
+      <created>1740766815394</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1740681802874</updated>
+      <updated>1740766815394</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2/28/25">
+      <option name="closed" value="true" />
+      <created>1740766868264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740766868264</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +270,7 @@
     <MESSAGE value="day 4, daily pushes" />
     <MESSAGE value="day 5, daily pushes" />
     <MESSAGE value="day 7, daily pushes - pd 3" />
-    <MESSAGE value="working on being able to select buttons on bed mobility page." />
-    <option name="LAST_COMMIT_MESSAGE" value="working on being able to select buttons on bed mobility page." />
+    <MESSAGE value="2/28/25" />
+    <option name="LAST_COMMIT_MESSAGE" value="2/28/25" />
   </component>
 </project>
