@@ -12,61 +12,36 @@
 <hr >
 <p> Please enter you input and click submit once compleated. </p>
 <div>
-  <button class="addrow" onclick="addRow()">Add New Row</button>
+  <form action="/submit" method="post">
+    <table id="VitalTable">
+      <thead>
+      <tr>
+        <th>DATE</th>
+        <th>TIME</th>
+        <th>Weight</th>
+        <th>BLOOD PRESSURE</th>
+        <th>T</th>
+        <th>P</th>
+        <th>R</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="date" id="date" placeholder="Enter date" required></td>
+        <td><input type="text"  placeholder="Enter time" required></td>
+        <td><input type="text" class ="weight" placeholder="Enter weight(lb)" required></td>
+        <td><input type="text" placeholder="Enter BP" required></td>
+        <td><input type="text" placeholder="Enter T" required></td>
+        <td><input type="text" placeholder="Enter P" required></td>
+        <td><input type="text" placeholder="Enter R" required></td>
+      </tr>
+      </tbody>
+    </table>
+    <button class="submit" type="submit">Submit</button>
+  </form>
 </div>
-<table id="VitalTable">
-  <thead>
-  <tr>
-    <th>DATE</th>
-    <th>TIME</th>
-    <th>WT.</th>
-    <th>BLOOD PRESSURE</th>
-    <th>T</th>
-    <th>P</th>
-    <th>R</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><input type="text" placeholder="Enter date"></td>
-    <td><input type="text" placeholder="Enter time"></td>
-    <td><input type="text" placeholder="Enter weight"></td>
-    <td><input type="text" placeholder="Enter BP"></td>
-    <td><input type="text" placeholder="Enter T"></td>
-    <td><input type="text" placeholder="Enter P"></td>
-    <td><input type="text" placeholder="Enter R"></td>
-  </tr>
-  <tr>
-    <td><input type="text" placeholder="Enter date"></td>
-    <td><input type="text" placeholder="Enter time"></td>
-    <td><input type="text" placeholder="Enter weight"></td>
-    <td><input type="text" placeholder="Enter BP"></td>
-    <td><input type="text" placeholder="Enter T"></td>
-    <td><input type="text" placeholder="Enter P"></td>
-    <td><input type="text" placeholder="Enter R"></td>
-  </tr>
-  </tbody>
-</table>
 
-<script>
-  function addRow() {
-    const table = document.getElementById('VitalTable').getElementsByTagName('tbody')[0];
-    const newRow = table.insertRow();
 
-    for (let i = 0; i < 7; i++) {
-      const cell = newRow.insertCell(i);
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.placeholder = 'Enter value';
-      input.type = 'text';
-      input.placeholder="Enter date";
-      input.type = 'text';
-      input.placeholder="Enter time","teme";
-
-      cell.appendChild(input);
-    }
-  }
-</script>
 
 <p><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 </body>
