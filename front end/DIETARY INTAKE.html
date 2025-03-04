@@ -18,54 +18,52 @@
   }
 </style> -->
 <section>
+  <form action="/submit" method="post">
     <table border="1">
 
-      <tr>
-        <th>DATE</th>
-        <td><label  aria-label="dateinput1" for="dateinput1"> </label><input type="text" id="dateinput1" name="date input"></td>
-      </tr>
+
+      <th>DATE</th>
+      <td><label  id="dateinput1" for="dateinput1"> </label><input type="date" id="date1"></td>
+
+      </tr> <!-- get rid of dat thing because they making something that gets it, or make date dropdwon menu???? update: made into dropdown, will ask-->
 
       <tr>
         <th>Brkfst</th>
         <td>
-          <label  aria-label="brkfst1">
-           <input type="radio" id="brk1" name="brk1" value="Y">
-           <label for="brk1">Y</label><br>
-           <input type="radio" id="brk2" name="brk2" value="N">
-           <label for="brk2">N</label><br>
-            <input type="radio" id="brk3" name="brk3" value="sub">
-            <label for="brk3">Substitute</label><br>
-          </label>
+          <input type="radio" id="brk1" name="brk" value="Y">
+          <label for="brk1">Y</label><br>
+          <input type="radio" id="brk2" name="brk" value="n">
+          <label for="brk2">N</label><br>
+          <input type="radio" id="sub1" name="sub" value="Substitute">
+          <label for="sub1">Substitute</label><br>
         </td>
       </tr>
 
       <tr>
         <th>Lunch</th>
         <td>
-          <label  aria-label="lun1">
-            <input type="radio" id="lun1" name="lun1" value="Y">
-            <label for="lun1">Y</label><br>
-            <input type="radio" id="lun2" name="lun2" value="N">
-            <label for="lun2">N</label><br>
-            <input type="radio" id="lun3" name="lun3" value="sub">
-            <label for="lun3">Substitute</label><br>
-          </label>
+          <input type="radio" id="lun1" name="lun" value="Y">
+          <label for="lun1">Y</label><br>
+          <input type="radio" id="lun2" name="lun" value="n">
+          <label for="lun2">N</label><br>
+          <input type="radio" id="sub2" name="sub" value="Substitute">
+          <label for="sub2">Substitute</label><br>
         </td>
       </tr>
       <tr>
         <th>Dinner</th>
         <td>
-          <label  aria-label="dinn1">
-            <input type="radio" id="din1" name="din1" value="Y">
-            <label for="din1">Y</label><br>
-            <input type="radio" id="din2" name="din2" value="N">
-            <label for="din2">N</label><br>
-            <input type="radio" id="din3" name="din3" value="sub">
-            <label for="din3">Substitute</label><br>
-          </label>
+          <input type="radio" id="din1" name="din" value="Y">
+          <label for="din1">Y</label><br>
+          <input type="radio" id="din2" name="din" value="n">
+          <label for="din2">N</label><br>
+          <input type="radio" id="sub3" name="sub" value="Substitute">
+          <label for="sub3">Substitute</label><br>
         </td>
       </tr>
     </table>
+    <button class="submit" type="submit">Submit</button>
+  </form>
 
 </section>
 
@@ -73,7 +71,7 @@
   <p> Intake and output record.</p>
   <p> <strong>Equivilants:</strong>1oz = 30cc</p>
   <p> <strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
-  ice cream, gelatin, and IV fluids.</p>
+    ice cream, gelatin, and IV fluids.</p>
   <p> <strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
 </section>
 
@@ -93,44 +91,29 @@
     <td><label  aria-label="timeinput1" for="timeinput1"> </label><input type="text" id="timeinput1" name="time input"></td>
     <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input"></td>
 
-    <td>  <tr>
-  <td>
-    <label  aria-label="typein1">
-      <input type="radio" id="wat" name="wat" value="Water">
-      <label for="wat">Water</label><br>
-      <input type="radio" id="jui" name="jui" value="Juice">
+    <td><label>   <input type="radio" id="soft" name="soft" value="softdrink">
+      <label for="soft">Softdrink</label><br>
+      <input type="radio" id="jui" name="jui" value="juice">
       <label for="jui">Juice</label><br>
-      <input type="radio" id="sof" name="sof" value="Soft Drinks">
-      <label for="sof">Soft Drink(s)</label><br>
-      <input type="radio" id="teco" name="teco" value="Tea/Coffee">
-      <label for="teco">Tea/Coffee</label><br>
-      <input type="radio" id="lcg" name="lcg" value="Liquid/">
-      <label for="lcg">Liquid/Cream/Gelatin food</label><br>
-      <input type="radio" id="iv" name="iv" value="IV Fluids">
-      <label for="iv">IV fluid</label><br>
-    </label>
-  </td>
-</tr>
+      <input type="radio" id="wat" name="wat" value="water">
+      <label for="wat">Water</label><br>
+      <input type="radio" id="teco" name="teaco" value="teaorcoffee">
+      <label for="teco">Tea or Coffee</label><br>
+      <input type="radio" id="liq" name="liq" value="liquid/gelatinfoods">
+      <label for="liq">Liquid/Gelatin/Cream foods</label><br>
+      <input type="radio" id="mil" name="mil" value="milk">
+      <label for="mil">Milk</label><br>
+      <input type="radio" id="iv" name="iv" value="ivfluid">
+      <label for="iv">IV Fluids</label><br>
+      <p> need to ask what substitues shje wants listed </p>
+
+    </td>
 
     <td><label  aria-label="time2input1" for="time2input1"> </label><input type="text" id="time2input1" name="time2 input"></td>
     <td><label  aria-label="outputinput1" for="outputinput1"> </label><input type="text" id="outputinput1" name="output input"></td>
+    <td><label  aria-label="otypeinput1" for="otypeinput1"> </label><input type="text" id="otypeinput1" name="otype input"></td>
 
-  <td> <td>
-  <label  aria-label="typein1">
-    <input type="radio" id="wat" name="wat" value="Water">
-    <label for="wat">Water</label><br>
-    <input type="radio" id="jui" name="jui" value="Juice">
-    <label for="jui">Juice</label><br>
-    <input type="radio" id="sof" name="sof" value="Soft Drinks">
-    <label for="sof">Soft Drink(s)</label><br>
-    <input type="radio" id="teco" name="teco" value="Tea/Coffee">
-    <label for="teco">Tea/Coffee</label><br>
-    <input type="radio" id="lcg" name="lcg" value="Liquid/">
-    <label for="lcg">Liquid/Cream/Gelatin food</label><br>
-    <input type="radio" id="iv" name="iv" value="IV Fluids">
-    <label for="iv">IV fluid</label><br>
-  </label>
-</td>
+  </tr>
   <tr>
     <td><label  aria-label="timeinput2" for="timeinput2"> </label><input type="text" id="timeinput2" name="time input"></td>
     <td><label  aria-label="intakeinput2" for="intakeinput2"> </label><input type="text" id="intakeinput2" name="intake input"></td>
