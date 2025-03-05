@@ -37,6 +37,8 @@ let button5 = document.getElementById("b5");
 let button6 = document.getElementById("b6");
 let button7 = document.getElementById("b7");
 
+var test = "index.js"
+
 button2.onclick = function() {
     console.log("test");
 };
