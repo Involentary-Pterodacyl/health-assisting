@@ -38,31 +38,37 @@ hr{
   text-shadow: 1px 1px cornflowerblue;
 }
 
-.button {                                        /*this part of the class gets the generic properites of all buttons, the other classes are specific to the button and will make it uniquly customizable */
-  background-color: cornflowerblue;
-  border: 4px solid cornflowerblue ;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 4px 2px;
-  border-radius: 10px;
+/* Button container styling */
+.button-container {
   display: flex;
-  column-gap:20px;
-  color:white;
-  text-shadow: 2px 2px black;
-  padding: 40px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: bold;
-
-  }
-
+  flex-wrap: wrap;
+  justify-content: center; /* Align buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin: 20px;
 }
 
-.button1 {
-  border-radius: 12px;
-  font-family: "Roboto Condensed", sans-serif;}
-.button2 {
-  border-radius: 12px;}
-.button3 {
-  border-radius: 12px;}
+/* Button general styling */
+.button {
+  background-color: cornflowerblue;
+  border: 2px solid #4682b4;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  width: 160px; /* Fixed width for equal size */
+  height: 60px; /* Fixed height for equal size */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  border-radius: 10px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+/* Button hover effect */
+.button:hover {
+  background-color: #4682b4;
+  transform: scale(1.05);
+}
