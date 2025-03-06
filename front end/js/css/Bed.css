@@ -12,7 +12,36 @@ h1 {
   background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif;
 }
+#container {
+  text-align:center;
+}
 
+
+.p1 {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
+}
+.p2 {
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
+}
+.p3 {
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
+}
+.section{
+display: inline-block;
+margin: 0 10px;
+
+
+}
 .Total{
 background-color: cornflowerblue;
   color:white;
@@ -60,4 +89,8 @@ background-color: cornflowerblue;
 .button:hover {
   background-color: #4682b4;
   transform: scale(1.05);
+}
+
+.buttons2{
+  align it
 }

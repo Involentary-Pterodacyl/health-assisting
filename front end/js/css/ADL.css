@@ -1,3 +1,7 @@
+/*bladder is connected to this!!!!!!!!!!!!!!!!!!*/
+
+
+
 /* General body styling */
 body {
   background-color: #87cefa;
@@ -21,11 +25,9 @@ h1 {
 
 /* Horizontal rule styling */
 hr {
-  height: 2px;
-  background-color: black;
-  border: none;
-  margin: 10px auto;
-  width: 100%;
+  border-top: dotted 7px cornflowerblue;
+  
+  border-bottom: none;
 }
 
 /* Paragraph text styling */

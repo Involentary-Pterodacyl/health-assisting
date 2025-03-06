@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="js/css/Bed.css" />
   <meta charset="UTF-8">
   <title>Eating</title>
-  <h1> Eating </h1>
 </head>
 <body>
-<p> How the resident eats/drinks (includes G-tube and TPN) </p>
+<h1> Eating </h1>
+<p class="p1"> How the resident eats/drinks (includes G-tube and TPN) </p>
 <hr>
 
-<section>
-  <p> <em> Self performance</em></p>
-  <p> <button type="submit" id="dependent"> 4. Totally Dependant </button></p>
-  <p> <button type="button" id="extAssist"> 3. Extensive Assist</button></p>
-  <p> <button type="button" id="limAssist"> 2. Limited Assist </button></p>
-  <p> <button type="button" id="supervision"> 1. Supervision </button></p>
-  <p> <button type="button" id="independent"> 0. Independent </button></p>
-  <p> <button type="button" id="none"> 8. Did Not Occur </button></p>
-</section>
+<div class="section">
+  <div style="display: flex; flex-direction: column; align-items: baseline; justify-content: center;" class="buttons1">
+    <p class="p2"> <em> Self performance</em></p>
+    <p> <button type="submit" class="button depend" id="dependent"> 4. Totally Dependant </button></p>
+    <p> <button type="button" class="button exten" id="extAssist"> 3. Extensive Assist</button></p>
+    <p> <button type="button" class="button lim" id="limAssist"> 2. Limited Assist </button></p>
+    <p> <button type="button" class="button sup" id="supervision"> 1. Supervision </button></p>
+    <p> <button type="button" class="button ind" id="independent"> 0. Independent </button></p>
+    <p> <button type="button" class="button didnot" id="none"> 8. Did Not Occur </button></p>
+  </div>
+</div>
 
-<section>
-  <p> <em> Support provided </em></p>
-  <p> <button type="button" id="twoPerson"> 3.Two Person Assist </button></p>
-  <p> <button type="button" id="onePerson"> 2. One Person Assist </button></p>
-  <p> <button type="button" id="setup"> 1. Set-up </button></p>
-  <p> <button type="button" id="noSetup"> 0. No set-up </button></p>
-  <p> <button type="button" id="no"> 8. Did Not Occur </button></p>
-</section>
+<div class="section">
+  <div style="display: flex; flex-direction: column; align-items: baseline ; justify-content: center;" class="buttons2">
+    <p class="p3"> <em> Support provided </em></p>
+    <p> <button type="button" class="button Two person" id="two person"> 3.Two Person Assist </button></p>
+    <p> <button type="button" class="button onep" id="onePerson"> 2. One Person Assist </button></p>
+    <p> <button type="button" class="button set" id="setup"> 1. Set-up </button></p>
+    <p> <button type="button" class="button noset" id="noSetup"> 0. No set-up </button></p>
+    <p> <button type="button" class="button didn't" id="no"> 8. Did Not Occur </button></p>
+  </div>
+</div>
 <p><a href="index.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
 
