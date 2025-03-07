@@ -1,3 +1,5 @@
+import {sendData} from "./paitents";
+
 let dependent = document.getElementById("dependent");
 let extAssist = document.getElementById("extAssist");
 let limAssist = document.getElementById("limAssist");
@@ -11,19 +13,17 @@ let setup = document.getElementById("setup");
 let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
-var toiletingSPer;
-dependent.onclick = function(){toiletingSPer = 1}
-extAssist.onclick = function(){toiletingSPer = 2}
-limAssist.onclick = function(){toiletingSPer = 3}
-supervision.onclick = function(){toiletingSPer = 4}
-independent.onclick = function(){toiletingSPer = 5}
-none1.onclick = function(){toiletingSPer = 6}
 
-var toiletingSupp;
-twoPerson.onclick = function(){toiletingSupp = 1}
-onePerson.onclick = function(){toiletingSupp = 2}
-setup.onclick = function(){toiletingSupp = 3}
-noSetup.onclick = function(){toiletingSupp = 4}
-none2.onclick = function(){toiletingSupp = 5}
+dependent.onclick = function(){sendData(toilet)}
+extAssist.onclick = function(){sendData(toilet)}
+limAssist.onclick = function(){sendData(toilet)}
+supervision.onclick = function(){sendData(toilet)}
+independent.onclick = function(){sendData(toilet)}
+none1.onclick = function(){}
 
-export {toiletingSupp, toiletingSPer}
+
+twoPerson.onclick = function(){sendData(toilet)}
+onePerson.onclick = function(){sendData(toilet)}
+setup.onclick = function(){sendData(toilet)}
+noSetup.onclick = function(){sendData(toilet)}
+none2.onclick = function(){sendData(toilet)}
