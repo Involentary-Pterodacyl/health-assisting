@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="2/28/25">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/front end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/databasePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/paitents.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/paitents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="">
@@ -62,13 +70,18 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
+<<<<<<< Updated upstream
     "JavaScript Debug.BED Mobility.html.executor": "Debug",
+=======
+    "JavaScript Debug.ADL.html.executor": "Debug",
+>>>>>>> Stashed changes
     "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
     "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
     "JavaScript Debug.Vital Signs.html.executor": "Debug",
     "JavaScript Debug.index.html.executor": "Debug",
     "Node.js.index.js.executor": "Run",
     "Node.js.index2.js.executor": "Run",
+    "Node.js.mood.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -85,7 +98,7 @@
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -132,8 +145,13 @@
       <workItem from="1739467484354" duration="1851000" />
       <workItem from="1739469578097" duration="2179000" />
       <workItem from="1740417220259" duration="806000" />
+<<<<<<< Updated upstream
       <workItem from="1741108249817" duration="5626000" />
       <workItem from="1741368607456" duration="650000" />
+=======
+      <workItem from="1741108249817" duration="6968000" />
+      <workItem from="1741282121630" duration="5923000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
