@@ -23,18 +23,21 @@ h1 {
   color: black;
   text-shadow: 1px 1px cornflowerblue;
   margin-bottom: 20px;
+
 }
 .p2 {
   font-size: 20px;
   color: black;
   text-shadow: 1px 1px cornflowerblue;
   margin-bottom: 20px;
+  font-wieght: bold;
 }
 .p3 {
   font-size: 20px;
   color: black;
   text-shadow: 1px 1px cornflowerblue;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .section{
 display: inline-block;
@@ -42,7 +45,7 @@ margin: 0 10px;
 
 
 }
-.Total{
+/* .Total{
 background-color: cornflowerblue;
   color:white;
   text-shadow: 2px 2px black;
@@ -54,7 +57,7 @@ background-color: cornflowerblue;
   font-size:20px;
   font-weight: bold;
   text-decoration: none;
-}
+}  old code i dont think we need*/
 
 /* Button container styling */
 .button-container {
@@ -66,7 +69,7 @@ background-color: cornflowerblue;
 }
 
 /* Button general styling */
-.button{
+.button {
   background-color: cornflowerblue;
   border: 2px solid #4682b4;
   text-align: center;
