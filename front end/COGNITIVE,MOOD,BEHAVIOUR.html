@@ -16,23 +16,26 @@
   <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;" class="buttons">
     <table>
      <tr>
-    <td><button class=" button button1" > Calm </button></td>
-    <td><button class=" button button2">Happy</button></td>
-    <td><button class=" button button3">Depressed</button></td>
+    <td><button class=" button button1" id="calm"> Calm </button></td>
+    <td><button class=" button button2" id="happy">Happy</button></td>
+    <td><button class=" button button3" id="depressed">Depressed</button></td>
   </tr>
   <tr>
-    <td><button class=" button button4">Agitation</button> </td>
-    <td><button class=" button button5" >Sad</button></td>
-    <td><button class=" button button6" >Yelling</button></td>
+    <td><button class=" button button4" id="agitation">Agitation</button> </td>
+    <td><button class=" button button5" id="sad">Sad</button></td>
+    <td><button class=" button button6" id="yelling">Yelling</button></td>
   </tr>
   <tr>
-    <td><button class=" button button7" >Anxiety</button> </td>
-    <td><button class=" button 8" >Withdrawn</button></td>
-    <td><button class=" button button9" >Combative</button></td>
+    <td><button class=" button button7" id="anxiety">Anxiety</button> </td>
+    <td><button class=" button 8" id="withdrawn">Withdrawn</button></td>
+    <td><button class=" button button9" id="combatitive" >Combative</button></td>
   </tr>
 </table>
 </div>
 <p><a href="index.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script src="server connection js files/mood.js" type="module"></script>
+<script defer nomodule src="classic-mood-bundle.js"></script>
 </body>
 </html>

@@ -1,9 +1,16 @@
+/*bladder is connected to this!!!!!!!!!!!!!!!!!!*/
+
+
+
+/* General body styling */
 body {
   background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif;
-
+  margin: 0;
+  padding: 0;
 }
 
+/* Header styling */
 h1 {
   color: cornflowerblue;
   font-optical-sizing: auto;
@@ -16,143 +23,53 @@ h1 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-hr{
-  height: 1px;
-  background-color: black;
-  border: none;
+/* Horizontal rule styling */
+hr {
+  border-top: dotted 7px cornflowerblue;
+  
+  border-bottom: none;
 }
 
-.p1{
+/* Paragraph text styling */
+.p1 {
   text-align: center;
   font-size: 20px;
   color: black;
-  font-family: "Roboto Condensed", sans-serif;
   text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
 }
 
-.buttons1{
-display: flex;
-column-gap:20px;
-
-}
-.bed{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
-
-}
-.bladder{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
-
-}
-.mood{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
-}
-.diet{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
-}
-
-
-.buttons2{
+/* Button container styling */
+.button-container {
   display: flex;
-  column-gap:20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Align buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin: 20px;
 }
 
-.eat{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
+/* Button general styling */
+.buttons {
   background-color: cornflowerblue;
+  border: 2px solid #4682b4;
+  text-align: center;
   text-decoration: none;
-}
-
-.toi{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
+  font-size: 18px;
+  width: 160px; /* Fixed width for equal size */
+  height: 60px; /* Fixed height for equal size */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
   border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
+  color: white;
+  text-shadow: 1px 1px black;
   font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.tran{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 40px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:20px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
+/* Button hover effect */
+.buttons:hover {
+  background-color: #4682b4;
+  transform: scale(1.05);
 }
-
-
-.pait{
-  color:white;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  padding: 20px;
-  border: 4px solid cornflowerblue ;
-  border-radius: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size:13px;
-  font-weight: bold;
-  background-color: cornflowerblue;
-  text-decoration: none;
-}
-
-
-
-
