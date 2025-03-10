@@ -1,5 +1,3 @@
-import {bladderVal} from "./bladder";
-
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
 let pait3 = document.getElementById("pait3");
@@ -10,6 +8,10 @@ let pait7 = document.getElementById("pait7");
 let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
+
+let uname = document.getElementById("uname");
+let psw = document.getElementById("psw");
+let login = document.getElementById("login");
 
 var patientval;
 
@@ -24,4 +26,22 @@ pait8.onclick = function (){patientval = 8};
 pait9.onclick = function (){patientval = 9};
 pait10.onclick = function (){patientval = 10};
 
-export {patientval};
+var username;
+var password;
+var id;
+
+login.onclick = function (){
+  password = psw.value
+  username = uname.value
+};
+
+function sendData(tableName, value) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, userId: id, patientId: patientval, value: value})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+export {sendData};

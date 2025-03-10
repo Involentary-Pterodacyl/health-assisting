@@ -1,3 +1,5 @@
+import {sendData} from "./paitents";
+
 let total = document.getElementById('total');
 let extensive = document.getElementById('extensive');
 let limited = document.getElementById('limited');
@@ -12,19 +14,16 @@ let noSetup = document.getElementById('no setup');
 let none2 = document.getElementById('no');
 
 
-var bedMobilitySPer;
-dependent.onclick = function(){bedMobilitySPer = 1};
-extAssist.onclick = function(){bedMobilitySPer = 2};
-limAssist.onclick = function(){bedMobilitySPer = 3};
-supervision.onclick = function(){bedMobilitySPer = 4};
-independent.onclick = function(){bedMobilitySPer = 5};
-none1.onclick = function(){bedMobilitySPer = 6};
+dependent.onclick = function(){sendData("bed_mobility_support", 1)};
+extAssist.onclick = function(){sendData("bed_mobility_support", 2)};
+limAssist.onclick = function(){sendData("bed_mobility_support", 3)};
+supervision.onclick = function(){sendData("bed_mobility_support", 4)};
+independent.onclick = function(){sendData("bed_mobility_support", 5)};
+none1.onclick = function(){sendData("bed_mobility_support", 6)};
 
-var bedMobilitySupp;
-twoPerson.onclick = function(){bedMobilitySupp = 1};
-onePerson.onclick = function(){bedMobilitySupp = 2};
-setup.onclick = function(){bedMobilitySupp = 3};
-noSetup.onclick = function(){bedMobilitySupp = 4};
-none2.onclick = function(){bedMobilitySupp = 5};
 
-export {bedMobilitySupp, bedMobilitySPer};
+twoPerson.onclick = function(){sendData("bed_mobility_self", 1)};
+onePerson.onclick = function(){sendData("bed_mobility_self", 2)};
+setup.onclick = function(){sendData("bed_mobility_self", 3)};
+noSetup.onclick = function(){sendData("bed_mobility_self", 4)};
+none2.onclick = function(){sendData("bed_mobility_self", 5)};

@@ -1,3 +1,5 @@
+import {sendData} from "./paitents";
+
 let dependent = document.getElementById("dependent");
 let extAssist = document.getElementById("extAssist");
 let limAssist = document.getElementById("limAssist");
@@ -11,19 +13,18 @@ let setup = document.getElementById("setup");
 let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
-var eatingSPer;
-dependent.onclick = function(){eatingSPer = 1}
-extAssist.onclick = function(){eatingSPer = 2}
-limAssist.onclick = function(){eatingSPer = 3}
-supervision.onclick = function(){eatingSPer = 4}
-independent.onclick = function(){eatingSPer = 5}
-none1.onclick = function(){eatingSPer = 6}
 
-var eatingSupp;
-twoPerson.onclick = function(){eatingSupp = 1}
-onePerson.onclick = function(){eatingSupp = 2}
-setup.onclick = function(){eatingSupp = 3}
-noSetup.onclick = function(){eatingSupp = 4}
-none2.onclick = function(){eatingSupp = 5}
+dependent.onclick = function(){sendData("eating_support", 1)};
+extAssist.onclick = function(){sendData("eating_support", 2)};
+limAssist.onclick = function(){sendData("eating_support", 3)};
+supervision.onclick = function(){sendData("eating_support", 4)};
+independent.onclick = function(){sendData("eating_support", 5)};
+none1.onclick = function(){sendData("eating_support", 6)};
 
-export {eatingSupp, eatingSPer};
+
+twoPerson.onclick = function(){sendData("eating_self", 1)};
+onePerson.onclick = function(){sendData("eating_self", 2)};
+setup.onclick = function(){sendData("eating_self", 3)};
+noSetup.onclick = function(){sendData("eating_self", 4)};
+none2.onclick = function(){sendData("eating_self", 5)};
+
