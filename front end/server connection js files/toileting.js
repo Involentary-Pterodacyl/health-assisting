@@ -14,16 +14,16 @@ let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
 
-dependent.onclick = function(){sendData(toilet)}
-extAssist.onclick = function(){sendData(toilet)}
-limAssist.onclick = function(){sendData(toilet)}
-supervision.onclick = function(){sendData(toilet)}
-independent.onclick = function(){sendData(toilet)}
-none1.onclick = function(){}
+dependent.onclick = function(){sendData("toileting_support", 1)};
+extAssist.onclick = function(){sendData("toileting_support", 2)};
+limAssist.onclick = function(){sendData("toileting_support", 3)};
+supervision.onclick = function(){sendData("toileting_support", 4)};
+independent.onclick = function(){sendData("toileting_support", 5)};
+none1.onclick = function(){sendData("toileting_support", 6)};
 
 
-twoPerson.onclick = function(){sendData(toilet)}
-onePerson.onclick = function(){sendData(toilet)}
-setup.onclick = function(){sendData(toilet)}
-noSetup.onclick = function(){sendData(toilet)}
-none2.onclick = function(){sendData(toilet)}
+twoPerson.onclick = function(){sendData("toileting_self", 1)};
+onePerson.onclick = function(){sendData("toileting_self", 2)};
+setup.onclick = function(){sendData("toileting_self", 3)};
+noSetup.onclick = function(){sendData("toileting_self", 4)};
+none2.onclick = function(){sendData("toileting_self", 5)};

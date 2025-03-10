@@ -1,3 +1,5 @@
+import {sendData} from "./paitents";
+
 let dependent = document.getElementById("dependent");
 let extAssist = document.getElementById("extAssist");
 let limAssist = document.getElementById("limAssist");
@@ -12,19 +14,17 @@ let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
 
-var transfersSPer;
-dependent.onclick = function(){transfersSPer = 1}
-extAssist.onclick = function(){transfersSPer = 2}
-limAssist.onclick = function(){transfersSPer = 3}
-supervision.onclick = function(){transfersSPer = 4}
-independent.onclick = function(){transfersSPer = 5}
-none1.onclick = function(){transfersSPer = 6}
 
-var transfersSupp;
-twoPerson.onclick = function(){transfersSupp = 1}
-onePerson.onclick = function(){transfersSupp = 2}
-setup.onclick = function(){transfersSupp = 3}
-noSetup.onclick = function(){transfersSupp = 4}
-none2.onclick = function(){transfersSupp = 5}
+dependent.onclick = function(){sendData("transfers_support", 1)};
+extAssist.onclick = function(){sendData("transfers_support", 2)};
+limAssist.onclick = function(){sendData("transfers_support", 3)};
+supervision.onclick = function(){sendData("transfers_support", 4)};
+independent.onclick = function(){sendData("transfers_support", 5)};
+none1.onclick = function(){sendData("transfers_support", 6)};
 
-export {transfersSupp, transfersSPer};
+
+twoPerson.onclick = function(){sendData("transfers_self", 1)};
+onePerson.onclick = function(){sendData("transfers_self", 2)};
+setup.onclick = function(){sendData("transfers_self", 3)};
+noSetup.onclick = function(){sendData("transfers_self", 4)};
+none2.onclick = function(){sendData("transfers_self", 5)};
