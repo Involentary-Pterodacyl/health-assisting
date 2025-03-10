@@ -7,12 +7,18 @@
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="2/28/25">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/front end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/databasePath.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/paitents.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/paitents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
@@ -71,7 +77,11 @@
     "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "JavaScript Debug.BED Mobility.html.executor": "Debug",
+=======
+    "JavaScript Debug.ADL.html.executor": "Debug",
+>>>>>>> Stashed changes
 =======
     "JavaScript Debug.ADL.html.executor": "Debug",
 >>>>>>> Stashed changes
@@ -151,6 +161,9 @@
 =======
       <workItem from="1741108249817" duration="6968000" />
       <workItem from="1741282121630" duration="5923000" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="starting the project">
