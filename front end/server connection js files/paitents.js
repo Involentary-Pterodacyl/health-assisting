@@ -1,3 +1,5 @@
+import axios from "axios";
+
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
 let pait3 = document.getElementById("pait3");
@@ -33,6 +35,15 @@ var id;
 login.onclick = function (){
   password = psw.value
   username = uname.value
+
+  axios.post("http://localhost:3000/getId", {username: username})
+  .then(res => {
+    console.log(res.data);
+    id = res.data;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
 };
 
 function sendData(tableName, value) {
