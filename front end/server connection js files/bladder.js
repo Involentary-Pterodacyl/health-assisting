@@ -1,4 +1,5 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login.js";
+import {patientval} from "./patients.js";
 
 let continent = document.getElementById("continent");
 let incontinent = document.getElementById("incontinent");
@@ -10,11 +11,11 @@ let besideCommode = document.getElementById("besideCommode");
 let pads = document.getElementById("pads");
 
 
-continent.onclick = function(){sendData("bladder", 1)};
-incontinent.onclick = function(){sendData("bladder", 2)};
-catheter.onclick = function(){sendData("bladder", 3)};
-catheterL.onclick = function(){sendData("bladder", 4)};
-bathroom.onclick = function(){sendData("bladder", 5)};
-bedPan.onclick = function(){sendData("bladder", 6)};
-besideCommode.onclick = function(){sendData("bladder", 7)};
-pads.onclick = function(){sendData("bladder", 8)};
+continent.onclick = function(){sendData("bladder", 1, patientval)};
+incontinent.onclick = function(){sendData("bladder", 2, patientval)};
+catheter.onclick = function(){sendData("bladder", 3, patientval)};
+catheterL.onclick = function(){sendData("bladder", 4, patientval)};
+bathroom.onclick = function(){sendData("bladder", 5, patientval)};
+bedPan.onclick = function(){sendData("bladder", 6, patientval)};
+besideCommode.onclick = function(){sendData("bladder", 7, patientval)};
+pads.onclick = function(){sendData("bladder", 8, patientval)};

@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://127.0.0.1:5500',
+    origin: 'http://localhost:63342',
 }
 app.use(cors(corsOrigin))
 
@@ -27,6 +27,31 @@ app.get('/', (req, res) => {
 // Middleware to parse JSON and form data
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
+
+//getting data
+app.post('/getId', (req, res) => {
+
+    let conn
+    let queryResult
+    try {
+        conn = mariadb.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "HA-db",
+            database: "health_assisting"
+        })
+        queryResult = conn.query("SELECT user_id FROM users WHERE username = " + req.body, [conn]);
+        console.log('db query complete')
+    }  catch (err) {
+        console.log(err);
+    } finally {
+        console.log(queryResult)
+        if (conn)  conn.end();
+        console.log('db connection closed');
+    }
+    return queryResult
+
+});
 
 // Handle POST requests
 app.post('/submit', (req, res) => {

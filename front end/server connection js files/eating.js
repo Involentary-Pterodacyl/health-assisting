@@ -1,4 +1,5 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login.js";
+import {patientval} from "./patients.js";
 
 let dependent = document.getElementById("dependent");
 let extAssist = document.getElementById("extAssist");
@@ -14,17 +15,17 @@ let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
 
-dependent.onclick = function(){sendData("eating_support", 1)};
-extAssist.onclick = function(){sendData("eating_support", 2)};
-limAssist.onclick = function(){sendData("eating_support", 3)};
-supervision.onclick = function(){sendData("eating_support", 4)};
-independent.onclick = function(){sendData("eating_support", 5)};
-none1.onclick = function(){sendData("eating_support", 6)};
+dependent.onclick = function(){sendData("eating_support", 1, patientval)};
+extAssist.onclick = function(){sendData("eating_support", 2, patientval)};
+limAssist.onclick = function(){sendData("eating_support", 3, patientval)};
+supervision.onclick = function(){sendData("eating_support", 4, patientval)};
+independent.onclick = function(){sendData("eating_support", 5, patientval)};
+none1.onclick = function(){sendData("eating_support", 6, patientval)};
 
 
-twoPerson.onclick = function(){sendData("eating_self", 1)};
-onePerson.onclick = function(){sendData("eating_self", 2)};
-setup.onclick = function(){sendData("eating_self", 3)};
-noSetup.onclick = function(){sendData("eating_self", 4)};
-none2.onclick = function(){sendData("eating_self", 5)};
+twoPerson.onclick = function(){sendData("eating_self", 1, patientval)};
+onePerson.onclick = function(){sendData("eating_self", 2, patientval)};
+setup.onclick = function(){sendData("eating_self", 3, patientval)};
+noSetup.onclick = function(){sendData("eating_self", 4, patientval)};
+none2.onclick = function(){sendData("eating_self", 5, patientval)};
 
