@@ -1,4 +1,4 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login";
 
 let total = document.getElementById('total');
 let extensive = document.getElementById('extensive');

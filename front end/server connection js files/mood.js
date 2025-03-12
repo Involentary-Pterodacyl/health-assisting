@@ -1,4 +1,4 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login";
 
 let calm = document.getElementById("calm");
 let happy = document.getElementById("happy");

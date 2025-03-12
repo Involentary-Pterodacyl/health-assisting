@@ -1,4 +1,4 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login";
 
 let dependent = document.getElementById("dependent");
 let extAssist = document.getElementById("extAssist");

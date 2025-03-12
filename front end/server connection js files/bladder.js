@@ -1,4 +1,4 @@
-import {sendData} from "./paitents";
+import {sendData} from "./login";
 
 let continent = document.getElementById("continent");
 let incontinent = document.getElementById("incontinent");

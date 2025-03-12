@@ -1,73 +1,65 @@
+
+<!--<!doctype html>-->
+<!--<html class="no-js" lang="">-->
+
+<!--<head>-->
+<!--  <title>Health Assisting Login</title>-->
+<!--  <link rel="stylesheet" href="js/css/style.css" />-->
+<!--  <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
+<!--</head>-->
+<h1 class ="head1"> Health Assisting </h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="styleSheet.css">
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <link rel="stylesheet" href="front%20end/js/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<h1>Bladder</h1>
-<table>
-    <tr>
-        <td>date</td>
-        <td><input type="text" id="date1"></td>
-        <td><input type="text" id="date2"></td>
-        <td><input type="text" id="date3"></td>
-        <td><input type="text" id="date4"></td>
-        <td><input type="text" id="date5"></td>
-        <td><input type="text" id="date6"></td>
-        <td><input type="text" id="date7"></td>
-    </tr>
+<p class="p1" id="id1"> CRLS Health Assisting documentation program.</p>
+<hr>
+<br>
+<p class ="p2">Welcome! Please enter your login credentials.</p>
+<br>
 
-    <tr>
-        <td>Patient Ability</td>
-        <td><input type="text" id="patAbil1"></td>
-        <td><input type="text" id="patAbil2"></td>
-        <td><input type="text" id="patAbil3"></td>
-        <td><input type="text" id="patAbil4"></td>
-        <td><input type="text" id="patAbil5"></td>
-        <td><input type="text" id="patAbil6"></td>
-        <td><input type="text" id="patAbil7"></td>
-    </tr>
-    <tr>
-        <td>Method Used</td>
-        <td><input type="text" id="method1"></td>
-        <td><input type="text" id="method2"></td>
-        <td><input type="text" id="method3"></td>
-        <td><input type="text" id="method4"></td>
-        <td><input type="text" id="method5"></td>
-        <td><input type="text" id="method6"></td>
-        <td><input type="text" id="method7"></td>
-    </tr>
 
-    <tr>
-        <td></td>
-        <td>
-            <button id="b1" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b2" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b3" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b4" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b5" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b6" type="button">Submit row data</button>
-        </td>
-        <td>
-            <button id="b7" type="button">Submit row data</button>
-        </td>
-    </tr>
 
-</table>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-<script src="index.js" type="module"></script>
-<script defer nomodule src="classic-index-bundle.js"></script>
+<form>
+  <div class="login-box">
+    <h2 class="text-2xl font-bold text-center">Login</h2>
+    <form action="#" method="POST">
+      <div class="container mb-4">
+        <label for="uname" class="user block mb-2 font-semibold">Username</label>
+        <input type="text" id="uname" placeholder="Enter Username" name="uname" class="w-full p-2 border rounded" required>
+      </div>
+
+      <div class="container mb-4">
+        <label for="psw" class="pass block mb-2 font-semibold">Password</label>
+        <input type="password" id="psw" placeholder="Enter Password" name="psw" class="w-full p-2 border rounded" required>
+      </div>
+
+      <div class="container mb-4 text-center">
+        <h2><button type="submit" class="w-full py-2 px-4 text-white rounded hover:bg-green-600" id="login">Login</button></h2>
+        <label class="inline-flex items-center mt-2">
+          <input type="checkbox" checked="checked" name="remember" class="mr-2"> Remember me
+        </label>
+      </div>
+    </form>
+    <p class="text-center text-sm">Don't have an account? <a href="#" class="text-blue-400 hover:underline">Sign up</a></p>
+  </div>
+  <p class="nav"><a href="front%20end/ADL.html">adl (for our naviagtion)</a></p>
+</form>
+
+<script src="front%20end/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  <script src="front%20end/server%20connection%20js%20files/login.js" type="module"></script>
+  <script defer nomodule src="classic-paitents-bundle.js"></script>
 </body>
+
 </html>
