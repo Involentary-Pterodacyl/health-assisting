@@ -43,13 +43,13 @@ app.post('/getId', (req, res) => {
         queryResult =  conn.query("SELECT user_id FROM users WHERE username = " + req.body, [conn]);
         console.log('db query complete')
     }  catch (err) {
-        console.log(err)
+        console.log(err);
     } finally {
         console.log(queryResult)
-        if (conn)  conn.end()
-        console.log('db connection closed')
-        return queryResult
+        if (conn)  conn.end();
+        console.log('db connection closed');
     }
+    return queryResult
 
 });
 
