@@ -1,5 +1,5 @@
 // import axios from '../node_modules/axios';
-import {patientval} from "./patients";
+//import {patientval} from "./patients.js";
 
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");
@@ -23,8 +23,8 @@ login.onclick = function (){
   })
 };
 
-function sendData(tableName, value) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, userId: id, patientId: patientval, value: value})
+function sendData(tableName, value, patientNum) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, userId: id, patientId: patientNum, value: value})
     .then(response => {
       console.log('Response:', response.data);
     })

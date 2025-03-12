@@ -10,7 +10,7 @@ let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
-var patientval;
+let patientval;
 
 pait1.onclick = function(){patientval = 1};
 pait2.onclick = function(){patientval = 2};

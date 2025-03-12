@@ -37,10 +37,10 @@ app.post('/getId', (req, res) => {
         conn = mariadb.createConnection({
             host: "localhost",
             user: "root",
-            password: "HA-DB",
+            password: "HA-db",
             database: "health_assisting"
         })
-        queryResult =  conn.query("SELECT user_id FROM users WHERE username = " + req.body, [conn]);
+        queryResult = conn.query("SELECT user_id FROM users WHERE username = " + req.body, [conn]);
         console.log('db query complete')
     }  catch (err) {
         console.log(err);
