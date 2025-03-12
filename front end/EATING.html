@@ -9,10 +9,11 @@
 <h1> Eating </h1>
 <p class="p1"> How the resident eats/drinks (includes G-tube and TPN) </p>
 <hr>
-
+    <div id="container">
 <div class="section">
-  <div style="display: flex; flex-direction: column; align-items: baseline; justify-content: center;" class="buttons1">
-    <p class="p2"> <em> Self performance</em></p>
+
+    <p class="p2"> <em> <b>Self performance </b> </em></p>
+    <form action="/submit" method="post">
     <p> <button type="submit" class="button depend" id="dependent"> 4. Totally Dependant </button></p>
     <p> <button type="button" class="button exten" id="extAssist"> 3. Extensive Assist</button></p>
     <p> <button type="button" class="button lim" id="limAssist"> 2. Limited Assist </button></p>
@@ -20,21 +21,24 @@
     <p> <button type="button" class="button ind" id="independent"> 0. Independent </button></p>
     <p> <button type="button" class="button didnot" id="none"> 8. Did Not Occur </button></p>
   </div>
-</div>
+
 
 <div class="section">
-  <div style="display: flex; flex-direction: column; align-items: baseline ; justify-content: center;" class="buttons2">
     <p class="p3"> <em> Support provided </em></p>
+    <p ><button  type="submit" class= "button feedtube" id="feedtube"> 4. Feeding tube </button></p>
     <p> <button type="button" class="button Two person" id="two person"> 3.Two Person Assist </button></p>
     <p> <button type="button" class="button onep" id="onePerson"> 2. One Person Assist </button></p>
     <p> <button type="button" class="button set" id="setup"> 1. Set-up </button></p>
     <p> <button type="button" class="button noset" id="noSetup"> 0. No set-up </button></p>
     <p> <button type="button" class="button didn't" id="no"> 8. Did Not Occur </button></p>
   </div>
+<div>
+      <button class="submit submitted" type="submit">Submit</button>
+      </form>
+
 </div>
-<p><a href="index.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
-
+<p class="back back5"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/eating.js" type="module"></script>
 <script defer nomodule src="classic-eating-bundle.js"></script>

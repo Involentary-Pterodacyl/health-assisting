@@ -1,5 +1,6 @@
 body{
   background-color: #87cefa;
+  font-family: "Roboto Condensed", sans-serif;
 }
 h1 {
   color: cornflowerblue;
@@ -11,11 +12,8 @@ h1 {
   text-shadow: 2px 2px black;
   background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif;
-}
-#container {
-  text-align:center;
-}
 
+}
 
 .p1 {
   text-align: center;
@@ -23,14 +21,28 @@ h1 {
   color: black;
   text-shadow: 1px 1px cornflowerblue;
   margin-bottom: 20px;
-
+  font-family: "Roboto Condensed", sans-serif;
 }
+
+hr {
+  border-top: dotted 7px cornflowerblue;
+
+  border-bottom: none;
+}
+
+#container {
+  text-align:center;
+}
+
+
+
 .p2 {
+
   font-size: 20px;
   color: black;
   text-shadow: 1px 1px cornflowerblue;
   margin-bottom: 20px;
-  font-wieght: bold;
+  font-weight: bold;
 }
 .p3 {
   font-size: 20px;
@@ -97,3 +109,33 @@ background-color: cornflowerblue;
 .buttons2{
 
 }
+.submit{
+  display:inline-block;
+  padding: 10px 20px;
+  height:45px;
+  font-size:17px;
+  color: white;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #4682b4;
+
+}
+
+
+.back{
+  width: 100px; /* Fixed width for equal size */
+  height: 40px;
+  display:block;
+  font-size: 15px;
+  margin:auto;
+  align-items: center; /* Center text vertically */
+  justify-content: center;
+}
+
+
+
+
+
+

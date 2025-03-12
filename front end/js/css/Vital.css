@@ -55,8 +55,16 @@ input[type="text"]:focus {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
-  position:relative;
-  bottom:86px ;
-  left:701px;
+
+}
+
+.back{
+  width: 100px; /* Fixed width for equal size */
+  height: 40px;
+  display:block;
+  font-size: 15px;
+  margin:auto;
+  align-items: center; /* Center text vertically */
+  justify-content: center;
 }
 

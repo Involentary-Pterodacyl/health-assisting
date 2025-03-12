@@ -84,3 +84,31 @@ hr {
   align-items: center; /* Center text vertically */
   justify-content: center;
 }
+
+header {
+  background-color: red; }
+
+.back{
+  width: 100px; /* Fixed width for equal size */
+  height: 40px;
+  display:block;
+  font-size: 15px;
+  margin:auto;
+  align-items: center; /* Center text vertically */
+  justify-content: center;
+}
+
+.submit{
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  height:45px;
+  font-size:17px;
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}

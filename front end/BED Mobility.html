@@ -7,11 +7,12 @@
 </head>
 <body>
 <h1> Bed Mobility</h1>
-<p class="p1"> How the resident moves to and from a lying position, turns side to side, and positions body while in bed.</p>
+<p class = "p1"> How the resident moves to and from a lying position, turns side to side, and positions body while in bed.</p>
 <hr>
 <div id="container">
 <div class="section">
 <p class="p2"> <em> <b> Self performance </b> </em></p>
+  <form action="/submit" method="post">
 <p ><button  type="submit" class= "button Total" id="total"> 4. Totally Dependant </button></p>
 <p> <button type="button" class="button Extensive" id="extensive"> 3. Extensive Assist</button></p>
 <p> <button type="button" class="button Limited" id="limited"> 2. Limited Assist </button></p>
@@ -29,8 +30,11 @@
 <p> <button type="button" class="button No setup" id="no setup"> 0. No set-up </button></p>
 <p> <button type="button" class="button not occur" id="no"> 8. Did Not Occur </button></p>
 </div>
-<p><a href="index.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
-<div>
+  <div>
+  <button class="submit submitbed" type="submit">Submit</button>
+  </form>
+
+    <p class="back 8"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/bed%20mobility.js" type="module"></script>
 <script defer nomodule src="classic-bed%20mobility-bundle.js"></script>
