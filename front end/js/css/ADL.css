@@ -98,17 +98,19 @@ header {
   justify-content: center;
 }
 
+
+
 .submit{
-  display: inline-block;
-  margin: 20px auto;
+  display: block;
+  margin: auto;
   padding: 10px 20px;
   height:45px;
   font-size:17px;
   color: white;
   background-color: cornflowerblue;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 2px solid #4682b4;
 
 }

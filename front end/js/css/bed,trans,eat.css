@@ -127,9 +127,7 @@ background-color: cornflowerblue;
 .back{
   width: 100px; /* Fixed width for equal size */
   height: 40px;
-  display:block;
   font-size: 15px;
-  margin:auto;
   align-items: center; /* Center text vertically */
   justify-content: center;
 }
