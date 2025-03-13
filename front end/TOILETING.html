@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Toileting</title>
-  <h1> Toileting</h1>
+  <link rel="stylesheet" href="js/css/bed,trans,eat.css" />
 </head>
 <body>
-<p> How the resident uses the toilet room/commode/bedpan/urinal.</p>
+<h1> Toileting</h1>
+<p class="p1"> How the resident uses the toilet room/commode/bedpan/urinal.</p>
 <hr>
+<div id="container">
+  <form action="/submit" method="post">
+<div class="section">
+  <p class="p2"> <em> Self performance</em></p>
 
-<section>
-  <p> <em> Self performance</em></p>
-  <p> <button type="submit" id="dependent"> 4. Totally Dependant </button></p>
-  <p> <button type="button" id="extAssist"> 3. Extensive Assist</button></p>
-  <p> <button type="button" id="limAssist"> 2. Limited Assist </button></p>
-  <p> <button type="button" id="supervision"> 1. Supervision </button></p>
-  <p> <button type="button" id="independent"> 0. Independent </button></p>
-  <p> <button type="button" id="none"> 8. Did Not Occur </button></p>
-</section>
+    <p> <button type="submit" class="button totdep" id="dependent"> 4. Totally Dependant </button></p>
+  <p> <button type="button" class="button toiass" id="extAssist"> 3. Extensive Assist</button></p>
+  <p> <button type="button" class="button toillim" id="limAssist"> 2. Limited Assist </button></p>
+  <p> <button type="button" class="button toilsup" id="supervision"> 1. Supervision </button></p>
+  <p> <button type="button" class="button toiind" id="independent"> 0. Independent </button></p>
+  <p> <button type="button" class="button toididnt" id="none"> 8. Did Not Occur </button></p>
+</div>
 
-<section>
-  <p> <em> Support provided </em></p>
-  <p> <button type="button" id="twoPerson"> 3.Two Person Assist </button></p>
-  <p> <button type="button" id="onePerson"> 2. One Person Assist </button></p>
-  <p> <button type="button" id="setup"> 1. Set-up </button></p>
-  <p> <button type="button" id="noSetup"> 0. No set-up </button></p>
-  <p> <button type="button" id="no"> 8. Did Not Occur </button></p>
-</section>
-<p><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
+<div class="section">
+  <p class="p3"> <em> Support provided </em></p>
+  <p> <button type="submit" class="button toicolo"  id="colostomy"> 4. Colostomy Bag </button></p>
+  <p> <button type="button" class="button toitwo" id="twoPerson"> 3.Two Person Assist </button></p>
+  <p> <button type="button" class="button toione" id="onePerson"> 2. One Person Assist </button></p>
+  <p> <button type="button" class="button toiset" id="setup"> 1. Set-up </button></p>
+  <p> <button type="button" class="button toinose" id="noSetup"> 0. No set-up </button></p>
+  <p> <button type="button" class="button toino" id="no"> 8. Did Not Occur </button></p>
+</div>
+
+  <button class="submit submittoil" type="submit">Submit</button>
+  </form>
+</div>
+<p class="back back4"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/toileting.js" type="module"></script>

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="js/css/dietary.css" />
   <title>Dietary Intake</title>
 </head>
 
 <body>
 <h1> Dietary Intake </h1>
-<p>Ate at least 75% of chosen meal</p>
-<p>Chart <strong> Y </strong> for yes or <strong> N </strong> for no</p>
-<p> If less than 50% of meal eaten, provide the substitute</p>
+<p class="p1">Ate at least 75% of chosen meal</p>
+<p class="p2">Chart <strong> Y </strong> for yes or <strong> N </strong> for no</p>
+<p class="p3"> If less than 50% of meal eaten, provide the substitute</p>
 <hr>
 <!------ <style>fix this up a little bit
   table, th, td {
@@ -28,13 +29,13 @@
       </tr> <!-- get rid of dat thing because they making something that gets it, or make date dropdwon menu???? update: made into dropdown, will ask-->
 
       <tr>
-        <th>Brkfst</th>
+        <th>Breakfast</th>
         <td>
           <input type="radio" id="brk1" name="brk" value="Y">
           <label for="brk1">Y</label><br>
           <input type="radio" id="brk2" name="brk" value="n">
           <label for="brk2">N</label><br>
-          <input type="radio" id="sub1" name="sub" value="Substitute">
+          <input type="radio" id="sub1" name="brk" value="Substitute1">
           <label for="sub1">Substitute</label><br>
         </td>
       </tr>
@@ -46,7 +47,7 @@
           <label for="lun1">Y</label><br>
           <input type="radio" id="lun2" name="lun" value="n">
           <label for="lun2">N</label><br>
-          <input type="radio" id="sub2" name="sub" value="Substitute">
+          <input type="radio" id="sub2" name="lun" value="Substitute2">
           <label for="sub2">Substitute</label><br>
         </td>
       </tr>
@@ -57,128 +58,77 @@
           <label for="din1">Y</label><br>
           <input type="radio" id="din2" name="din" value="n">
           <label for="din2">N</label><br>
-          <input type="radio" id="sub3" name="sub" value="Substitute">
+          <input type="radio" id="sub3" name="din" value="Substitute3">
           <label for="sub3">Substitute</label><br>
         </td>
       </tr>
     </table>
-    <button class="submit" type="submit">Submit</button>
-  </form>
+
 
 </section>
 
 <section>
-  <p> Intake and output record.</p>
-  <p> <strong>Equivilants:</strong>1oz = 30cc</p>
-  <p> <strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
+  <p class="p4"> Intake and output record.</p>
+  <hr>
+  <p class="p5"> <strong>Equivilants:</strong>1oz = 30cc</p>
+  <p class="p6"> <strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
     ice cream, gelatin, and IV fluids.</p>
-  <p> <strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
+  <p class="p7"> <strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
 </section>
 
 <table border="1">
   <tr>
 
 
-    <th>TIME</th>
+
     <th>INTAKE AMOUNT IN CCs</th>
     <th>TYPE OF INTAKE</th>
-    <th>TIME</th>
     <th>OUTPUT AMOUNT IN CCs</th>
     <th>TYPE OF OUTPUT</th>
   </tr>
   <tr>
 
-    <td><label  aria-label="timeinput1" for="timeinput1"> </label><input type="text" id="timeinput1" name="time input"></td>
-    <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input"></td>
 
-    <td><label>   <input type="radio" id="soft" name="soft" value="softdrink">
+    <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input">CCs</td>
+
+    <td><label>   <input type="radio" id="soft" name="intake" value="softdrink">
       <label for="soft">Softdrink</label><br>
-      <input type="radio" id="jui" name="jui" value="juice">
+      <input type="radio" id="jui" name="intake" value="juice">
       <label for="jui">Juice</label><br>
-      <input type="radio" id="wat" name="wat" value="water">
+      <input type="radio" id="wat" name="intake" value="water">
       <label for="wat">Water</label><br>
-      <input type="radio" id="teco" name="teaco" value="teaorcoffee">
+      <input type="radio" id="teco" name="intake" value="teaorcoffee">
       <label for="teco">Tea or Coffee</label><br>
-      <input type="radio" id="liq" name="liq" value="liquid/gelatinfoods">
+      <input type="radio" id="liq" name="intake" value="liquid/gelatinfoods">
       <label for="liq">Liquid/Gelatin/Cream foods</label><br>
-      <input type="radio" id="mil" name="mil" value="milk">
+      <input type="radio" id="mil" name="intake" value="milk">
       <label for="mil">Milk</label><br>
-      <input type="radio" id="iv" name="iv" value="ivfluid">
+      <input type="radio" id="iv" name="intake" value="ivfluid">
       <label for="iv">IV Fluids</label><br>
-      <p> need to ask what substitues shje wants listed </p>
-
     </td>
 
-    <td><label  aria-label="time2input1" for="time2input1"> </label><input type="text" id="time2input1" name="time2 input"></td>
-    <td><label  aria-label="outputinput1" for="outputinput1"> </label><input type="text" id="outputinput1" name="output input"></td>
-    <td> <input type="radio" id="uri" name="uri" value="urine">
-      <label for="uri">Softdrink</label><br>
-      <input type="radio" id="jui" name="jui" value="juice">
-      <label for="jui">Juice</label><br>
-      <input type="radio" id="wat" name="wat" value="water">
-      <label for="wat">Water</label><br>
-      <input type="radio" id="teco" name="teaco" value="teaorcoffee">
-      <label for="teco">Tea or Coffee</label><br>
-      <input type="radio" id="liq" name="liq" value="liquid/gelatinfoods">
-      <label for="liq">Liquid/Gelatin/Cream foods</label><br>
-      <input type="radio" id="mil" name="mil" value="milk">
-      <label for="mil">Milk</label><br>
-      <input type="radio" id="iv" name="iv" value="ivfluid">
-      <label for="iv">IV Fluids</label><br>
-      <p> need to ask what substitues shje wants listed </p></td>
 
+    <td><label  aria-label="outputtype" for="outputtype"> </label><input type="text" id="outputtype" name="output type">CCs</td>
+
+    <td> <input type="radio" id="uri" name="output" value="urine">
+      <label for="uri">Urine</label><br>
+      <input type="radio" id="vom" name="output" value="vomitus">
+      <label for="vom">Vomitus</label><br>
+      <input type="radio" id="excpersp" name="output" value="excessive perspiration">
+      <label for="excpersp">Excessive perspiration</label><br>
+      <input type="radio" id="blood" name="output" value="blood">
+      <label for="blood">Blood</label><br>
+      <input type="radio" id="wound" name="output" value="wound drainage">
+      <label for="wound">Wound drainage</label><br>
+      <input type="radio" id="liqsto" name="output" value="liquidstools">
+      <label for="liqsto">Liquid stools</label><br>
   </tr>
-  <tr>
-    <td><label  aria-label="timeinput2" for="timeinput2"> </label><input type="text" id="timeinput2" name="time input"></td>
-    <td><label  aria-label="intakeinput2" for="intakeinput2"> </label><input type="text" id="intakeinput2" name="intake input"></td>
-    <td><label  aria-label="itypeinput2" for="itypeinput2"> </label><input type="text" id="itypeinput2" name="itype input"></td>
-    <td><label  aria-label="time2input2" for="time2input2"> </label><input type="text" id="time2input2" name="time2 input"></td>
-    <td><label  aria-label="outputinput2" for="outputinput2"> </label><input type="text" id="outputinput2" name="output input"></td>
-    <td><label  aria-label="otypeinput2" for="otypeinput2"> </label><input type="text" id="otypeinput2" name="otype input"></td>
-  </tr>
-  <tr>
-
-    <td><label  aria-label="timeinput3" for="timeinput3"> </label><input type="text" id="timeinput3" name="time input"></td>
-    <td><label  aria-label="intakeinput3" for="intakeinput3"> </label><input type="text" id="intakeinput3" name="intake input"></td>
-    <td><label  aria-label="itypeinput3" for="itypeinput3"> </label><input type="text" id="itypeinput3" name="itype input"></td>
-    <td><label  aria-label="time2input3" for="time2input3"> </label><input type="text" id="time2input3" name="time2 input"></td>
-    <td><label  aria-label="outputinput3" for="outputinput3"> </label><input type="text" id="outputinput3" name="output input"></td>
-    <td><label  aria-label="otypeinput3" for="otypeinput3"> </label><input type="text" id="otypeinput3" name="otype input"></td>
-  </tr>
-
-  <tr>
-
-    <td><label  aria-label="timeinput4" for="timeinput4"> </label><input type="text" id="timeinput4" name="time input"></td>
-    <td><label  aria-label="intakeinput4" for="intakeinput4"> </label><input type="text" id="intakeinput4" name="intake input"></td>
-    <td><label  aria-label="itypeinput4" for="itypeinput4"> </label><input type="text" id="itypeinput4" name="itype input"></td>
-    <td><label  aria-label="time2input4" for="time2input4"> </label><input type="text" id="time2input4" name="time2 input"></td>
-    <td><label  aria-label="outputinput4" for="outputinput4"> </label><input type="text" id="outputinput4" name="output input"></td>
-    <td><label  aria-label="otypeinput4" for="otypeinput4"> </label><input type="text" id="otypeinput4" name="otype input"></td>
-  </tr>
-
-  <tr>
-
-    <td><label  aria-label="timeinput5" for="timeinput5"> </label><input type="text" id="timeinput5" name="time input"></td>
-    <td><label  aria-label="intakeinput5" for="intakeinput5"> </label><input type="text" id="intakeinput5" name="intake input"></td>
-    <td><label  aria-label="itypeinput5" for="itypeinput5"> </label><input type="text" id="itypeinput5" name="itype input"></td>
-    <td><label  aria-label="time2input5" for="time2input5"> </label><input type="text" id="time2input5" name="time2 input"></td>
-    <td><label  aria-label="outputinput5" for="outputinput5"> </label><input type="text" id="outputinput5" name="output input"></td>
-    <td><label  aria-label="otypeinput5" for="otypeinput5"> </label><input type="text" id="otypeinput5" name="otype input"></td>
-  </tr>
-
-
-  <tr>
-
-    <td><label  aria-label="timeinput6" for="timeinput6"> </label><input type="text" id="timeinput6" name="time input"></td>
-    <td><label  aria-label="intakeinput6" for="intakeinput6"> </label><input type="text" id="intakeinput6" name="intake input"></td>
-    <td><label  aria-label="itypeinput6" for="itypeinput6"> </label><input type="text" id="itypeinput6" name="itype input"></td>
-    <td><label  aria-label="time2input6" for="time2input6"> </label><input type="text" id="time2input6" name="time2 input"></td>
-    <td><label  aria-label="outputinput6" for="outputinput6"> </label><input type="text" id="outputinput6" name="output input"></td>
-    <td><label  aria-label="otypeinput6" for="otypeinput6"> </label><input type="text" id="otypeinput6" name="otype input"></td>
-  </tr>
-
-  <p><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 </table>
+
+<button class="submit" type="submit">Submit</button>
+  </form>
+<p class="back 8"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/diet.js" type="module"></script>
 <script defer nomodule src="classic-diet-bundle.js"></script>
