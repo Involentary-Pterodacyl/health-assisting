@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import mariadb from "mariadb";
+import mariadb from "mariadb/callback.js";
 
 const pool = mariadb.createPool({
     host: "localhost",
@@ -31,21 +31,30 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 //getting data
 app.post('/getId', (req, res) => {
 
+
     let conn
     let queryResult
     try {
         conn = mariadb.createConnection({
             host: "localhost",
-            user: "root",
+            user: "db_user",
             password: "HA-db",
             database: "health_assisting"
         })
-        queryResult = conn.query("SELECT user_id FROM users WHERE username = " + req.body, [conn]);
+        queryResult = conn.query("SELECT user_id FROM users WHERE username = '" + req.body.username + "';",
+            (err,res,meta) => {
+            if (err) {
+                console.error("Error querying data: ", err);
+            } else {
+                console.log(res);
+            }
+        });
         console.log('db query complete')
     }  catch (err) {
         console.log(err);
     } finally {
-        console.log(queryResult)
+        console.log('type: ' + typeof queryResult);
+        console.log(queryResult);
         if (conn)  conn.end();
         console.log('db connection closed');
     }
