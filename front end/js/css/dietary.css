@@ -31,7 +31,28 @@ h1 {
   margin-bottom: 20px;
   font-family: "Roboto Condensed", sans-serif;
 }
+.p5 {
+    font-size: 16px;
+    color: black;
+    text-shadow: 1px 1px cornflowerblue;
+    margin-bottom: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+}
 
+.p6 {
+  font-size: 16px;
+  color: black;
+  text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.p7 {
+  font-size: 16px;
+  color: black;
+  text-shadow: 1px 1px cornflowerblue;
+  margin-bottom: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
 
 hr {
   border-top: dotted 7px cornflowerblue;
@@ -141,6 +162,29 @@ background-color: cornflowerblue;
   justify-content: center;
 }
 
-input[type='radio']:after {
-  color:deeppink;
+
+
+input {
+
+  background-color: lightblue; /* Default background color */
+
+  cursor: pointer;
+}
+
+input[type=radio] {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-clip: content-box;
+  border: 1.5px solid black;
+  background-color: lightblue;
+  appearance: none;
+
+}
+
+input[type="radio"]:checked {
+  background-color: black;
+  accent-color: black;
+  padding: 4px;
+  border: 2px solid #000;
 }

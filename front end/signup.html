@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="js/css/style.css" />"
+</head>
+<body>
+  <h1 className="text-2xl font-bold text-center mb-4">Create Account</h1>
+  <form>
+    <div class="login-box">
+      <div class="container mb-4">
+    <div className="mb-4">
+      <Label htmlFor="username">Username</Label>
+      <Input id="username" type="text" placeholder="Enter your username" required />
+    </div>
+
+    <div className="mb-4">
+      <Label htmlFor="password">Password</Label>
+      <Input id="password" type="password" placeholder="Enter your password" required />
+    </div>
+
+    <div className="mb-4">
+      <Label htmlFor="firstName">First Name</Label>
+      <Input id="firstName" type="text" placeholder="Enter your first name" required />
+    </div>
+
+    <div className="mb-4">
+      <Label htmlFor="lastName">Last Name</Label>
+      <Input id="lastName" type="text" placeholder="Enter your last name" required />
+    </div>
+
+    <div className="mb-4">
+      <Label htmlFor="schoolDistrict">School District</Label>
+      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required />
+    </div>
+
+    <div className="flex items-center justify-between mb-4">
+      <Label htmlFor="isTeacher" className="flex items-center">
+        Are you a teacher?
+      </Label>
+      <label>Yes</label>
+     <input type ="radio" id="isTeacher" type="radio" name="isTeacher" value="yes" />
+      <label>No</label>
+      <input type ="radio" id="isTeacher" type="radio" name="isTeacher" value="no" />
+    </div>
+
+    <Button className="w-full mt-4" type="submit">
+      Create Account
+    </Button>
+      </div>
+    </div>
+    </div>
+  </form>
+</body>
+</html>
