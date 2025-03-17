@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="3/10/25">
-      <change afterPath="$PROJECT_DIR$/front end/Create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/PATIENTS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/PATIENTS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/Patients.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/Patients.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="dietary intake path sent to server compleate" />
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
-    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496">
-      <change beforePath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/TOILETING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TOILETING.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/Vital Signs.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Vital Signs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/ADL.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/ADL.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/dietary.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/dietary.css" afterDir="false" />
-    </list>
+    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,15 +37,6 @@
     &quot;accountId&quot;: &quot;fd896de2-71f1-437a-a67a-798166768857&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/front end/index.html">
-      <ranges>
-        <range start1="48" end1="51" start2="48" end2="48" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
-        <range start1="53" end1="54" start2="50" end2="51" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="55" end1="55" start2="52" end2="53" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -110,7 +87,7 @@
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -128,7 +105,7 @@
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/health-assisting/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
