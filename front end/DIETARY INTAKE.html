@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="js/css/dietary.css" />
   <title>Dietary Intake</title>
-  <style>
-    input[type="radio"] {
-      accent-color: black;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -29,6 +23,10 @@
     <table border="1">
 
 
+      <th>DATE</th>
+      <td><label  id="dateinput1" for="dateinput1"> </label><input type="date" id="date1"></td>
+
+      </tr> <!-- get rid of dat thing because they making something that gets it, or make date dropdwon menu???? update: made into dropdown, will ask-->
 
       <tr>
         <th>Breakfast</th>
@@ -66,8 +64,6 @@
       </tr>
     </table>
 
-</form>
-
 
 </section>
 
@@ -93,7 +89,6 @@
   <tr>
 
 
-
     <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input">CCs</td>
 
     <td><label>   <input type="radio" id="soft" name="intake" value="softdrink">
@@ -110,8 +105,6 @@
       <label for="mil">Milk</label><br>
       <input type="radio" id="iv" name="intake" value="ivfluid">
       <label for="iv">IV Fluids</label><br>
-      </label>
-
     </td>
 
 
@@ -129,12 +122,11 @@
       <label for="wound">Wound drainage</label><br>
       <input type="radio" id="liqsto" name="output" value="liquidstools">
       <label for="liqsto">Liquid stools</label><br>
-    </td>
   </tr>
 </table>
 
 <button class="submit" type="submit">Submit</button>
-
+  </form>
 <p class="back 8"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
