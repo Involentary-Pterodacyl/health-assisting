@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="dietary intake path sent to server compleate" />
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +33,12 @@
     &quot;assignee&quot;: &quot;Involentary-Pterodacyl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Involentary-Pterodacyl/health-assisting.git&quot;,
-    &quot;accountId&quot;: &quot;fd896de2-71f1-437a-a67a-798166768857&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Involentary-Pterodacyl/health-assisting.git",
+    "accountId": "71adca24-98d7-44ef-a7e7-6ca8414c5187"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -52,50 +54,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Unnamed.executor&quot;: &quot;Debug&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.ADL.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.BED Mobility.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.BLADDER.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Create.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.DIETARY INTAKE.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.EATING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.PATIENTS.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.TOILETING.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.TRANSFERS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Vital Signs.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.index2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.server.mjs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.10&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/8015754/WebstormProjects/health-assisting/front end/js/css&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/8015754/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.ADL.html.executor": "Debug",
+    "JavaScript Debug.BED Mobility.html.executor": "Debug",
+    "JavaScript Debug.BLADDER.html.executor": "Debug",
+    "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
+    "JavaScript Debug.Create.html.executor": "Debug",
+    "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+    "JavaScript Debug.EATING.html.executor": "Run",
+    "JavaScript Debug.PATIENTS.html.executor": "Debug",
+    "JavaScript Debug.TOILETING.html.executor": "Debug",
+    "JavaScript Debug.TRANSFERS.html.executor": "Run",
+    "JavaScript Debug.Vital Signs.html.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "Node.js.index.js.executor": "Debug",
+    "Node.js.index2.js.executor": "Run",
+    "Node.js.server.mjs.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "22.14.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
+    "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end/js/css",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/2102400/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
@@ -122,7 +124,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -156,6 +158,7 @@
       <workItem from="1741368607456" duration="3859000" />
       <workItem from="1741883199067" duration="4484000" />
       <workItem from="1741969535441" duration="3820000" />
+      <workItem from="1742227803506" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -285,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741887714555</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1742227824578</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227824578</updated>
+    </task>
+    <task id="LOCAL-00018" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1742227842964</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227842964</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +334,7 @@
     <MESSAGE value="2/28/25" />
     <MESSAGE value="3/10/25" />
     <MESSAGE value="Changes by 8000496" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by 8000496" />
+    <MESSAGE value="friaday changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
   </component>
 </project>
