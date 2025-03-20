@@ -23,6 +23,7 @@ h1{
   font-size: 20px;
   text-shadow: 1px 1px cornflowerblue;
 }
+
 hr{
   height: 1px;
   background-color: black;
@@ -61,3 +62,13 @@ hr{
   top: 700px;
   left:50px;
 }
+.mb-4{
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif ;
+
+  color:#454545;
+}
+.h1{
+  font-family: "Roboto Condensed", sans-serif ;
+}
+body{}

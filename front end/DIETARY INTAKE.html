@@ -8,10 +8,11 @@
 
 <body>
 <h1> Dietary Intake </h1>
+<hr>
 <p class="p1">Ate at least 75% of chosen meal</p>
 <p class="p2">Chart <strong> Y </strong> for yes or <strong> N </strong> for no</p>
 <p class="p3"> If less than 50% of meal eaten, provide the substitute</p>
-<hr>
+
 <!------ <style>fix this up a little bit
   table, th, td {
     border: 1px solid black;
@@ -23,10 +24,6 @@
     <table border="1">
 
 
-      <th>DATE</th>
-      <td><label  id="dateinput1" for="dateinput1"> </label><input type="date" id="date1"></td>
-
-      </tr> <!-- get rid of dat thing because they making something that gets it, or make date dropdwon menu???? update: made into dropdown, will ask-->
 
       <tr>
         <th>Breakfast</th>
@@ -63,17 +60,14 @@
         </td>
       </tr>
     </table>
+  </form>
 
-
-</section>
-
-<section>
   <p class="p4"> Intake and output record.</p>
   <hr>
-  <p class="p5"> <strong>Equivilants:</strong>1oz = 30cc</p>
-  <p class="p6"> <strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
+  <p class="p5"><strong>Equivilants:</strong>1oz = 30cc</p>
+  <p class="p6"><strong>Record for Intake:</strong> Water, milk, juices, soft drinks, coffee, tea,
     ice cream, gelatin, and IV fluids.</p>
-  <p class="p7"> <strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
+  <p class="p7"><strong>Record for output:</strong> Urine, vomit, liquid stools, blood, wound drainage.</p>
 </section>
 
 <table border="1">
@@ -91,7 +85,9 @@
 
     <td><label  aria-label="intakeinput1" for="intakeinput1"> </label><input type="text" id="intakeinput1" name="intake input">CCs</td>
 
-    <td><label>   <input type="radio" id="soft" name="intake" value="softdrink">
+    <td>
+      <label>
+      <input type="radio" id="soft" name="intake" value="softdrink">
       <label for="soft">Softdrink</label><br>
       <input type="radio" id="jui" name="intake" value="juice">
       <label for="jui">Juice</label><br>
@@ -105,6 +101,7 @@
       <label for="mil">Milk</label><br>
       <input type="radio" id="iv" name="intake" value="ivfluid">
       <label for="iv">IV Fluids</label><br>
+      </label>
     </td>
 
 
@@ -126,7 +123,7 @@
 </table>
 
 <button class="submit" type="submit">Submit</button>
-  </form>
+
 <p class="back 8"><a href="ADL.html"><img src="arrow.png" alt="Back" width="50px" height="50px"></a></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>

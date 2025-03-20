@@ -25,7 +25,7 @@ h1 {
 }
 
 hr {
-  border-top: dotted 7px cornflowerblue;
+border-top: 5px dotted cornflowerblue;
 
   border-bottom: none;
 }
@@ -118,7 +118,7 @@ background-color: cornflowerblue;
   background-color: cornflowerblue;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color .3s;
   border: 2px solid #4682b4;
 
 }
