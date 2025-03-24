@@ -28,38 +28,60 @@ app.get('/', (req, res) => {
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
+let isUser;
 //getting data
-app.post('/getId', (req, res) => {
+app.post('/login', (req, res) => {
 
+    // const pool = mariadb.createPool({
+    //     host: 'localhost',
+    //     user:'db_user',
+    //     password: 'HA-db',
+    //     database: "health-assisting",
+    //     connectionLimit: 5
+    // });
+    async function main() {
+        let conn;
 
-    let conn
-    let queryResult
-    try {
-        conn = mariadb.createConnection({
-            host: "localhost",
-            user: "db_user",
-            password: "HA-db",
-            database: "health_assisting"
-        })
-        queryResult = conn.query("SELECT user_id FROM users WHERE username = '" + req.body.username + "';",
-            (err,res,meta) => {
-            if (err) {
-                console.error("Error querying data: ", err);
-            } else {
-                console.log(res);
-            }
-        });
-        console.log('db query complete')
-    }  catch (err) {
-        console.log(err);
-    } finally {
-        console.log('type: ' + typeof queryResult);
-        console.log(queryResult);
-        if (conn)  conn.end();
-        console.log('db connection closed');
+        try {
+            conn = await mariadb.createConnection({
+                host: 'localhost',
+                user:'db_user',
+                password: 'HA-db',
+                database: "health-assisting",
+            });
+
+            await print_contacts(conn);
+        } catch (err) {
+            // Manage Errors
+            console.log(err);
+        } finally {
+            // Close Connection
+            if (conn) conn.close();
+        }
     }
-    return queryResult
 
+// Print list of contacts
+    function print_contacts(conn) {
+        return new Promise(
+            (resolve, reject) => {
+                resolve(
+                    conn
+                        .queryStream("SELECT * FROM users WHERE username = '" + req.body.username + "';")
+                        .on("error", (err) => {
+                            console.error("Issue retrieving information", err);
+                        })
+                        .on("fields", (meta) => {
+                            console.error("Field Metadata:", meta);
+                        })
+                        .on("data", (row) => {
+                            console.log(`${row.first_name} ${row.last_name}`);
+                        })
+                )
+            }
+        );
+    }
+
+    main();
 });
 
 // Handle POST requests
