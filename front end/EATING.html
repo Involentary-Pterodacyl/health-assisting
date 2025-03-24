@@ -6,17 +6,19 @@
   <title>Eating</title>
 </head>
 <body>
-<header>
-  <h1> Eating </h1>
-  <p class="p1"> How the resident eats/drinks (includes G-tube and TPN) </p>
-</header>
-<hr>
+  <header id="header">
+    <h1> Eating </h1>
+    <p class="p1"> <b> How the resident eats/drinks (includes G-tube and TPN). </b> </p>
+  </header>
+
     <div id="container">
       <form action="/submit" method="post">
 <div class="section">
+  <hr>
+
     <p class="p2"> <em> <b>Self performance </b> </em></p>
 
-    <p> <button type="submit" class="button depend" id="dependent"> 4. Totally Dependant </button></p>
+    <p> <button type="button" class="button depend" id="dependent"> 4. Totally Dependant </button></p>
     <p> <button type="button" class="button exten" id="extAssist"> 3. Extensive Assist</button></p>
     <p> <button type="button" class="button lim" id="limAssist"> 2. Limited Assist </button></p>
     <p> <button type="button" class="button sup" id="supervision"> 1. Supervision </button></p>
@@ -27,7 +29,7 @@
 
 <div class="section">
     <p class="p3"> <em> Support provided </em></p>
-    <p ><button  type="submit" class= "button feedtube" id="feedtube"> 4. Feeding tube </button></p>
+    <p ><button  type="button" class= "button feedtube" id="feedtube"> 4. Feeding tube </button></p>
     <p> <button type="button" class="button Two person" id="two person"> 3.Two Person Assist </button></p>
     <p> <button type="button" class="button onep" id="onePerson"> 2. One Person Assist </button></p>
     <p> <button type="button" class="button set" id="setup"> 1. Set-up </button></p>

@@ -1,18 +1,30 @@
 body{
   background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+
 h1 {
-  color: cornflowerblue;
+  color: skyblue;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   text-align: center;
   font-size: 70px;
   text-shadow: 2px 2px black;
-  background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif;
 
+}
+
+.headp{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+  margin-bottom: 0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .p1 {
@@ -55,9 +67,7 @@ h1 {
 }
 
 hr {
-  border-top: dotted 7px cornflowerblue;
-
-  border-bottom: none;
+ visibility: hidden;
 }
 
 #container {
@@ -187,4 +197,11 @@ input[type="radio"]:checked {
   accent-color: black;
   padding: 4px;
   border: 2px solid #000;
+}
+
+header{
+  background-color: cornflowerblue;
+  width: 100%;
+  top: 0;
+  padding:10px;
 }
