@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import mariadb from "mariadb/callback.js";
 
-const pool = mariadb.createPool({
+let pool = mariadb.createPool({
     host: "localhost",
-    user: "root",
+    user: "db_user",
     password: "HA-db",
     connectionLimit: 5
 });
@@ -31,58 +31,42 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 let isUser;
 //getting data
 app.post('/login', (req, res) => {
-
-    // const pool = mariadb.createPool({
-    //     host: 'localhost',
-    //     user:'db_user',
-    //     password: 'HA-db',
-    //     database: "health-assisting",
-    //     connectionLimit: 5
-    // });
-    async function main() {
+    function main() {
         let conn;
 
         try {
-            conn = await mariadb.createConnection({
-                host: 'localhost',
-                user:'db_user',
-                password: 'HA-db',
-                database: "health-assisting",
+            // Establish Connection
+            conn = mariadb.createConnection({
+                host: "localhost",
+                user: "db_user",
+                password: "HA-db",
+                database: "health_assisting",
             });
 
-            await print_contacts(conn);
+            conn.query("SELECT * from users;",
+                (err,res,meta) => {
+                    if (err) {
+                        console.error("Error querying data: ", err);
+                    } else {
+                        console.log(res);
+                    }
+                }
+            );
+
         } catch (err) {
             // Manage Errors
-            console.log(err);
+            console.error("Error connecting to the database and querying data: ", err);
         } finally {
-            // Close Connection
-            if (conn) conn.close();
+            if (conn) conn.end(err => {
+                if(err) {
+                    console.log("SQL error in closing connection: ", err);
+                }
+            })
         }
     }
 
-// Print list of contacts
-    function print_contacts(conn) {
-        return new Promise(
-            (resolve, reject) => {
-                resolve(
-                    conn
-                        .queryStream("SELECT * FROM users WHERE username = '" + req.body.username + "';")
-                        .on("error", (err) => {
-                            console.error("Issue retrieving information", err);
-                        })
-                        .on("fields", (meta) => {
-                            console.error("Field Metadata:", meta);
-                        })
-                        .on("data", (row) => {
-                            console.log(`${row.first_name} ${row.last_name}`);
-                        })
-                )
-            }
-        );
-    }
-
     main();
-});
+})
 
 // Handle POST requests
 app.post('/submit', (req, res) => {
