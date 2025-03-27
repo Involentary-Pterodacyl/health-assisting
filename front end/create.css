@@ -1,3 +1,4 @@
+
 body{
   background-color: #87cefa;
   font-family: "Roboto Condensed", sans-serif ;
@@ -10,6 +11,89 @@ header{
   background-color: cornflowerblue;
   width: 100%;
   top: 0;
-  padding:10px;
+  padding:35px;
   margin: 0px;
+}
+
+h1{
+  color:lightskyblue;
+  font-family: "Roboto Condensed", serif ;
+  font-optical-sizing: auto;
+  font-weight:900;
+  font-style: normal;
+  text-align: center;
+  font-size: 70px;
+  text-shadow: 2px 2px black;
+}
+
+
+.p1{
+  text-align: center;
+  font-size: 23px;
+  color:white;
+  text-shadow: 2px 2px black;
+  margin-bottom: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+hr{
+  visibility: hidden;
+}
+.p2 {
+  text-align: center;
+  font-size: 23px;
+  text-shadow: 2px 2px black;
+  color: white;
+
+}
+
+.login-box {
+  background-color: cornflowerblue;
+  padding: 2rem;
+  margin:auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  font-family: "Roboto Condensed", sans-serif ;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+}
+.login-box input {
+  background-color: lightskyblue;
+  color: #000;
+}
+.login-box button {
+  background-color: cornflowerblue;
+  font-family: "Roboto Condensed", sans-serif ;
+}
+.nav{
+  position:absolute;
+  top: 700px;
+  left:50px;
+}
+.mb-4{
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif ;
+
+  color:white;
+}
+
+
+
+
+.text{
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.user {
+  color: white;
+  text-shadow: 2px 2px black;
+
+}
+.pass{
+  color: white;
+  text-shadow: 2px 2px black;
 }

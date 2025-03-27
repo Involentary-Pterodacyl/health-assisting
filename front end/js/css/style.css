@@ -56,7 +56,9 @@ hr{
   width: 100%;
   max-width: 400px;
   font-family: "Roboto Condensed", sans-serif ;
+  color:whitesmoke;
 }
+
 .login-box h2 {
   margin-bottom: 1.5rem;
 }
@@ -89,10 +91,15 @@ hr{
 }
 .user {
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
 
 }
 .pass{
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
+}
+
+.sign{
+  text-decoration: none;
+  text-shadow:none;
 }
