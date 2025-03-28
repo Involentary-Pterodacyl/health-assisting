@@ -1,11 +1,12 @@
 import express from "express";
 import cors from "cors";
-import mariadb from "mariadb/promise.js";
+import mariadb from "mariadb/callback.js";
 
 let pool = mariadb.createPool({
     host: "localhost",
     user: "db_user",
     password: "HA-db",
+    database: "health_assisting",
     connectionLimit: 5
 });
 
@@ -31,40 +32,14 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 let isUser;
 //getting data
 app.post('/login', (req, res) => {
-    async function main() {
-        let conn;
 
-        try {
-            conn = await mariadb.createConnection({
-                host: "localhost",
-                user: "db_user",
-                password: "HA-db",
-                database: "health_assisting",
-            });
-
-            // Use Connection to get contacts data
-            var rows = await get_contacts(conn);
-
-            //Print list of contacts
-            for (let i = 0, len = rows.length; i < len; i++) {
-                console.log(`${rows[i].first_name} ${rows[i].last_name}`);
-            }
-        } catch (err) {
-            // Manage Errors
-            console.log(err);
-        } finally {
-            // Close Connection
-            if (conn) conn.close();
-        }
-    }
-
-//Get list of contacts
-    function get_contacts(conn) {
-        return conn.query("SELECT first_name, last_name FROM health_assisting.");
-    }
-
-    main();
+    const conn = mariadb.createConnection({host: '127.0.0.1', user:'db_user', password: 'HA-db', database: 'health_assisting'});
+    conn.query("SELECT username FROM users where username='Tlllll'", (err, rows) => { //as val ????   // works add chageabliliy from user to user
+        console.log(rows); //[ {val: 1}, meta: ... ]
+            conn.end();
+    })
 });
+
 
 
 
