@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import mariadb from "mariadb/callback.js";
+import mariadb from "mariadb/promise.js";
 
-const pool = mariadb.createPool({
+let pool = mariadb.createPool({
     host: "localhost",
-    user: "root",
+    user: "db_user",
     password: "HA-db",
     connectionLimit: 5
 });
@@ -16,7 +16,7 @@ app.use(cors());
 const corsOrigin = {
     origin: 'http://localhost:63342',
 }
-app.use(cors(corsOrigin))
+app.use(cors(corsOrigin));
 
 const port = 3000;
 
@@ -28,39 +28,45 @@ app.get('/', (req, res) => {
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
+let isUser;
 //getting data
-app.post('/getId', (req, res) => {
+app.post('/login', (req, res) => {
+    async function main() {
+        let conn;
 
+        try {
+            conn = await mariadb.createConnection({
+                host: "localhost",
+                user: "db_user",
+                password: "HA-db",
+                database: "health_assisting",
+            });
 
-    let conn
-    let queryResult
-    try {
-        conn = mariadb.createConnection({
-            host: "localhost",
-            user: "db_user",
-            password: "HA-db",
-            database: "health_assisting"
-        })
-        queryResult = conn.query("SELECT user_id FROM users WHERE username = '" + req.body.username + "';",
-            (err,res,meta) => {
-            if (err) {
-                console.error("Error querying data: ", err);
-            } else {
-                console.log(res);
+            // Use Connection to get contacts data
+            var rows = await get_contacts(conn);
+
+            //Print list of contacts
+            for (let i = 0, len = rows.length; i < len; i++) {
+                console.log(`${rows[i].first_name} ${rows[i].last_name}`);
             }
-        });
-        console.log('db query complete')
-    }  catch (err) {
-        console.log(err);
-    } finally {
-        console.log('type: ' + typeof queryResult);
-        console.log(queryResult);
-        if (conn)  conn.end();
-        console.log('db connection closed');
+        } catch (err) {
+            // Manage Errors
+            console.log(err);
+        } finally {
+            // Close Connection
+            if (conn) conn.close();
+        }
     }
-    return queryResult
 
+//Get list of contacts
+    function get_contacts(conn) {
+        return conn.query("SELECT first_name, last_name FROM health_assisting.");
+    }
+
+    main();
 });
+
+
 
 // Handle POST requests
 app.post('/submit', (req, res) => {
