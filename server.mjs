@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import mariadb from "mariadb/callback.js";
+import mariadb from "mariadb/promise.js";
 
 let pool = mariadb.createPool({
     host: "localhost",
@@ -16,7 +16,7 @@ app.use(cors());
 const corsOrigin = {
     origin: 'http://localhost:63342',
 }
-app.use(cors(corsOrigin))
+app.use(cors(corsOrigin));
 
 const port = 3000;
 
@@ -31,42 +31,42 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 let isUser;
 //getting data
 app.post('/login', (req, res) => {
-    function main() {
+    async function main() {
         let conn;
 
         try {
-            // Establish Connection
-            conn = mariadb.createConnection({
+            conn = await mariadb.createConnection({
                 host: "localhost",
                 user: "db_user",
                 password: "HA-db",
                 database: "health_assisting",
             });
 
-            conn.query("SELECT * from users;",
-                (err,res,meta) => {
-                    if (err) {
-                        console.error("Error querying data: ", err);
-                    } else {
-                        console.log(res);
-                    }
-                }
-            );
+            // Use Connection to get contacts data
+            var rows = await get_contacts(conn);
 
+            //Print list of contacts
+            for (let i = 0, len = rows.length; i < len; i++) {
+                console.log(`${rows[i].first_name} ${rows[i].last_name}`);
+            }
         } catch (err) {
             // Manage Errors
-            console.error("Error connecting to the database and querying data: ", err);
+            console.log(err);
         } finally {
-            if (conn) conn.end(err => {
-                if(err) {
-                    console.log("SQL error in closing connection: ", err);
-                }
-            })
+            // Close Connection
+            if (conn) conn.close();
         }
     }
 
+//Get list of contacts
+    function get_contacts(conn) {
+        return conn.query("SELECT first_name, last_name FROM health_assisting.");
+    }
+
     main();
-})
+});
+
+
 
 // Handle POST requests
 app.post('/submit', (req, res) => {

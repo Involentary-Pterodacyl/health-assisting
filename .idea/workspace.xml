@@ -45,14 +45,14 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/server.mjs">
       <ranges>
-        <range start1="4" end1="5" start2="4" end2="5" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="6" end1="7" start2="6" end2="7" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="33" end1="42" start2="33" end2="34" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="45" end1="50" start2="37" end2="43" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="52" end1="53" start2="45" end2="55" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="55" end1="56" start2="57" end2="58" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="57" end1="81" start2="59" end2="65" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="84" end1="85" start2="68" end2="69" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="2" end1="3" start2="2" end2="3" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="18" end1="19" start2="18" end2="19" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="33" end1="34" start2="33" end2="34" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="37" end1="39" start2="37" end2="38" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="45" end1="55" start2="44" end2="51" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="57" end1="58" start2="53" end2="54" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="59" end1="65" start2="55" end2="63" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="68" end1="69" start2="66" end2="69" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
       </ranges>
     </file>
   </component>
@@ -88,14 +88,14 @@
     "JavaScript Debug.TRANSFERS.html.executor": "Run",
     "JavaScript Debug.Vital Signs.html.executor": "Debug",
     "JavaScript Debug.index.html.executor": "Run",
-    "Node.js.index.js.executor": "Debug",
+    "Node.js.index.js.executor": "Run",
     "Node.js.index2.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "javascript.nodejs.core.library.configured.version": "22.14.0",
-    "javascript.nodejs.core.library.typings.version": "22.13.10",
+    "javascript.nodejs.core.library.typings.version": "22.13.14",
     "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end/js/css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -133,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +178,8 @@
       <workItem from="1742227803506" duration="851000" />
       <workItem from="1742230250866" duration="1815000" />
       <workItem from="1742491162606" duration="1411000" />
-      <workItem from="1743008588908" duration="3297000" />
+      <workItem from="1743008588908" duration="3321000" />
+      <workItem from="1743092596860" duration="3248000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
