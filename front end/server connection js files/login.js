@@ -7,6 +7,7 @@ var username;
 var password;
 
 login.onclick = function (){
+  console.log("login");
   password = psw.value
   username = uname.value
 
