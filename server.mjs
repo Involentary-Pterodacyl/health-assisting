@@ -8,7 +8,7 @@ let isAdmin;
 let patientId;
 
 let pool = mariadb.createPool({
-    host: "localhost",
+    host: "204.167.95.253",
     user: "db_user",
     password: "HA-db",
     database: "health_assisting",
@@ -20,7 +20,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'https://involentary-pterodacyl.github.io/health-assisting/?uname=TestUser&psw=df&remember=on',
 }
 app.use(cors(corsOrigin));
 
@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
 let isUser;
 
-let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
+let db_info = {host: '204.167.95.253', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
 
 //getting data
 app.post('/login', (req, res) => {
@@ -70,20 +70,20 @@ app.get('/login_get', (req, res) => {
     res.send(isUser)
 })
 
-app.post('/signup', (req, res) => {
-    const conn = mariadb.createConnection(db_info);
-    conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
-        //console.log(rows);
-        if (rows.length > 0) {
-            console.log("That username is already taken."); // this should be displayed to the user somehow
-        }
-        else {
-            console.log("Good username");
-        }
-        conn.end();
-    })
-    //"INSERT INTO users (is_administrator, first_name, last_name, username) values (req.body.is_administrator, req.body.first_name, req.body.last_name, req.body.username)"
-});
+// app.post('/signup', (req, res) => {
+//     const conn = mariadb.createConnection(db_info);
+//     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
+//         //console.log(rows);
+//         if (rows.length > 0) {
+//             console.log("That username is already taken."); // this should be displayed to the user somehow
+//         }
+//         else {
+//             console.log("Good username");
+//         }
+//         conn.end();
+//     })
+//     //"INSERT INTO users (is_administrator, first_name, last_name, username) values (req.body.is_administrator, req.body.first_name, req.body.last_name, req.body.username)"
+// });
 
 // Handle POST requests
 app.post('/submit', (req, res) => {

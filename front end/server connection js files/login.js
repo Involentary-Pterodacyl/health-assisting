@@ -11,7 +11,7 @@ login.onclick = function (){
   password = psw.value
   username = uname.value
 
-  axios.post("http://localhost:3000/login",{username:username})
+  axios.post("http://204.167.95.253:3000/login",{username:username})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -20,7 +20,7 @@ login.onclick = function (){
     });
 };
 
-axios.get("http://localhost:3000/login_get")
+axios.get("http://204.167.95.253:3000/login_get")
   .then(response => {
     console.log('Response:', response.data);
     if (response.data)
