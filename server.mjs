@@ -8,7 +8,7 @@ let isAdmin;
 let patientId;
 
 let pool = mariadb.createPool({
-    host: "204.167.95.253",
+    host: "localhost",
     user: "db_user",
     password: "HA-db",
     database: "health_assisting",
@@ -20,7 +20,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'https://involentary-pterodacyl.github.io/health-assisting/?uname=TestUser&psw=df&remember=on',
+    origin: 'https://localhost:63342',
 }
 app.use(cors(corsOrigin));
 
@@ -36,18 +36,18 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
 let isUser;
 
-let db_info = {host: '204.167.95.253', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
+let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
 
 //getting data
 app.post('/login', (req, res) => {
+    console.log("test")
     const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
-        //console.log(rows);
+        console.log(rows);
         if (rows.length > 0) {
             username = rows[0]["username"];
             isAdmin = Boolean(rows[0]["is_administrator"]);
             isUser = true;
-            console.log("Successful login");
             //location.replace("front%20end/ADL.html");
             // if ( typeof window !== "undefined") {
             //     console.log("window is working");
@@ -69,7 +69,7 @@ app.post('/login', (req, res) => {
 app.get('/login_get', (req, res) => {
     res.send(isUser)
 })
-
+//
 // app.post('/signup', (req, res) => {
 //     const conn = mariadb.createConnection(db_info);
 //     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
