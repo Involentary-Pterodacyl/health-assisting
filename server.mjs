@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mariadb from "mariadb/callback.js";
+import axios from "axios";
 
 let username;
 let isAdmin;
@@ -45,13 +46,29 @@ app.post('/login', (req, res) => {
         if (rows.length > 0) {
             username = rows[0]["username"];
             isAdmin = Boolean(rows[0]["is_administrator"]);
+            isUser = true;
+            console.log("Successful login");
+            //location.replace("front%20end/ADL.html");
+            // if ( typeof window !== "undefined") {
+            //     console.log("window is working");
+            //     window.location.href = "front%20end/ADL.html";
+            // }
+            // else{
+            //     console.log("window is not defined");
+            // }
+
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
+            isUser = false;
         }
         conn.end();
     })
 });
+
+app.get('/login_get', (req, res) => {
+    res.send(isUser)
+})
 
 app.post('/signup', (req, res) => {
     const conn = mariadb.createConnection(db_info);

@@ -20,6 +20,23 @@ login.onclick = function (){
     });
 };
 
+axios.get("http://localhost:3000/login_get")
+  .then(response => {
+    console.log('Response:', response.data);
+    if (response.data)
+    {
+      console.log("going to ADL");
+      window.location.href = "front%20end/ADL.html";
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+
+
+
+
 function sendData(tableName, value, patientNum) {
   axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
     .then(response => {
