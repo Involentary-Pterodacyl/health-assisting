@@ -43,10 +43,8 @@ app.post('/login', (req, res) => {
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
         //console.log(rows);
         if (rows.length > 0) {
-            username = rows[0]["username"]; //the actual value as a string, not in an object
-            console.log("Username: " + rows[0]["username"]);
+            username = rows[0]["username"];
             isAdmin = Boolean(rows[0]["is_administrator"]);
-            console.log("Administrator: " + isAdmin);
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
