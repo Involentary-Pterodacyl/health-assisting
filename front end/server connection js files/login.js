@@ -13,6 +13,7 @@ login.onclick = function (){
 
   axios.post("http://localhost:3000/login",{username:username})
     .then(response => {
+      consle.log("in login post.then");
       console.log('Response:', response.data);
     })
     .catch(error => {
@@ -22,6 +23,7 @@ login.onclick = function (){
 
 axios.get("http://localhost:3000/login_get")
   .then(response => {
+    console.log("in get.then");
     console.log('Response:', response.data);
     if (response.data)
     {

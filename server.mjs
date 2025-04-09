@@ -20,7 +20,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'https://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -40,7 +40,7 @@ let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 
 
 //getting data
 app.post('/login', (req, res) => {
-    console.log("test")
+    console.log("test");
     const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
         console.log(rows);
@@ -63,12 +63,14 @@ app.post('/login', (req, res) => {
             isUser = false;
         }
         conn.end();
-    })
+    });
 });
 
 app.get('/login_get', (req, res) => {
-    res.send(isUser)
-})
+    console.log("test /login_get");
+    res.send(isUser);
+});
+
 //
 // app.post('/signup', (req, res) => {
 //     const conn = mariadb.createConnection(db_info);
