@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
-let isUser;
+let isUser = false;
 
 let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
 
@@ -45,18 +45,9 @@ app.post('/login', (req, res) => {
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
         console.log(rows);
         if (rows.length > 0) {
-            username = rows[0]["username"];
-            isAdmin = Boolean(rows[0]["is_administrator"]);
+            // username = rows[0]["username"];
+            // isAdmin = Boolean(rows[0]["is_administrator"]);
             isUser = true;
-            //location.replace("front%20end/ADL.html");
-            // if ( typeof window !== "undefined") {
-            //     console.log("window is working");
-            //     window.location.href = "front%20end/ADL.html";
-            // }
-            // else{
-            //     console.log("window is not defined");
-            // }
-
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
@@ -67,7 +58,7 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/login_get', (req, res) => {
-    console.log("test /login_get");
+    console.log("isUser: " + isUser);
     res.send(isUser);
 });
 

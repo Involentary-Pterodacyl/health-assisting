@@ -1,5 +1,26 @@
-import {sendData} from "./login.js";
 import {patientval} from "./patients.js";
+
+console.log("test");
+window.onload = () => {
+  axios.get('http://localhost:3000/login_get')
+    .then(response => {
+      if (response.data === false){
+        console.log("not signed in");
+        window.location.href = "index.html";
+      }
+    });
+
+}
+
+function sendData(tableName, value, patientNum) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 
 let total = document.getElementById('total');
 let extensive = document.getElementById('extensive');
@@ -15,12 +36,12 @@ let noSetup = document.getElementById('no setup');
 let none2 = document.getElementById('no');
 
 
-dependent.onclick = function(){sendData("bed_mobility_support", 1, patientval)};
-extAssist.onclick = function(){sendData("bed_mobility_support", 2, patientval)};
-limAssist.onclick = function(){sendData("bed_mobility_support", 3, patientval)};
+total.onclick = function(){sendData("bed_mobility_support", 1, patientval)};
+extensive.onclick = function(){sendData("bed_mobility_support", 2, patientval)};
+limited.onclick = function(){sendData("bed_mobility_support", 3, patientval)};
 supervision.onclick = function(){sendData("bed_mobility_support", 4, patientval)};
 independent.onclick = function(){sendData("bed_mobility_support", 5, patientval)};
-none1.onclick = function(){sendData("bed_mobility_support", 6)};
+none1.onclick = function(){sendData("bed_mobility_support", 6, patientval)};
 
 
 twoPerson.onclick = function(){sendData("bed_mobility_self", 1, patientval)};

@@ -1,4 +1,14 @@
 
+axios.get("http://localhost:3000/login_get")
+  .then(response => {
+    console.log(response.data);
+    if(response.data === false)
+    {
+      window.location.href = "index.html";
+    }
+  })
+var patientval;
+
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
 let pait3 = document.getElementById("pait3");
@@ -10,7 +20,7 @@ let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
-let patientval;
+
 
 pait1.onclick = function(){patientval = 1};
 pait2.onclick = function(){patientval = 2};
