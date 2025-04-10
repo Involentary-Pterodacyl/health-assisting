@@ -1,5 +1,26 @@
-import {sendData} from "./login.js";
 import {patientval} from "./patients.js";
+import {username} from "./login.js";
+
+window.onload = () => {
+  axios.post('http://localhost:3000/login_get', {user:username})
+    .then(response => {
+      console.log(response.data);
+      if (response.data === false){
+        console.log("not signed in");
+        window.location.href = "index.html";
+      }
+    });
+}
+
+function sendData(tableName, value, patientNum) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 
 let continent = document.getElementById("continent");
 let incontinent = document.getElementById("incontinent");

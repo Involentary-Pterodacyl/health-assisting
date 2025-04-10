@@ -1,3 +1,16 @@
+import {username} from "./login.js";
+
+window.onload = () => {
+  axios.post('http://localhost:3000/login_get', {user:username})
+    .then(response => {
+      console.log(response.data);
+      if (response.data === false){
+        console.log("not signed in");
+        window.location.href = "index.html";
+      }
+    });
+}
+var patientval;
 
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
@@ -10,7 +23,7 @@ let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
-let patientval;
+
 
 pait1.onclick = function(){patientval = 1};
 pait2.onclick = function(){patientval = 2};

@@ -1,11 +1,17 @@
 import express from "express";
 import cors from "cors";
-import mariadb from "mariadb/promise.js";
+import mariadb from "mariadb/callback.js";
+import axios from "axios";
+
+let username;
+let isAdmin;
+let patientId;
 
 let pool = mariadb.createPool({
     host: "localhost",
     user: "db_user",
     password: "HA-db",
+    database: "health_assisting",
     connectionLimit: 5
 });
 
@@ -14,7 +20,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -28,45 +34,56 @@ app.get('/', (req, res) => {
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
-let isUser;
+
+let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
+
 //getting data
 app.post('/login', (req, res) => {
-    async function main() {
-        let conn;
-
-        try {
-            conn = await mariadb.createConnection({
-                host: "localhost",
-                user: "db_user",
-                password: "HA-db",
-                database: "health_assisting",
-            });
-
-            // Use Connection to get contacts data
-            var rows = await get_contacts(conn);
-
-            //Print list of contacts
-            for (let i = 0, len = rows.length; i < len; i++) {
-                console.log(`${rows[i].first_name} ${rows[i].last_name}`);
-            }
-        } catch (err) {
-            // Manage Errors
-            console.log(err);
-        } finally {
-            // Close Connection
-            if (conn) conn.close();
+    console.log("test");
+    const conn = mariadb.createConnection(db_info);
+    conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
+        console.log(rows);
+        if (rows.length > 0) {
+            // username = rows[0]["username"];
+            // isAdmin = Boolean(rows[0]["is_administrator"]);
+            conn.query("update users set logged_in=1 where username='" + req.body.username + "'", (err,rows) => {});
+            console.log("logged in");
+            return res.send(true);
         }
-    }
-
-//Get list of contacts
-    function get_contacts(conn) {
-        return conn.query("SELECT first_name, last_name FROM health_assisting.");
-    }
-
-    main();
+        else {
+            console.log("Invalid username."); // this should be displayed to the user somehow
+            return res.send(false);
+        }
+    });
 });
 
+app.post('/login_get', (req, res) => {
+    const conn = mariadb.createConnection(db_info);
+    conn.query("SELECT * FROM users where username='" + req.body.user + "'", (err, rows) => {
+        if(rows.length > 0 && rows[0].logged_in === 1) {
+            return res.send(true);
+        }
+        else {
+            return res.send(false);
+        }
+    });
+});
 
+//
+// app.post('/signup', (req, res) => {
+//     const conn = mariadb.createConnection(db_info);
+//     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
+//         //console.log(rows);
+//         if (rows.length > 0) {
+//             console.log("That username is already taken."); // this should be displayed to the user somehow
+//         }
+//         else {
+//             console.log("Good username");
+//         }
+//         conn.end();
+//     })
+//     //"INSERT INTO users (is_administrator, first_name, last_name, username) values (req.body.is_administrator, req.body.first_name, req.body.last_name, req.body.username)"
+// });
 
 // Handle POST requests
 app.post('/submit', (req, res) => {

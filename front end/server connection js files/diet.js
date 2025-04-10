@@ -1,5 +1,46 @@
-import {sendData, sendInOutData, sendMealData} from "./login.js";
 import {patientval} from "./patients.js";
+import {username} from "./login.js";
+
+window.onload = () => {
+  axios.post('http://localhost:3000/login_get', {user:username})
+    .then(response => {
+      console.log(response.data);
+      if (response.data === false){
+        console.log("not signed in");
+        window.location.href = "index.html";
+      }
+    });
+}
+
+function sendData(tableName, value, patientNum) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+function sendInOutData(tableName, valueD, valueI, patientNum) {
+  axios.post('http://localhost:3000/submitInOut', {tableName: tableName, userId: id,  ccIn: valueD, ccOut: valueI, patientId: patientNum})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+function sendMealData(valueB, valueL, valueD, patientNum) {
+  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", userId: id,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientNum})
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 
 let brk1 = document.getElementById("brk1");
 let brk2 = document.getElementById("brk2");
