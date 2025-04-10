@@ -1,21 +1,21 @@
 
-body{
+body {
   background-color: #87cefa;
-  font-family: "Roboto Condensed", sans-serif ;
+  font-family: "Roboto Condensed", sans-serif;
   margin: 0;
   padding: 0;
-
 }
 
 header{
   background-color: cornflowerblue;
   width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
   top: 0;
   padding:35px;
   margin: 0px;
 }
 
-h1{
+.h1{
   color:lightskyblue;
   font-family: "Roboto Condensed", serif ;
   font-optical-sizing: auto;

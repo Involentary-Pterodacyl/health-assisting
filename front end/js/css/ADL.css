@@ -54,8 +54,8 @@ hr {
   text-decoration: none;
   font-size: 18px;
   width: 160px; /* Fixed width for equal size */
-  height: 60px; /* Fixed height for equal size */
-  display: flex;
+  height: 160px; /* Fixed height for equal size */
+  display: grid;
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
   border-radius: 10px;
@@ -64,7 +64,10 @@ hr {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+
 }
+
+
 
 /* Button hover effect */
 .buttons:hover {
@@ -98,6 +101,17 @@ header{
   width: 100%;
   top: 0;
   padding:10px;
+}
+.signout{
+  border: 1px solid #4682b4;
+  width: 100px; /* Fixed width for equal size */
+  height: 40px;
+  font-size: 15px;
+  align-items: center; /* Center text vertically */
+  justify-content: center;
+  text-decoration: none;
+  text-color: white;
+  margin
 }
 
 
