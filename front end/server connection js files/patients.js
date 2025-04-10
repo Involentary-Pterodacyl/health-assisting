@@ -1,12 +1,15 @@
+import {username} from "./login.js";
 
-axios.get("http://localhost:3000/login_get")
-  .then(response => {
-    console.log(response.data);
-    if(response.data === false)
-    {
-      window.location.href = "index.html";
-    }
-  })
+window.onload = () => {
+  axios.post('http://localhost:3000/login_get', {user:username})
+    .then(response => {
+      console.log(response.data);
+      if (response.data === false){
+        console.log("not signed in");
+        window.location.href = "index.html";
+      }
+    });
+}
 var patientval;
 
 let pait1 = document.getElementById("pait1");

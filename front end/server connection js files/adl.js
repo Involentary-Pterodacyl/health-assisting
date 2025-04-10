@@ -1,5 +1,7 @@
+import {username} from "./login.js";
+
 window.onload = () => {
-  axios.get('http://localhost:3000/login_get')
+  axios.post('http://localhost:3000/login_get', {user:username})
     .then(response => {
       console.log(response.data);
       if (response.data === false){

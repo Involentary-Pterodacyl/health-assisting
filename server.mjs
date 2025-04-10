@@ -34,7 +34,6 @@ app.get('/', (req, res) => {
 app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
-let isUser = false;
 
 let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
 
@@ -47,19 +46,27 @@ app.post('/login', (req, res) => {
         if (rows.length > 0) {
             // username = rows[0]["username"];
             // isAdmin = Boolean(rows[0]["is_administrator"]);
-            isUser = true;
+            conn.query("update users set logged_in=1 where username='" + req.body.username + "'", (err,rows) => {});
+            console.log("logged in");
+            return res.send(true);
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
-            isUser = false;
+            return res.send(false);
         }
-        conn.end();
     });
 });
 
-app.get('/login_get', (req, res) => {
-    console.log("isUser: " + isUser);
-    res.send(isUser);
+app.post('/login_get', (req, res) => {
+    const conn = mariadb.createConnection(db_info);
+    conn.query("SELECT * FROM users where username='" + req.body.user + "'", (err, rows) => {
+        if(rows.length > 0 && rows[0].logged_in === 1) {
+            return res.send(true);
+        }
+        else {
+            return res.send(false);
+        }
+    });
 });
 
 //

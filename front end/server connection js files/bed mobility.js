@@ -1,15 +1,16 @@
 import {patientval} from "./patients.js";
+import {username} from "./login.js";
 
 console.log("test");
 window.onload = () => {
-  axios.get('http://localhost:3000/login_get')
+  axios.post('http://localhost:3000/login_get', {user:username})
     .then(response => {
+      console.log(response.data);
       if (response.data === false){
         console.log("not signed in");
         window.location.href = "index.html";
       }
     });
-
 }
 
 function sendData(tableName, value, patientNum) {
