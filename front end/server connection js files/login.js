@@ -1,12 +1,17 @@
+var username = "";
+
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");
 let login = document.getElementById("login");
 
-var username = "";
+console.log("null login: " + login === null);
 
 login.onclick = function (){
   console.log("login");
   username = uname.value;
+  if (username === "" || psw.value === "") {
+    return;
+  }
 
   axios.post("http://localhost:3000/login",{username:username})
     .then(response => {
@@ -34,4 +39,4 @@ login.onclick = function (){
 //     console.error('Error:', error);
 //   });
 
-export {username}
+export {username};

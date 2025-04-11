@@ -7,20 +7,13 @@ let username;
 let isAdmin;
 let patientId;
 
-let pool = mariadb.createPool({
-    host: "localhost",
-    user: "db_user",
-    password: "HA-db",
-    database: "health_assisting",
-    connectionLimit: 5
-});
 
 const app = express();
 
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63343',
+    origin: 'http://localhost:63342',
 }
 app.use(cors(corsOrigin));
 
@@ -58,12 +51,15 @@ app.post('/login', (req, res) => {
 });
 
 app.post('/login_get', (req, res) => {
+    console.log("checking if logged in");
     const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.user + "'", (err, rows) => {
-        if(rows.length > 0 && rows[0].logged_in === 1) {
+        if(rows.length > 0 && rows[0]["logged_in"] === 1) {
+            console.log("logged in!");
             return res.send(true);
         }
         else {
+            console.log("not logged in");
             return res.send(false);
         }
     });

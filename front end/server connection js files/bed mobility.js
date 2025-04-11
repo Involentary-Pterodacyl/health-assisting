@@ -1,7 +1,6 @@
 import {patientval} from "./patients.js";
 import {username} from "./login.js";
 
-console.log("test");
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {user:username})
     .then(response => {
