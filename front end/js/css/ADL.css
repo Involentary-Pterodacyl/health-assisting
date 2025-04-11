@@ -53,10 +53,11 @@ hr {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  width: 160px; /* Fixed width for equal size */
-  height: 160px; /* Fixed height for equal size */
+  width: 210px; /* Fixed width for equal size */
+  height: 200px; /* Fixed height for equal size */
   display: grid;
   align-items: center; /* Center text vertically */
+
   justify-content: center; /* Center text horizontally */
   border-radius: 10px;
   color: white;
@@ -110,8 +111,12 @@ header{
   align-items: center; /* Center text vertically */
   justify-content: center;
   text-decoration: none;
-  text-color: white;
-  margin
+  color: white;
+
 }
 
+.img{
+  width: 180px;
+  height: 160px;
+}
 

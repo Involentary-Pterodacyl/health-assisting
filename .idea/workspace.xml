@@ -5,31 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
+      <change afterPath="$PROJECT_DIR$/front end/dietaryin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front end/mood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front end/mood1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front end/moodtrans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front end/toilet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/js/css/ADL.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/ADL.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/adl.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/adl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496">
+      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/js/css/ADL.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/ADL.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/js/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
-    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,23 +46,39 @@
     &quot;assignee&quot;: &quot;Involentary-Pterodacyl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Involentary-Pterodacyl/health-assisting.git&quot;,
-    &quot;accountId&quot;: &quot;71adca24-98d7-44ef-a7e7-6ca8414c5187&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Involentary-Pterodacyl/health-assisting.git",
+    "accountId": "fd896de2-71f1-437a-a67a-798166768857"
   }
-}</component>
+}]]></component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/server.mjs">
+    <file path="$PROJECT_DIR$/front end/ADL.html">
       <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="18" end1="19" start2="18" end2="19" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="33" end1="34" start2="33" end2="34" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="37" end1="39" start2="37" end2="38" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="45" end1="55" start2="44" end2="51" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="57" end1="58" start2="53" end2="54" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="59" end1="65" start2="55" end2="63" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="68" end1="69" start2="66" end2="69" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="10" end1="10" start2="10" end2="11" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="17" end1="21" start2="18" end2="50" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="24" end1="28" start2="53" end2="82" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="33" end1="34" start2="87" end2="88" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/index.html">
+      <ranges>
+        <range start1="11" end1="12" start2="11" end2="11" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="24" end1="24" start2="23" end2="25" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="25" end1="26" start2="26" end2="27" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="29" end1="29" start2="30" end2="32" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="48" end1="51" start2="51" end2="51" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="53" end1="54" start2="53" end2="54" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="55" end1="56" start2="55" end2="56" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/front end/js/css/ADL.css">
+      <ranges>
+        <range start1="55" end1="57" start2="55" end2="57" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="59" end1="59" start2="59" end2="60" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="112" end1="114" start2="113" end2="115" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
+        <range start1="116" end1="116" start2="117" end2="121" changelist="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" />
       </ranges>
     </file>
   </component>
@@ -105,22 +113,24 @@
     "JavaScript Debug.TOILETING.html.executor": "Debug",
     "JavaScript Debug.TRANSFERS.html.executor": "Run",
     "JavaScript Debug.Vital Signs.html.executor": "Debug",
-    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "JavaScript Debug.signup.html.executor": "Run",
     "Node.js.index.js.executor": "Run",
     "Node.js.index2.js.executor": "Run",
     "Node.js.server.mjs.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
     "git-widget-placeholder": "master",
     "javascript.nodejs.core.library.configured.version": "22.14.0",
     "javascript.nodejs.core.library.typings.version": "22.13.14",
-    "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end/js/css",
+    "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/2104663/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.nodejs",
@@ -135,6 +145,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end" />
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
       <recent name="C:\Users\2102400\WebstormProjects\untitled1" />
     </key>
@@ -151,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +209,7 @@
       <workItem from="1742491162606" duration="1411000" />
       <workItem from="1743008588908" duration="3321000" />
       <workItem from="1743092596860" duration="3248000" />
+      <workItem from="1744388785832" duration="4273000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -380,8 +392,9 @@
     <MESSAGE value="day 7, daily pushes - pd 3" />
     <MESSAGE value="2/28/25" />
     <MESSAGE value="3/10/25" />
-    <MESSAGE value="Changes by 8000496" />
+    <MESSAGE value="3/20/25" />
     <MESSAGE value="friaday changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
+    <MESSAGE value="Changes by 8000496" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by 8000496" />
   </component>
 </project>
