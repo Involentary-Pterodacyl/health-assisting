@@ -53,13 +53,25 @@ app.post('/login', (req, res) => {
 app.post('/login_get', (req, res) => {
     console.log("checking if logged in");
     const conn = mariadb.createConnection(db_info);
-    conn.query("SELECT * FROM users where username='" + req.body.user + "'", (err, rows) => {
-        if(rows.length > 0 && rows[0]["logged_in"] === 1) {
-            console.log("logged in!");
-            return res.send(true);
+    conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
+        console.log("username: " + req.body.username);
+        console.log("rows:");
+        console.log(rows);
+        if(rows.length > 0)
+        {
+            console.log("logged in: " + rows[0]["logged_in"]);
+            if (rows[0]["logged_in"] === 1)
+            {
+                console.log("logged in!");
+                return res.send(true);
+            }
+            else {
+                console.log("not logged in");
+                return res.send(false);
+            }
         }
         else {
-            console.log("not logged in");
+            console.log("not logged in (invalid username)");
             return res.send(false);
         }
     });
