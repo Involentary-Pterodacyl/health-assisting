@@ -25,8 +25,7 @@ let pait7 = document.getElementById("pait7");
 let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
-
-
+let logout = document.getElementById("signout");
 
 pait1.onclick = function(){patientval = 1};
 pait2.onclick = function(){patientval = 2};
@@ -38,5 +37,17 @@ pait7.onclick = function(){patientval = 7};
 pait8.onclick = function(){patientval = 8};
 pait9.onclick = function(){patientval = 9};
 pait10.onclick = function(){patientval = 10};
+
+if (logout !== null) {
+  logout.onclick = function () {
+    console.log("logging out");
+
+    axios.post("http://localhost:3000/logout", {username:"TestUser"})
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    window.location.href = "../index.html";
+  };
+}
 
 export {patientval};
