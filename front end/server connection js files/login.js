@@ -1,15 +1,11 @@
-var username = "";
-
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");
 let login = document.getElementById("login");
 
 console.log("null login: ", (login === null));
 
-function getUsername()
-{
-  return username;
-}
+
+var username = username || undefined;
 
 if (login !== null) {
   login.onclick = function () {
@@ -29,6 +25,11 @@ if (login !== null) {
         console.error('Error:', error);
       });
   };
+}
+
+function getUsername()
+{
+  return username;
 }
 
 // axios.get("http://localhost:3000/login_get")
