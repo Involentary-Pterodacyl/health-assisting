@@ -15,7 +15,7 @@ window.onload = () => {
 }
 
 function sendData(tableName, value, patientNum) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, username:getUsername(),  value: value, patientId: patientNum})
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username:username,  value: value, patientId: patientNum})
     .then(response => {
       console.log('Response:', response.data);
     })

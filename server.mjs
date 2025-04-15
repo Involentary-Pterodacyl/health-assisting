@@ -87,6 +87,17 @@ app.post('/logout', (req, res) => {
     });
 });
 
+app.post('/submitMeal', (req, res) => {
+    console.log("sumbitMeal");
+    const conn = mariadb.createConnection(db_info);
+    conn.query("insert into meal (username, patient, breakfast, lunch, dinner) values("
+        + req.body.username + ""
+        + ")", (err) => {
+        //console.log(err);
+        console.log("submitted meal");
+    });
+});
+
 //
 // app.post('/signup', (req, res) => {
 //     const conn = mariadb.createConnection(db_info);
@@ -105,29 +116,14 @@ app.post('/logout', (req, res) => {
 
 // Handle POST requests
 app.post('/submit', (req, res) => {
-    console.log('Received POST Data:', req.body); // Access the POST data
-    res.json({ message: 'Data received', data: req.body });
-
-    /*
-    async function asyncFunction() {
-  let conn;
-  try {
-	conn = await pool.getConnection();
-	const rows = await conn.query("SELECT 1 as val");
-	console.log(rows); //[ {val: 1}, meta: ... ]
-	const res = await conn.query("INSERT INTO myTable value (?, ?)", [1, "mariadb"]);
-	console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
-
-  } catch (err) {
-	throw err;
-  } finally {
-	if (conn) conn.end();
-  }
-}
-asyncFunction().then(() => {
-  pool.end();
-});
-     */
+    console.log("sumbit");
+    const conn = mariadb.createConnection(db_info);
+    conn.query("insert into " + req.body.tableName + " (username, patient_id, value) values("
+        + req.body.username + ", " + 
+        + ")", (err) => {
+        //console.log(err);
+        console.log("submitted meal");
+    });
 });
 
 app.listen(port, () => {

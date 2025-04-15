@@ -33,6 +33,9 @@ function sendData(tableName, value, patientNum) {
 }
 
 submit.onclick = () => {
+  if(typeof weight.value != "number" || typeof temp.value != "number" || typeof pulse.value != "number" || typeof respratory.value != "number"){
+    return;
+  }
    sendData("weight", weight.value);
    sendData("blood_pressure", bp.value);
    sendData("temperature", temp.value);

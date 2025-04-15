@@ -5,25 +5,24 @@ let login = document.getElementById("login");
 
 let username;
 
+login.onclick = function () {
+  console.log("login");
+  username = uname.value;
+  sessionStorage.setItem("username", uname.value);
+  if (username === "" || psw.value === "") {
+    return;
+  }
 
-  login.onclick = function () {
-    console.log("login");
-    username = uname.value;
-    sessionStorage.setItem("username", uname.value);
-    if (username === "" || psw.value === "") {
-      return;
-    }
-
-    axios.post("http://localhost:3000/login", {username: username})
-      .then(response => {
-        if (response.data === true) {
-          window.location.href = "front%20end/PATIENTS.html";
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  };
+  axios.post("http://localhost:3000/login", {username: username})
+    .then(response => {
+      if (response.data === true) {
+        window.location.href = "front%20end/PATIENTS.html";
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+};
 
 
 
