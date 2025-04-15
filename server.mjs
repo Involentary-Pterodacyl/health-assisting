@@ -82,7 +82,7 @@ app.post('/logout', (req, res) => {
     console.log("logout test");
     const conn = mariadb.createConnection(db_info);
     conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
-        console.log(err);
+        //console.log(err);
         console.log("tried to log out");
     });
 });

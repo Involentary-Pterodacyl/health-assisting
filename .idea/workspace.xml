@@ -6,10 +6,47 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/BED Mobility.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BED Mobility.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/BLADDER.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BLADDER.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/EATING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/EATING.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/PATIENTS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/PATIENTS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/TOILETING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TOILETING.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/TRANSFERS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TRANSFERS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/Vital Signs.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Vital Signs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/bed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/bed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/bed1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/bed1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/bedmobility.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/bedmobility.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/dietaryin.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/dietaryin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/eating.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/eating.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/mood.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/mood.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/mood1.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/mood1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/moodtrans.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/moodtrans.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/adl.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/adl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/toilet.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/toilet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/vitals.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/img/vitals.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styleSheet.css" beforeDir="false" />
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
     </list>
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +79,31 @@
     &quot;accountId&quot;: &quot;fd896de2-71f1-437a-a67a-798166768857&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/front end/server connection js files/login.js">
+      <ranges>
+        <range start1="4" end1="5" start2="4" end2="4" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="6" end1="8" start2="5" end2="6" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="9" end1="10" start2="7" end2="8" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="13" end1="13" start2="11" end2="12" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="27" end1="28" start2="26" end2="27" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="29" end1="33" start2="28" end2="29" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="48" end1="49" start2="44" end2="45" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/front end/server connection js files/patients.js">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="2" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="2" end1="3" start2="3" end2="4" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="5" end1="7" start2="6" end2="7" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="8" end1="9" start2="8" end2="9" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="15" end1="16" start2="15" end2="16" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="27" end1="28" start2="27" end2="27" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="44" end1="45" start2="43" end2="44" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="52" end1="53" start2="51" end2="52" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -111,6 +173,7 @@
       <recent name="C:\Users\2102400\WebstormProjects\untitled1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2104663\Documents\GitHub\health-assisting\front end\img" />
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
@@ -183,7 +246,7 @@
       <workItem from="1744302436904" duration="3862000" />
       <workItem from="1744646677492" duration="1527000" />
       <workItem from="1744733189494" duration="141000" />
-      <workItem from="1744733340530" duration="208000" />
+      <workItem from="1744733340530" duration="2908000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -387,5 +450,17 @@
     <MESSAGE value="Changes by 8000496" />
     <MESSAGE value="friaday changes" />
     <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front end/server connection js files/patients.js</url>
+          <line>39</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

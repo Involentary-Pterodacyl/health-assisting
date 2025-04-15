@@ -1,5 +1,7 @@
-import {username} from "./login.js";
 import {patientval} from "./patients.js";
+let username = sessionStorage.getItem("username");
+
+let logout = document.getElementById("signout");
 
 let weight = document.getElementById("weight");
 let bp = document.getElementById("bp");
