@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
