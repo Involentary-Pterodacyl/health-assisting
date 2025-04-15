@@ -1,4 +1,7 @@
-import {username} from "./login.js";
+import {patientval} from "./patients.js";
+let username = sessionStorage.getItem("username");
+
+let logout = document.getElementById("signout");
 
 let weight = document.getElementById("weight");
 let bp = document.getElementById("bp");
@@ -20,7 +23,7 @@ window.onload = () => {
 }
 
 function sendData(tableName, value, patientNum) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -30,5 +33,9 @@ function sendData(tableName, value, patientNum) {
 }
 
 submit.onclick = () => {
-  
+   sendData("weight", weight.value);
+   sendData("blood_pressure", bp.value);
+   sendData("temperature", temp.value);
+   sendData("pulse", pulse.value);
+   sendData("respiration", respratory.value);
 }

@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -74,6 +74,16 @@ app.post('/login_get', (req, res) => {
             console.log("not logged in (invalid username)");
             return res.send(false);
         }
+    });
+});
+
+//logout
+app.post('/logout', (req, res) => {
+    console.log("logout test");
+    const conn = mariadb.createConnection(db_info);
+    conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
+        //console.log(err);
+        console.log("tried to log out");
     });
 });
 

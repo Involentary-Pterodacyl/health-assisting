@@ -1,5 +1,7 @@
-import {patientval} from "./patients.js";
-import {username} from "./login.js";
+let patientval = sessionStorage.getItem("patientval");
+let username = sessionStorage.getItem("username");
+
+let logout = document.getElementById("signout");
 
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username:username})

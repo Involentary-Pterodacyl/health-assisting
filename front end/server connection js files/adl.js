@@ -1,10 +1,9 @@
-import {getUsername} from "./login.js";
+let username = sessionStorage.getItem("username");
 
-//console.log(username);
+let logout = document.getElementById("signout");
 
 window.onload = () => {
-  //axios.post('http://localhost:3000/login_get', {username:getUsername()})
-  axios.post('http://localhost:3000/login_get', {username:"TestUser"})
+  axios.post('http://localhost:3000/login_get', {username:username})
     .then(response => {
       console.log(response.data);
       if (response.data === false){
@@ -12,4 +11,16 @@ window.onload = () => {
         window.location.href = "../index.html";
       }
     });
+}
+
+if (logout !== null) {
+  logout.onclick = function () {
+    console.log("logging out");
+
+    axios.post("http://localhost:3000/logout", {username:username})
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    window.location.href = "../index.html";
+  };
 }

@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
-      <change afterPath="$PROJECT_DIR$/front end/bladder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front end/transfers.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/PATIENTS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/PATIENTS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/bedmobility.png" beforeDir="false" afterPath="$PROJECT_DIR$/front end/bedmobility.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/ADL.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/ADL.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/Patients.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/Patients.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/bed,trans,eat.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/bed,trans,eat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/js/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes" />
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496">
+      <change beforePath="$PROJECT_DIR$/front end/BLADDER.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BLADDER.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +111,7 @@
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/health-assisting/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -184,7 +175,7 @@
       <workItem from="1743784196823" duration="1502000" />
       <workItem from="1744214932726" duration="4918000" />
       <workItem from="1744302436904" duration="3862000" />
-      <workItem from="1744646677492" duration="7945000" />
+      <workItem from="1744646677492" duration="1527000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -346,15 +337,7 @@
       <option name="project" value="LOCAL" />
       <updated>1744650553308</updated>
     </task>
-    <task id="LOCAL-00021" summary="friaday changes">
-      <option name="closed" value="true" />
-      <created>1744650695074</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1744650695074</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

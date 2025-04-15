@@ -1,8 +1,10 @@
-import {patientval} from "./patients.js";
-import {getUsername} from "./login.js";
+let patientval = sessionStorage.getItem("patientval");
+let username = sessionStorage.getItem("username");
+
+let logout = document.getElementById("signout");
 
 window.onload = () => {
-  axios.post('http://localhost:3000/login_get', {username:getUsername()})
+  axios.post('http://localhost:3000/login_get', {username:username})
     .then(response => {
       console.log(response.data);
       if (response.data === false){
@@ -13,7 +15,7 @@ window.onload = () => {
 }
 
 function sendData(tableName, value, patientNum) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username:getUsername(),  value: value, patientId: patientNum})
     .then(response => {
       console.log('Response:', response.data);
     })
