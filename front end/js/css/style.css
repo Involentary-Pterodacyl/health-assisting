@@ -102,3 +102,44 @@ hr{
   text-decoration: none;
   text-shadow:none;
 }
+.buttons {
+  background-color: cornflowerblue;
+  border: 2px solid #4682b4;
+
+  text-decoration: none;
+  font-size: 18px;
+  width: 120px; /* Fixed width for equal size */
+  height: 40px; /* Fixed height for equal size */
+  display: grid;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  border-radius: 10px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+/* Button hover effect */
+.buttons:hover {
+  background-color: #4682b4;
+  transform: scale(1.05);
+}
+.nav {
+  background-color: cornflowerblue;
+  color:white;
+  width:120px;
+  height:40px;
+  justify-content:center;
+  border: 1px solid #4682b4;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+ position:absolute;
+  top:95%;
+  left:0%;
+}
