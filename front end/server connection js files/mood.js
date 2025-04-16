@@ -1,4 +1,4 @@
-let patientval = sessionStorage.getItem("patientval");
+let patientval = parseInt(sessionStorage.getItem("patientval"));
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");

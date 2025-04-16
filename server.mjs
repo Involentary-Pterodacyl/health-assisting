@@ -116,13 +116,16 @@ app.post('/submitMeal', (req, res) => {
 
 // Handle POST requests
 app.post('/submit', (req, res) => {
-    console.log("sumbit");
+    console.log("in submit");
+    console.log("username: " + req.body.username);
+    console.log("patientId: " + req.body.patientId);
+    console.log("value: " + req.body.value);
     const conn = mariadb.createConnection(db_info);
-    conn.query("insert into " + req.body.tableName + " (username, patient_id, value) values("
-        + req.body.username + ", " + 
+    conn.query("insert into " + req.body.tableName + " (username, patient_id, value) values('"
+        + req.body.username + "', " + req.body.patientId + ", " + req.body.value
         + ")", (err) => {
-        //console.log(err);
-        console.log("submitted meal");
+        console.log("err: " + err);
+        console.log("submitted " + req.body.tableName);
     });
 });
 

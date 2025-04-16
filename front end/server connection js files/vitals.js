@@ -1,4 +1,4 @@
-import {patientval} from "./patients.js";
+let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");
@@ -33,9 +33,26 @@ function sendData(tableName, value, patientNum) {
 }
 
 submit.onclick = () => {
-  if(typeof weight.value != "number" || typeof temp.value != "number" || typeof pulse.value != "number" || typeof respratory.value != "number"){
+  if(isNaN(Number.parseFloat(weight.value)) || isNaN(Number.parseFloat(temp.value)) || isNaN(Number.parseFloat(pulse.value)) || isNaN(Number.parseFloat(respratory.value))){
+    window.alert("Please make sure you have filled in all input fields with numbers except BP")
     return;
   }
+  if(bp.value === null){
+    window.alert("please enter a value in BP");
+    return;
+  }
+  if(bp.value.includes("/" === false)){
+    window.alert("Please make sure that BP is filled out with convention num/num")
+    return;
+  }
+  let sidesOfSlash = bp.value.split("/");
+  for(let i = 0; i < sidesOfSlash.length; i++){
+
+    if(isNaN(Number.parseFloat(sidesOfSlash[i]))){
+      window.alert("Please make sure that BP is filled out with convention num/num")
+    }
+  }
+
    sendData("weight", weight.value);
    sendData("blood_pressure", bp.value);
    sendData("temperature", temp.value);

@@ -92,9 +92,18 @@ submit.onclick = function(){
   else if (din2.checked){din = false}
   else if (sub3.checked){din = null}
 
-  if(brk1.checked === false && brk2.checked === false && sub1.checked === false){ return;}
-  if(lun1.checked === false && lun2.checked === false && sub2.checked === false){ return;}
-  if(din1.checked === false && din2.checked === false && sub3.checked === false){ return;}
+  if(brk1.checked === false && brk2.checked === false && sub1.checked === false){
+    window.alert("Please select one of the 3 options in the Breakfast section")
+    return;
+  }
+  if(lun1.checked === false && lun2.checked === false && sub2.checked === false){
+    window.alert("Please select one of the 3 options in the Lunch section")
+    return;
+  }
+  if(din1.checked === false && din2.checked === false && sub3.checked === false){
+    window.alert("Please select one of the 3 options in the Dinner section")
+    return;
+  }
 
   sendMealData(brk, lun, din, patientval);
 
@@ -113,6 +122,7 @@ submit.onclick = function(){
   else if(liqsto.checked){typeOut = 6}
 
     if(typeof intake.value != "number" || typeof output.value != "number" || typeIn === null || typeOut === null){
+      window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
       return;
     }
     console.log("submitted meal");

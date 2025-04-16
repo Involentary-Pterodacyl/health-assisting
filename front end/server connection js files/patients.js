@@ -13,7 +13,6 @@ window.onload = () => {
       }
     });
 }
-let patientval;
 
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
@@ -26,16 +25,16 @@ let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
-pait1.onclick = function(){patientval = 1};
-pait2.onclick = function(){patientval = 2};
-pait3.onclick = function(){patientval = 3};
-pait4.onclick = function(){patientval = 4};
-pait5.onclick = function(){patientval = 5};
-pait6.onclick = function(){patientval = 6};
-pait7.onclick = function(){patientval = 7};
-pait8.onclick = function(){patientval = 8};
-pait9.onclick = function(){patientval = 9};
-pait10.onclick = function(){patientval = 10};
+pait1.onclick = function(){sessionStorage.setItem("patientval", "1")};
+pait2.onclick = function(){sessionStorage.setItem("patientval", "2")};
+pait3.onclick = function(){sessionStorage.setItem("patientval", "3")};
+pait4.onclick = function(){sessionStorage.setItem("patientval", "4")};
+pait5.onclick = function(){sessionStorage.setItem("patientval", "5")};
+pait6.onclick = function(){sessionStorage.setItem("patientval", "6")};
+pait7.onclick = function(){sessionStorage.setItem("patientval", "7")};
+pait8.onclick = function(){sessionStorage.setItem("patientval", "8")};
+pait9.onclick = function(){sessionStorage.setItem("patientval", "9")};
+pait10.onclick = function(){sessionStorage.setItem("patientval", "10")};
 
 if (logout !== null) {
   logout.onclick = function () {
@@ -48,5 +47,3 @@ if (logout !== null) {
     window.location.href = "../index.html";
   };
 }
-
-sessionStorage.setItem("patientval", patientval);
