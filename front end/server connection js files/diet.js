@@ -25,7 +25,7 @@ function sendData(tableName, value, patientNum) {
 }
 
 function sendInOutData(tableName, valueD, valueI, patientNum) {
-  axios.post('http://localhost:3000/submitInOut', {tableName: tableName, userId: id,  ccIn: valueD, ccOut: valueI, patientId: patientNum})
+  axios.post('http://localhost:3000/submitInOut', {tableName: tableName, username: username,  ccIn: valueD, ccOut: valueI, patientId: patientNum})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -35,7 +35,7 @@ function sendInOutData(tableName, valueD, valueI, patientNum) {
 }
 
 function sendMealData(valueB, valueL, valueD, patientNum) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", userId: id,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientNum})
+  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientNum})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -92,6 +92,19 @@ submit.onclick = function(){
   else if (din2.checked){din = false}
   else if (sub3.checked){din = null}
 
+  if(brk1.checked === false && brk2.checked === false && sub1.checked === false){
+    window.alert("Please select one of the 3 options in the Breakfast section")
+    return;
+  }
+  if(lun1.checked === false && lun2.checked === false && sub2.checked === false){
+    window.alert("Please select one of the 3 options in the Lunch section")
+    return;
+  }
+  if(din1.checked === false && din2.checked === false && sub3.checked === false){
+    window.alert("Please select one of the 3 options in the Dinner section")
+    return;
+  }
+
   sendMealData(brk, lun, din, patientval);
 
   if(soft.checked){typeIn = 1}
@@ -108,6 +121,11 @@ submit.onclick = function(){
   else if(wound.checked){typeOut = 5}
   else if(liqsto.checked){typeOut = 6}
 
+    if(typeof intake.value != "number" || typeof output.value != "number" || typeIn === null || typeOut === null){
+      window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
+      return;
+    }
+    console.log("submitted meal");
   sendInOutData("dietary_intake_in", intake.value, typeIn);
   sendInOutData("dietary_intake_out", output.value, typeOut);
-}
+  }

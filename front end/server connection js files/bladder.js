@@ -33,7 +33,6 @@ let bedPan = document.getElementById("bedPan");
 let besideCommode = document.getElementById("besideCommode");
 let pads = document.getElementById("pads");
 
-
 continent.onclick = function(){sendData("bladder", 1, patientval)};
 incontinent.onclick = function(){sendData("bladder", 2, patientval)};
 catheter.onclick = function(){sendData("bladder", 3, patientval)};
