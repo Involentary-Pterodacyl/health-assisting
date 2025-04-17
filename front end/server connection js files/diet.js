@@ -73,7 +73,7 @@ let wound = document.getElementById("wound");
 let liqsto = document.getElementById("liqsto");
 
 let submit = document.getElementById("submit");
-
+//
 let brk;
 let lun;
 let din;
