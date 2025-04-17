@@ -83,6 +83,9 @@ hr {
   font-size: 15px;
   align-items: center; /* Center text vertically */
   justify-content: center;
+  position: absolute;
+  bottom:1%;
+  left:0%;
 }
 
 header {
@@ -108,7 +111,9 @@ header{
   width: 100px; /* Fixed width for equal size */
   height: 40px;
   font-size: 15px;
-  align-items: center; /* Center text vertically */
+ position:absolute;
+  bottom:0%;
+  right:0%;
   justify-content: center;
   text-decoration: none;
   color: white;

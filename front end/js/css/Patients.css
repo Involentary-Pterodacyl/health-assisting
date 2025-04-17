@@ -77,3 +77,22 @@ visibility: hidden;
   display: inline-block;
   margin: 0 10px;
 }
+.signout{
+  background-color: cornflowerblue;
+  color:white;
+  width:120px;
+  height:40px;
+  position:absolute;
+  bottom:1%;
+  right:0%;
+  justify-content:center;
+  border: 1px solid #4682b4;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.arrow{
+  position: absolute;
+  bottom:1%;
+  left:0%;
+}
