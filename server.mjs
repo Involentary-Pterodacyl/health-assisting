@@ -98,6 +98,10 @@ app.post('/submitMeal', (req, res) => {
     });
 });
 
+app.post('/getPatients', (req, res) => {
+    console.log("getPatients");
+})
+
 //
 // app.post('/signup', (req, res) => {
 //     const conn = mariadb.createConnection(db_info);

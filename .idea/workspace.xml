@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/BED Mobility.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BED Mobility.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
-    </list>
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes" />
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +79,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging master&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.14&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/8015754/WebstormProjects/health-assisting/front end&quot;,
@@ -122,7 +112,7 @@
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/health-assisting/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -192,7 +182,7 @@
       <workItem from="1744646677492" duration="1527000" />
       <workItem from="1744733189494" duration="141000" />
       <workItem from="1744733340530" duration="4871000" />
-      <workItem from="1744819789210" duration="4073000" />
+      <workItem from="1744819789210" duration="4711000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
