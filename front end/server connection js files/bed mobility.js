@@ -15,6 +15,8 @@ window.onload = () => {
     });
 }
 
+// ISSUE: submit stops working after ~5 times
+
 if (logout !== null) {
   logout.onclick = function () {
     console.log("logging out");
@@ -28,6 +30,7 @@ if (logout !== null) {
 }
 
 function sendData(tableName, value, patientNum) {
+  console.log("tablename: " + tableName);
   axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
@@ -35,6 +38,7 @@ function sendData(tableName, value, patientNum) {
     .catch(error => {
       console.error('Error:', error);
     });
+  return;
 }
 
 let total = document.getElementById('total');

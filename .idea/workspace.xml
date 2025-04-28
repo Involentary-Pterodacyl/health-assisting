@@ -6,38 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/ADL.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/ADL.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/BED Mobility.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BED Mobility.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/BLADDER.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BLADDER.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/COGNITIVE,MOOD,BEHAVIOUR.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/DIETARY INTAKE.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/EATING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/EATING.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/PATIENTS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/PATIENTS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/TOILETING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TOILETING.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/TRANSFERS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TRANSFERS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/Vital Signs.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Vital Signs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/ADL.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/ADL.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/Patients.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/Patients.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/Vital.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/Vital.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/bed,trans,eat.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/bed,trans,eat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/bladder.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/bladder.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/dietary.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/dietary.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/mood.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/mood.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/js/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
-    </list>
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +46,6 @@
     &quot;accountId&quot;: &quot;fd896de2-71f1-437a-a67a-798166768857&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/front end/server connection js files/diet.js">
-      <ranges>
-        <range start1="15" end1="15" start2="15" end2="27" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="75" end1="76" start2="87" end2="88" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -224,7 +193,7 @@
       <workItem from="1744819789210" duration="4711000" />
       <workItem from="1744907993667" duration="3739000" />
       <workItem from="1745856159789" duration="166000" />
-      <workItem from="1745856334904" duration="1774000" />
+      <workItem from="1745856334904" duration="4931000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
