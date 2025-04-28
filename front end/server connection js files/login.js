@@ -10,6 +10,7 @@ login.onclick = function () {
   username = uname.value;
   sessionStorage.setItem("username", uname.value);
   if (username === "" || psw.value === "") {
+    window.alert("Please enter a username and password.");
     return;
   }
 
@@ -17,6 +18,9 @@ login.onclick = function () {
     .then(response => {
       if (response.data === true) {
         window.location.href = "front%20end/PATIENTS.html";
+      }
+      else {
+        window.alert("Username or password is incorrect.");
       }
     })
     .catch(error => {

@@ -14,6 +14,18 @@ window.onload = () => {
     });
 }
 
+if (logout !== null) {
+  logout.onclick = function () {
+    console.log("logging out");
+
+    axios.post("http://localhost:3000/logout", {username:username})
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    window.location.href = "../index.html";
+  };
+}
+
 function sendData(tableName, value, patientNum) {
   axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
     .then(response => {
@@ -73,7 +85,7 @@ let wound = document.getElementById("wound");
 let liqsto = document.getElementById("liqsto");
 
 let submit = document.getElementById("submit");
-//
+// database conflict need to rework so can leave one or more of the sections blank
 let brk;
 let lun;
 let din;
