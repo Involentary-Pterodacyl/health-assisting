@@ -34,6 +34,7 @@ function sendData(tableName, value, patientNum) {
     .catch(error => {
       console.error('Error:', error);
     });
+  location.reload();
 }
 
 let continent = document.getElementById("continent");

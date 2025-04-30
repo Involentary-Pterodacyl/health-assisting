@@ -32,9 +32,11 @@ let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 
 
 //getting data
 app.post('/login', (req, res) => {
-    console.log("test");
+    console.log("in /login");
     const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
+        console.log(err);
+        console.log("in query");
         console.log(rows);
         if (rows.length > 0) {
             // username = rows[0]["username"];
@@ -79,7 +81,7 @@ app.post('/login_get', (req, res) => {
 
 //logout
 app.post('/logout', (req, res) => {
-    console.log("logout test");
+    console.log("in /logout");
     const conn = mariadb.createConnection(db_info);
     conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
         //console.log(err);
@@ -98,8 +100,14 @@ app.post('/submitMeal', (req, res) => {
     });
 });
 
-app.post('/getPatients', (req, res) => {
+app.get('/getPatients', (req, res) => {
     console.log("getPatients");
+    const conn = mariadb.createConnection(db_info);
+    conn.query("SELECT * FROM patients", (err, rows) => {
+        console.log(rows);
+        res.send(rows);
+    })
+        //console.log(err);
 })
 
 //
