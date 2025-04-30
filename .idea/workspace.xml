@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/BED Mobility.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/BED Mobility.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/EATING.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/EATING.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/TRANSFERS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/TRANSFERS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
-    </list>
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes" />
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +111,7 @@
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/health-assisting/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -396,14 +387,15 @@
     <MESSAGE value="3/10/25" />
     <MESSAGE value="Changes by 8000496" />
     <MESSAGE value="friaday changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
+    <MESSAGE value="new changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>89</line>
+          <line>91</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
