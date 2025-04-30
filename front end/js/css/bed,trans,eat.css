@@ -32,7 +32,9 @@ visibility: hidden;
 #container {
   text-align:center;
 }
-
+#container1 {
+  text-align:center;
+}
 
 
 .p2 {
@@ -42,6 +44,7 @@ visibility: hidden;
   text-shadow: 2px 2px black;
   margin-bottom: 20px;
   font-weight: bold;
+
 }
 .p3 {
   font-size: 20px;
@@ -50,11 +53,30 @@ visibility: hidden;
   margin-bottom: 20px;
   font-weight: bold;
 }
+.p4{
+  text-align: center;
+  font-size: 21px;
+  color:white;
+  margin-bottom: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: royalblue;
+  display: table;
+  margin: 0px auto 0px auto;
+}
 .section{
 display: inline-block;
 margin: 0 10px;
 
 
+}
+.section1{
+  display: inline-block;
+  margin: 0px 300px 10px;
+  align-items: center;
+}
+.section2{
+  display: inline-block;
+  margin: 0 10px;
 }
 /* .Total{
 background-color: cornflowerblue;
@@ -137,20 +159,28 @@ header{
   top: 0;
   padding:10px;
 }
+
 #signout{
   background-color: cornflowerblue;
   color:white;
   width:120px;
   height:40px;
-  justify-content:center;
   border: 1px solid #4682b4;
   text-decoration: none;
   border-radius: 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   position:absolute;
-  bottom:1%;
+  bottom:0%;
   right:0%;
   text-decoration: none !important;
+}
+
+.section2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin: 20px;
 }
 
 

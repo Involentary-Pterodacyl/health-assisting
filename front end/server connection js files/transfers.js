@@ -14,18 +14,6 @@ window.onload = () => {
     });
 }
 
-if (logout !== null) {
-  logout.onclick = function () {
-    console.log("logging out");
-
-    axios.post("http://localhost:3000/logout", {username:username})
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    window.location.href = "../index.html";
-  };
-}
-
 function sendData(tableName, value, patientNum) {
   axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
     .then(response => {
@@ -44,7 +32,6 @@ let supervision = document.getElementById("supervision");
 let independent = document.getElementById("independent");
 let none1 = document.getElementById("none");
 
-let hoyer = document.getElementById('hoyer');
 let twoPerson = document.getElementById("twoPerson");
 let onePerson = document.getElementById("onePerson");
 let setup = document.getElementById("setup");
@@ -52,16 +39,17 @@ let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
 
-dependent.onclick = function(){sendData("transfers_self", 1, patientval)};
-extAssist.onclick = function(){sendData("transfers_self", 2, patientval)};
-limAssist.onclick = function(){sendData("transfers_self", 3, patientval)};
-supervision.onclick = function(){sendData("transfers_self", 4, patientval)};
-independent.onclick = function(){sendData("transfers_self", 5, patientval)};
-none1.onclick = function(){sendData("transfers_self", 6, patientval)};
 
-hoyer.onclick = function(){sendData("transfers_support", 1, patientval)};
-twoPerson.onclick = function(){sendData("transfers_support", 2, patientval)};
-onePerson.onclick = function(){sendData("transfers_support", 3, patientval)};
-setup.onclick = function(){sendData("transfers_support", 4, patientval)};
-noSetup.onclick = function(){sendData("transfers_support", 5, patientval)};
-none2.onclick = function(){sendData("transfers_support", 6, patientval)};
+dependent.onclick = function(){sendData("transfers_support", 1, patientval)};
+extAssist.onclick = function(){sendData("transfers_support", 2, patientval)};
+limAssist.onclick = function(){sendData("transfers_support", 3, patientval)};
+supervision.onclick = function(){sendData("transfers_support", 4, patientval)};
+independent.onclick = function(){sendData("transfers_support", 5, patientval)};
+none1.onclick = function(){sendData("transfers_support", 6, patientval)};
+
+
+twoPerson.onclick = function(){sendData("transfers_self", 1, patientval)};
+onePerson.onclick = function(){sendData("transfers_self", 2, patientval)};
+setup.onclick = function(){sendData("transfers_self", 3, patientval)};
+noSetup.onclick = function(){sendData("transfers_self", 4, patientval)};
+none2.onclick = function(){sendData("transfers_self", 5, patientval)};

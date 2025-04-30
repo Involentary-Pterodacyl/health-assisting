@@ -14,9 +14,6 @@ window.onload = () => {
     });
 }
 
-let patientIDs = [];
-let patientNames = [];
-
 let pait1 = document.getElementById("pait1");
 let pait2 = document.getElementById("pait2");
 let pait3 = document.getElementById("pait3");

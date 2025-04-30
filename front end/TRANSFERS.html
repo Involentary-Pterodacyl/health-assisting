@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Transfers</title>
-  <link rel="stylesheet" href="css/bed,trans,eat.css" />
+  <link rel="stylesheet" href="js/css/bed,trans,eat.css" />
 </head>
 <body>
 <header>
@@ -15,7 +15,7 @@
 <div class="section">
   <p class="p2"> <em><b> Self performance </b> </em></p>
 
-  <p> <button type="button" class="button dep" id="dependent"> 4. Totally Dependant </button></p>
+  <p> <button type="button" class="button dep" id=dependent"> 4. Totally Dependant </button></p>
   <p> <button type="button" class="button exAt" id="extAssist"> 3. Extensive Assist</button></p>
   <p> <button type="button" class="button limAs" id="limAssist"> 2. Limited Assist </button></p>
   <p> <button type="button" class="button supv" id="supervision"> 1. Supervision </button></p>
@@ -32,12 +32,20 @@
   <p> <button type="button" class="button nose" id="noSetup"> 0. No set-up </button></p>
   <p> <button type="button" class="button didntno" id="no"> 8. Did Not Occur </button></p>
 </div>
-
+<div class="section">
+  <p class="p3"> <em> Assisted Device used </em></p>
+  <p><button type="button" class="button cane" id="cane">A.Cane</button> </p>
+  <p><button type="button" class="button walker" id="walk">B.Walker</button> </p>
+  <p><button type="button" class="button crutches" id="crutch">C.Crutches</button> </p>
+  <p><button type="button" class="button wheelchair" id="wheel">D.WheelChair</button> </p>
+  <p><button type="button" class="button bedrid" id="bedrid">E.Bedridden</button></p>
+  <p><button type="button" class="button none" id="nodevice" >E.none</button></p>
+</div>
 
   <!--<button class="submit submittrans" type="submit">Submit</button>-->
   </form>
   <p class="back back3"><a href="ADL.html"><img src="img/arrow.png" alt="Back" width="50px" height="50px"></a></p>
-  <p id="signout" class="button signout">Signout</p>
+  <p id="signout"><a href="#" >Sign out</a></p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/transfers.js" type="module"></script>
