@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+  <h1 class ="head1"> Health Assisting </h1>
+  <p class="p1" id="id1"> CRLS Health Assisting documentation Student Work.</p>
+
+  <br>
+  <p class ="p2">Please select the dates you would like to see work for.</p>
+  <br>
+</header>
+
+<div class="container mb-4">
+
+  <label for="date1">Earliest Date Work Completed</label><input type="date" id="date1">
+  <label for="date2">Latest Date Work Completed</label> <input type="date" id="date2">
+
+  <button type="button" id="submit">Submit</button>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script src="server connection js files/Teacher.js" type="module"></script>
+<script defer nomodule src="classic-Teacher-bundle.js"></script>
+</body>
+</html>
