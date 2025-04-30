@@ -16,10 +16,11 @@ login.onclick = function () {
 
   axios.post("http://localhost:3000/login", {username: username})
     .then(response => {
+      console.log(response.data.admin)
       if (response.data === true && response.data.admin === false) {
         window.location.href = "front%20end/PATIENTS.html";
       }
-      if (response.data === true && response.data.admin === true) {
+      else if (response.data === true && response.data.admin === true) {
         window.location.href = "front%20end/ "; //teacher page
       }
       else {
