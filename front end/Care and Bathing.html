@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Care and Bathing</title>
+  <link rel="stylesheet" href="js/css/dietary.css" />
+</head>
+<body>
+<header>
+  <h1> Self-care and bathing </h1>
+<p class="p1"> The residence's needed assistance with self-care and bathing.</p>
+</header>
+<p class="p2"> Please select one for each category.</p>
+<p class="code"><em> Codes: A - Assist   I - Independent   D - Dependent</em></p>
+<p class="p4"> Bathing method</p>
+<hr>
+
+<section>
+  <form action="/submit" method="post">
+    <table border="1">
+
+
+      <tr>
+
+        <th>Bathing method used</th>
+        <td>
+          <input type="radio" id="bmu1" name="BMU" value="1">
+          <label for="bmu1">Partial </label><br>
+          <input type="radio" id="bmu2" name="BMU" value="2">
+          <label for="bmu2">Tub</label><br>
+          <input type="radio" id="bmu3" name="BMU" value="3">
+          <label for="bmu3">Shower</label><br>
+          <input type="radio" id="bmu4" name="BMU" value="4">
+          <label for="bmu4">Complete Bed Bath</label><br>
+        </td>
+        <th> Assistance needed</th>
+        <td>
+          <input type="radio" id="A1" name="BMA" value="1">
+          <label for="A1">A </label><br>
+          <input type="radio" id="I1" name="BMA" value="1">
+          <label for="I1">I</label><br>
+          <input type="radio" id="D1" name="BMA" value="1">
+          <label for="D1">D</label><br>
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
+<hr>
+      <p class="p4"> Personal care </p>
+<section>
+  <form action="/submit" method="post">
+    <table border="1">
+
+      <tr>
+        <th>Shaving</th>
+        <td>
+          <input type="radio" id="A2" name="SA" value="2">
+          <label for="A2">A </label><br>
+          <input type="radio" id="I2" name="SA" value="2">
+          <label for="I2">I</label><br>
+          <input type="radio" id="D2" name="SA" value="2">
+          <label for="D2">D</label><br>
+          <input type="radio" id="N1" name="SA" value="1">
+          <label for="N1">Not Applicable</label><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Back Rub</th>
+        <td>
+          <input type="radio" id="A3" name="BRA" value="3">
+          <label for="A3">A </label><br>
+          <input type="radio" id="I3" name="BRA" value="3">
+          <label for="I3">I</label><br>
+          <input type="radio" id="D3" name="BRA" value="3">
+          <label for="D3">D</label><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Nail Care</th>
+        <td>
+          <input type="radio" id="A4" name="NA" value="4">
+          <label for="A4">A </label><br>
+          <input type="radio" id="I4" name="NA" value="4">
+          <label for="I4">I</label><br>
+          <input type="radio" id="D4" name="NA" value="4">
+          <label for="D4">D</label><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Oral Care</th>
+        <td>
+          <input type="radio" id="A5" name="OCA" value="5">
+          <label for="A5">A </label><br>
+          <input type="radio" id="I5" name="OCA" value="5">
+          <label for="I4">I</label><br>
+          <input type="radio" id="D5" name="OCA" value="5">
+          <label for="D5">D</label><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Denture care</th>
+        <td>
+          <input type="radio" id="A6" name="DA" value="6">
+          <label for="A6">A </label><br>
+          <input type="radio" id="I6" name="DA" value="6">
+          <label for="I6">I</label><br>
+          <input type="radio" id="D6" name="DA" value="6">
+          <label for="D6">D</label><br>
+          <input type="radio" id="N2" name="DA" value="2">
+          <label for="N2">Not Applicable</label><br>
+        </td>
+      </tr>
+
+    </table>
+  </form>
+
+
+</section>
+
+</body>
+</html>

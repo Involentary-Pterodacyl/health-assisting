@@ -106,7 +106,6 @@ header{
   top: 0;
   padding:10px;
 }
-
 .signout{
   border: 1px solid #4682b4;
   width: 100px; /* Fixed width for equal size */
@@ -118,6 +117,7 @@ header{
   justify-content: center;
   text-decoration: none;
   color: white;
+
 }
 
 .img{

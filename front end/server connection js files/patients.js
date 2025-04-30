@@ -25,17 +25,16 @@ let pait8 = document.getElementById("pait8");
 let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
-// we shouldn't hardcode the patient id
-pait1.onclick = function(){sessionStorage.setItem("patientval", "2")};
-pait2.onclick = function(){sessionStorage.setItem("patientval", "3")};
-pait3.onclick = function(){sessionStorage.setItem("patientval", "4")};
-pait4.onclick = function(){sessionStorage.setItem("patientval", "5")};
-pait5.onclick = function(){sessionStorage.setItem("patientval", "6")};
-pait6.onclick = function(){sessionStorage.setItem("patientval", "7")};
-pait7.onclick = function(){sessionStorage.setItem("patientval", "8")};
-pait8.onclick = function(){sessionStorage.setItem("patientval", "9")};
-pait9.onclick = function(){sessionStorage.setItem("patientval", "10")};
-pait10.onclick = function(){sessionStorage.setItem("patientval", "11")};
+pait1.onclick = function(){sessionStorage.setItem("patientval", "1")};
+pait2.onclick = function(){sessionStorage.setItem("patientval", "2")};
+pait3.onclick = function(){sessionStorage.setItem("patientval", "3")};
+pait4.onclick = function(){sessionStorage.setItem("patientval", "4")};
+pait5.onclick = function(){sessionStorage.setItem("patientval", "5")};
+pait6.onclick = function(){sessionStorage.setItem("patientval", "6")};
+pait7.onclick = function(){sessionStorage.setItem("patientval", "7")};
+pait8.onclick = function(){sessionStorage.setItem("patientval", "8")};
+pait9.onclick = function(){sessionStorage.setItem("patientval", "9")};
+pait10.onclick = function(){sessionStorage.setItem("patientval", "10")};
 
 if (logout !== null) {
   logout.onclick = function () {
