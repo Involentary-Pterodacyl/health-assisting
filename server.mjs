@@ -43,7 +43,7 @@ app.post('/login', (req, res) => {
             // isAdmin = Boolean(rows[0]["is_administrator"]);
             conn.query("update users set logged_in=1 where username='" + req.body.username + "'", (err,rows) => {});
             console.log("logged in");
-            return res.send(true);
+            return res.send({user: true, admin: rows[0]["is_administrator"]});
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
