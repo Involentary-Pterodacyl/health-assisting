@@ -44,24 +44,38 @@ let supervision = document.getElementById("supervision");
 let independent = document.getElementById("independent");
 let none1 = document.getElementById("none");
 
+let hoyer = document.getElementById('hoyer');
 let twoPerson = document.getElementById("twoPerson");
 let onePerson = document.getElementById("onePerson");
 let setup = document.getElementById("setup");
 let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
+let cane = document.getElementById("cane");
+let walker = document.getElementById("walk");
+let crutches = document.getElementById("crutch");
+let wheelchair = document.getElementById("wheel");
+let bedridden = document.getElementById("bedrid");
+let none3 = document.getElementById("nodevice");
 
 
-dependent.onclick = function(){sendData("transfers_support", 1, patientval)};
-extAssist.onclick = function(){sendData("transfers_support", 2, patientval)};
-limAssist.onclick = function(){sendData("transfers_support", 3, patientval)};
-supervision.onclick = function(){sendData("transfers_support", 4, patientval)};
-independent.onclick = function(){sendData("transfers_support", 5, patientval)};
-none1.onclick = function(){sendData("transfers_support", 6, patientval)};
+dependent.onclick = function(){sendData("transfers_self", 1, patientval)};
+extAssist.onclick = function(){sendData("transfers_self", 2, patientval)};
+limAssist.onclick = function(){sendData("transfers_self", 3, patientval)};
+supervision.onclick = function(){sendData("transfers_self", 4, patientval)};
+independent.onclick = function(){sendData("transfers_self", 5, patientval)};
+none1.onclick = function(){sendData("transfers_self", 6, patientval)};
 
+hoyer.onclick = function(){sendData("transfers_support", 1, patientval)};
+twoPerson.onclick = function(){sendData("transfers_support", 2, patientval)};
+onePerson.onclick = function(){sendData("transfers_support", 3, patientval)};
+setup.onclick = function(){sendData("transfers_support", 4, patientval)};
+noSetup.onclick = function(){sendData("transfers_support", 5, patientval)};
+none2.onclick = function(){sendData("transfers_support", 6, patientval)};
 
-twoPerson.onclick = function(){sendData("transfers_self", 1, patientval)};
-onePerson.onclick = function(){sendData("transfers_self", 2, patientval)};
-setup.onclick = function(){sendData("transfers_self", 3, patientval)};
-noSetup.onclick = function(){sendData("transfers_self", 4, patientval)};
-none2.onclick = function(){sendData("transfers_self", 5, patientval)};
+cane.onclick = function(){sendData("transfers_device", 1, patientval)};
+walker.onclick = function(){sendData("transfers_device", 2, patientval)};
+crutches.onclick = function(){sendData("transfers_device", 3, patientval)};
+wheelchair.onclick = function(){sendData("transfers_device", 4, patientval)};
+bedridden.onclick = function(){sendData("transfers_device", 5, patientval)};
+none3.onclick = function(){sendData("transfers_device", 6, patientval)};

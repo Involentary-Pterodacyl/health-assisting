@@ -52,6 +52,14 @@ let setup = document.getElementById("setup");
 let noSetup = document.getElementById("noSetup");
 let none2 = document.getElementById("no");
 
+let liquid = document.getElementById("1poo");
+let soft = document.getElementById("2poo");
+let formed = document.getElementById("3poo");
+let constipated = document.getElementById("4poo");
+
+let catheter = document.getElementById("cy");
+let noCatheter = document.getElementById("cn");
+
 
 dependent.onclick = function(){sendData("toileting_self", 1, patientval)};
 extAssist.onclick = function(){sendData("toileting_self", 2, patientval)};
@@ -66,3 +74,11 @@ onePerson.onclick = function(){sendData("toileting_support", 3, patientval)};
 setup.onclick = function(){sendData("toileting_support", 4, patientval)};
 noSetup.onclick = function(){sendData("toileting_support", 5, patientval)};
 none2.onclick = function(){sendData("toileting_support", 6, patientval)};
+
+liquid.onclick = function(){sendData("toileting_consistency", 1, patientval)};
+soft.onclick = function(){sendData("toileting_consistency", 2, patientval)};
+formed.onclick = function(){sendData("toileting_consistency", 3, patientval)};
+constipated.onclick = function(){sendData("toileting_consistency", 4, patientval)};
+
+catheter.onclick = function(){sendData("catheter", 1, patientval)};
+noCatheter.onclick = function(){sendData("catheter", 0, patientval)};
