@@ -141,6 +141,18 @@ app.post('/submit', (req, res) => {
     });
 });
 
+app.post('/teacher', (req, res) => {
+    const conn = mariadb.createConnection(db_info);
+    console.log(typeof(req.body.date1));
+
+    const allTables = "bed_mobility_self, bed_mobility_support, bed_mobility_position, bladder"
+
+    conn.query("SELECT * FROM " + allTables + " WHERE date >= " + req.body.date1 + " && date <= " + req.body.date2 + " GROUP BY username", (rows) => {
+        console.log(rows);
+    })
+
+})
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

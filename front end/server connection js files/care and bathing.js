@@ -2,6 +2,7 @@ let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");
+let submit = document.getElementById("submit");
 
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username:username})
@@ -25,3 +26,12 @@ if (logout !== null) {
     window.location.href = "../index.html";
   };
 }
+
+let bath1 = document.getElementById("bmu1");
+let bath2 = document.getElementById("bmu2");
+let bath3 = document.getElementById("bmu3");
+let bath4 = document.getElementById("bmu4");
+
+let bathA = document.getElementById("A1");
+let bathI = document.getElementById("I1");
+let bathD = document.getElementById("D1");
