@@ -21,7 +21,7 @@ login.onclick = function () {
         window.location.href = "front%20end/PATIENTS.html";
       }
       else if (response.data["user"] === true && response.data["admin"] === 1) {
-        window.location.href = "front%20end/Teacher.html "; //teacher page
+        window.location.href = "front%20end/Teacher.html"; //teacher page
       }
       else {
         window.alert("Username or password is incorrect.");
