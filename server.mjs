@@ -83,6 +83,7 @@ app.post('/login_get', (req, res) => {
 app.post('/logout', (req, res) => {
     console.log("in /logout");
     const conn = mariadb.createConnection(db_info);
+    //are we using this anymore?
     conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
         //console.log(err);
         console.log("tried to log out");
@@ -144,12 +145,36 @@ app.post('/submit', (req, res) => {
 app.post('/teacher', (req, res) => {
     const conn = mariadb.createConnection(db_info);
     console.log(typeof(req.body.date1));
+    console.log(req.body.date1)
 
-    const allTables = "bed_mobility_self, bed_mobility_support, bed_mobility_position, bladder"
+    // const allTables = "bed_mobility_self, bed_mobility_support, bed_mobility_position, bladder"
+    //
+    // conn.query("SELECT * FROM " + allTables + " WHERE date >= " + req.body.date1 + " && date <= " + req.body.date2 + " GROUP BY username", (err, rows) => {
+    //
+    //     console.log(rows);
+    // })
 
-    conn.query("SELECT * FROM " + allTables + " WHERE date >= " + req.body.date1 + " && date <= " + req.body.date2 + " GROUP BY username", (rows) => {
-        console.log(rows);
-    })
+    // conn.query("SELECT * FROM bladder WHERE (date >= " + req.body.date1 + ") AND (date <= " + req.body.date2 + ")" , (err, rows) => {
+    //     console.log("err: " + err);
+    //     console.log("rows: " + rows.toString());
+    // })
+
+    //WORKS
+    // conn.query("SELECT * FROM bladder WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+    //     console.log("err: " + err);
+    //     console.log("rows: " + rows);
+    //     console.log(rows[0]["username"]);
+    //     console.log(rows[0]);
+    // })
+
+    const allTablesArray = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder"];
+    for (let i = 0; i < allTablesArray.length; i++) {
+        conn.query("SELECT * FROM " + allTablesArray[i] + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+            console.log(allTablesArray[i] + " rows:");
+            console.log(rows);
+        })
+    }
+
 
 })
 

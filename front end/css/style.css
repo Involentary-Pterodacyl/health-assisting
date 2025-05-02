@@ -143,3 +143,8 @@ hr{
   top:95%;
   left:0%;
 }
+
+table {
+  border: 1px solid black;
+  padding: 1rem;
+}
