@@ -145,37 +145,28 @@ app.post('/submit', (req, res) => {
 app.post('/teacher', (req, res) => {
     const conn = mariadb.createConnection(db_info);
     console.log(typeof(req.body.date1));
-    console.log(req.body.date1)
+    console.log(req.body.date1);
 
-    // const allTables = "bed_mobility_self, bed_mobility_support, bed_mobility_position, bladder"
-    //
-    // conn.query("SELECT * FROM " + allTables + " WHERE date >= " + req.body.date1 + " && date <= " + req.body.date2 + " GROUP BY username", (err, rows) => {
-    //
-    //     console.log(rows);
-    // })
+    // all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
+    // "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
+    // "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
+    // "nails", "oral", "denture"]
 
-    // conn.query("SELECT * FROM bladder WHERE (date >= " + req.body.date1 + ") AND (date <= " + req.body.date2 + ")" , (err, rows) => {
-    //     console.log("err: " + err);
-    //     console.log("rows: " + rows.toString());
-    // })
+    const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
+    let allData = [];
+    let usernames = [];
 
-    //WORKS
-    // conn.query("SELECT * FROM bladder WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
-    //     console.log("err: " + err);
-    //     console.log("rows: " + rows);
-    //     console.log(rows[0]["username"]);
-    //     console.log(rows[0]);
-    // })
-
-    const allTablesArray = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder"];
-    for (let i = 0; i < allTablesArray.length; i++) {
-        conn.query("SELECT * FROM " + allTablesArray[i] + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
-            console.log(allTablesArray[i] + " rows:");
+    console.log("about to start loop");
+    for (let i = 0; i < tableNames.length; i++) {
+        console.log("iteration of loop " + i);
+        conn.query("SELECT * FROM " + tableNames[i] + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+            console.log(tableNames[i] + " rows:");
             console.log(rows);
-        })
+            allData[i] = rows;
+
+    })
     }
-
-
+    res.send(allData);
 })
 
 app.listen(port, () => {
