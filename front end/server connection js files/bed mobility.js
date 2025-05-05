@@ -15,6 +15,18 @@ window.onload = () => {
     });
 }
 
+if (logout !== null) {
+  logout.onclick = function () {
+    console.log("logging out");
+
+    axios.post("http://localhost:3000/logout", {username:username})
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    window.location.href = "../index.html";
+  };
+}
+
 function sendData(tableName, value) {
   axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientval})
     .then(response => {
@@ -23,7 +35,7 @@ function sendData(tableName, value) {
     .catch(error => {
       console.error('Error:', error);
     });
-  return;
+  location.reload();
 }
 
 let total = document.getElementById('total');
@@ -40,6 +52,10 @@ let setup = document.getElementById('setup');
 let noSetup = document.getElementById('no setup');
 let none2 = document.getElementById('no');
 
+let left = document.getElementById('left');
+let right = document.getElementById('right');
+let supine = document.getElementById('supine');
+
 total.onclick = function(){sendData("bed_mobility_self", 1)};
 extensive.onclick = function(){sendData("bed_mobility_self", 2)};
 limited.onclick = function(){sendData("bed_mobility_self", 3)};
@@ -53,3 +69,7 @@ onePerson.onclick = function(){sendData("bed_mobility_support", 3)};
 setup.onclick = function(){sendData("bed_mobility_support", 4)};
 noSetup.onclick = function(){sendData("bed_mobility_support", 5)};
 none2.onclick = function(){sendData("bed_mobility_support", 6)};
+
+left.onclick = function(){sendData("bed_mobility_position", 1)};
+right.onclick = function(){sendData("bed_mobility_position", 2)};
+supine.onclick = function(){sendData("bed_mobility_position", 3)};

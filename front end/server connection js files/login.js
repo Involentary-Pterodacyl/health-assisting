@@ -16,11 +16,12 @@ login.onclick = function () {
 
   axios.post("http://localhost:3000/login", {username: username})
     .then(response => {
-      if (response.data === true && response.data.admin === false) {
+      console.log(response.data["admin"]);
+      if (response.data["user"] === true && response.data["admin"] === 0) {
         window.location.href = "front%20end/PATIENTS.html";
       }
-      if (response.data === true && response.data.admin === true) {
-        window.location.href = "front%20end/ "; //teacher page
+      else if (response.data["user"] === true && response.data["admin"] === 1) {
+        window.location.href = "front%20end/Teacher.html"; //teacher page
       }
       else {
         window.alert("Username or password is incorrect.");
