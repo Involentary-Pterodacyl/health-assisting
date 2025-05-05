@@ -234,6 +234,21 @@ table{
 
 }
 
+#signout{
+  background-color: cornflowerblue;
+  color:white;
+  width:120px;
+  height:40px;
+  border: 1px solid #4682b4;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position:absolute;
+  bottom:-19%;
+  right:0%;
+}
+
+
 
 
 
