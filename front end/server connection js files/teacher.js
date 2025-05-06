@@ -6,8 +6,9 @@ let date1 = document.getElementById("date1");
 let date2 = document.getElementById("date2");
 
 let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
-const tableNames = []; //string names of all tables
 
+// once the page has fully loaded a call is made to the server with the username variable
+// to check if the student has signed in
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username:username})
     .then(response => {
@@ -19,31 +20,47 @@ window.onload = () => {
     });
 }
 
-submit.onclick = function (){
+
+// all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
+// "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
+// "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
+// "nails", "oral", "denture"]
+
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
+let students = [];
+let allData = [];
+
+submit.onclick = async function () {
   let d1 = date1.value;
   let d2 = date2.value;
-  //database date format: YYYY-MM-DD HH:MM:SS
-  console.log("d1: " + d1); //YYYY-MM-DD
-  console.log("typeof d1: " + typeof d1); //string
 
   if (d1 === "" || d2 === "") {
     window.alert("Please select both dates.");
     return;
-  }
-  else if (d1 > d2) {
+  } else if (d1 > d2) {
     window.alert("The end date must be on or after the start date.");
     return;
   }
-  axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2})
-  .then(res => {
-    let students = res.data["studentNames"];
-    console.log(res.data["studentNames"])
-    console.log(students);
-    generateTable(students);
-  })
+  console.log("about to start loop");
+  for (let i = 0; i < tableNames.length; i++) {
+    axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, tableName: tableNames[i]})
+      .then(res => {
+        console.log("data: ");
+        console.log(res.data);
+        allData.push(res.data);
+
+        for (let x = 0; x < res.data.length; x++) {
+          if(students.includes(res.data[x]["username"]) === false){
+            students.push(res.data[x]["username"]);
+          }
+        }
+      })
+  }
+  await new Promise(r => setTimeout(r, 1));
+  console.log("students:");
+  console.log(students);
+  generateTable(students);
 }
-
-
 
 if (logout !== null) {
   logout.onclick = function () {
@@ -57,28 +74,53 @@ if (logout !== null) {
   };
 }
 
-function generateTable(students) {
-  //let students = ["Student 1", "Student 2"]; // string usernames
-  console.log("students: " + students.length);
-  let studentRowspans = [3, 1]; //the rowspan corresponding to each student
-  let studentAtRowI = [];
+generateTable(["Student 1", "Student 2"], [[2,1], [0,1]]);
 
-  for (let i = 0; i < students.length; i++) {
+//WORKS
+function calcRowspans(usernames, categoryRowspans) {
+  // let usernames = ["Student 1", "Student 2"]; // string usernames
+  // let categoryRowspans = [[2,1], [0,1]]; // each inner array is for a student, each value is for a category
+
+  let studentRowspans = []; // the rowspan corresponding to each student
+  let studentAtRowI = [];
+  let catAtRowI = [];
+  let numRows = 0;
+
+  for (let i = 0; i < categoryRowspans.length; i++){
+    studentRowspans[i] = 0;
+    for (let j = 0; j < categoryRowspans[i].length; j++){
+      studentRowspans[i] += categoryRowspans[i][j];
+
+      //find the category at row i
+      for (let k = 0; k < categoryRowspans[i][j]; k++){
+        catAtRowI.push(j);
+        console.log("cat j: " + j);
+      }
+    }
+  }
+  numRows = catAtRowI.length;
+
+  for (let i = 0; i < usernames.length; i++) {
     for (let j = 0; j < studentRowspans[i]; j++) {
       studentAtRowI.push(i);
     }
   }
-  let numRows = studentAtRowI.length;
+  console.log("studnet rowspans: " + studentRowspans);
+  console.log("student at i: " + studentAtRowI);
+  console.log("cat cat i: " + catAtRowI);
+  console.log("numrows: " + numRows);
+  return {studentRowspans: studentRowspans, studentAtRowI: studentAtRowI, catAtRowI: catAtRowI, numRows: numRows};
+}
 
-// category rowspan stuff
-// let categoryRowspans = [[2,1], [1]]; // the rowspan corresponding to each category for each student
-// let catAtRowI = [];
-//
-// for (let i = 0; i < students.length; i++) {
-//   for (let j = 0; j < categoryRowspans[i]; j++) {
-//     catAtRowI.push(i);
-//   }
-// }
+function generateTable(students, categoryRowspans) {
+  console.log("students: " + students.length);
+
+  let rowspanThings = calcRowspans(students, categoryRowspans);
+  let studentRowspans = rowspanThings.studentRowspans;
+  let studentAtRowI = rowspanThings.studentAtRowI;
+  let catAtRowI = rowspanThings.catAtRowI;
+  let numRows = rowspanThings.numRows;
+  console.log("cat at i: " + catAtRowI);
 
 // create the table header
   const table = document.createElement("table");
@@ -103,15 +145,21 @@ function generateTable(students) {
     const row = document.createElement("tr");
 
     for (let j = 0; j < headerNames.length; j++){
-      if ((i > 0 && j === 0 && studentAtRowI[i] === studentAtRowI[i - 1])
-        //|| (i > 0 && j === 1 && catAtRowI[i] === catAtRowI[i - 1])
-      ) {
+      if (i > 0 &&
+        ((j === 0 && studentAtRowI[i] === studentAtRowI[i - 1])
+          || (j === 1 && catAtRowI[i] === catAtRowI[i - 1]))) {
         continue;
       }
+      // if (i > 0 && j === 1 && catAtRowI[i] === catAtRowI[i - 1]) {
+      //   continue;
+      // }
       const cell = document.createElement("td");
       if (j === 0) {
         cell.setAttribute("rowSpan", studentRowspans[studentAtRowI[i]].toString());
-        console.log(studentRowspans[studentAtRowI[i]]);
+        //console.log(studentRowspans[studentAtRowI[i]]);
+      }
+      else if (j === 1){
+        cell.setAttribute("rowSpan", categoryRowspans[catAtRowI[i]].toString());
       }
       const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
       cell.appendChild(cellText);

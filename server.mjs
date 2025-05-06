@@ -147,26 +147,13 @@ app.post('/teacher', (req, res) => {
     console.log(typeof(req.body.date1));
     console.log(req.body.date1);
 
-    // all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
-    // "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-    // "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
-    // "nails", "oral", "denture"]
 
-    const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
-    let allData = [];
-    let usernames = [];
-
-    console.log("about to start loop");
-    for (let i = 0; i < tableNames.length; i++) {
-        console.log("iteration of loop " + i);
-        conn.query("SELECT * FROM " + tableNames[i] + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
-            console.log(tableNames[i] + " rows:");
+        conn.query("SELECT * FROM " + req.body.tableName + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+            console.log(req.body.tableName + " : " + rows);
             console.log(rows);
-            allData[i] = rows;
+            res.send(rows);
 
     })
-    }
-    res.send(allData);
 })
 
 app.listen(port, () => {

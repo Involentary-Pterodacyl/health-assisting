@@ -6,13 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/Teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/adl.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/adl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/adl.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/adl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bed mobility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
@@ -49,19 +53,35 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/front end/server connection js files/teacher.js">
       <ranges>
-        <range start1="6" end1="6" start2="6" end2="9" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="17" end1="18" start2="20" end2="20" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="36" end1="37" start2="38" end2="42" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="39" end1="39" start2="44" end2="46" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="52" end1="52" start2="59" end2="130" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="8" end1="9" start2="8" end2="8" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="10" end1="10" start2="9" end2="11" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="21" end1="22" start2="22" end2="33" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="24" end1="27" start2="35" end2="35" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="31" end1="33" start2="39" end2="40" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="36" end1="43" start2="43" end2="62" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="44" end1="46" start2="63" end2="63" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="59" end1="61" start2="76" end2="115" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="62" end1="64" start2="116" end2="116" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="65" end1="81" start2="117" end2="123" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="105" end1="108" start2="147" end2="150" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="110" end1="110" start2="152" end2="155" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="113" end1="114" start2="158" end2="159" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="115" end1="115" start2="160" end2="163" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/server.mjs">
       <ranges>
-        <range start1="147" end1="168" start2="147" end2="148" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
-        <range start1="169" end1="173" start2="149" end2="163" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="174" end1="175" start2="164" end2="186" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
-        <range start1="176" end1="178" start2="187" end2="191" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="149" end1="153" start2="149" end2="149" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="154" end1="163" start2="150" end2="152" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="164" end1="165" start2="153" end2="154" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="167" end1="169" start2="156" end2="156" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/front end/server connection js files/adl.js">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" />
+        <range start1="4" end1="4" start2="5" end2="7" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
+        <range start1="15" end1="15" start2="18" end2="19" changelist="714df66f-b124-4ee3-83b4-93fb167f3d2f" />
       </ranges>
     </file>
   </component>
@@ -224,7 +244,8 @@
       <workItem from="1746116757335" duration="4175000" />
       <workItem from="1746196429802" duration="4298000" />
       <workItem from="1746203147072" duration="4469000" />
-      <workItem from="1746453955740" duration="10260000" />
+      <workItem from="1746453955740" duration="10566000" />
+      <workItem from="1746547555112" duration="5048000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
