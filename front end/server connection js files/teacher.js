@@ -147,7 +147,7 @@ function generateTable(students, categoryRowspans) {
     for (let j = 0; j < headerNames.length; j++){
       if (i > 0 &&
         ((j === 0 && studentAtRowI[i] === studentAtRowI[i - 1])
-          || (j === 1 && catAtRowI[i] === catAtRowI[i - 1]))) {
+          || (j === 1 && catAtRowI[i] === catAtRowI[i - 1]) && studentAtRowI[i] === studentAtRowI[i - 1])) {
         continue;
       }
       // if (i > 0 && j === 1 && catAtRowI[i] === catAtRowI[i - 1]) {
