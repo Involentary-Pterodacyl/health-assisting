@@ -34,8 +34,10 @@ if (logout !== null) {
 
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
-function sendInOutData(tableName, valueD, valueI, patientNum) {
-  axios.post('http://localhost:3000/submitInOut', {tableName: tableName, username: username,  ccIn: valueD, ccOut: valueI, patientId: patientNum})
+//                                                                                         type           amount
+function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
+  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
+    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -46,8 +48,8 @@ function sendInOutData(tableName, valueD, valueI, patientNum) {
 
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
-function sendMealData(valueB, valueL, valueD, patientNum) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientNum})
+function sendMealData(valueB, valueL, valueD) {
+  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -120,7 +122,7 @@ submit.onclick = function(){
   }
 
   //sends the values for breakfast lunch and dinner
-  sendMealData(brk, lun, din, patientval);
+  sendMealData(brk, lun, din);
 
   // checks the intake and outake radios and sets a numarical value for the type selected
   if(soft.checked){typeIn = 1}
@@ -144,6 +146,6 @@ submit.onclick = function(){
     }
     console.log("submitted meal");
     //submits intake and output values
-  sendInOutData("dietary_intake_in", intake.value, typeIn);
-  sendInOutData("dietary_intake_out", output.value, typeOut);
+  sendTwoValues("dietary_intake_in", intake.value, typeIn, "amount", "type");
+  sendTwoValues("dietary_intake_out", output.value, typeOut, "amount", "type");
   }

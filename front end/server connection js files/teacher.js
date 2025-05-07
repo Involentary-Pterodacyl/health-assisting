@@ -7,6 +7,23 @@ let date2 = document.getElementById("date2");
 
 let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
 
+// all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
+// "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
+// "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
+// "nails", "oral", "denture"]
+
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
+let usernames = [];
+let studentNames = [];
+let categoryRowspans = [];
+let allData = [];
+
+await sortStudents();
+console.log("usernames:");
+console.log(usernames);
+console.log("studentNames:");
+console.log(studentNames);
+
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
 window.onload = () => {
@@ -20,16 +37,6 @@ window.onload = () => {
     });
 }
 
-
-// all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
-// "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-// "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
-// "nails", "oral", "denture"]
-
-const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
-let students = [];
-let allData = [];
-
 submit.onclick = async function () {
   let d1 = date1.value;
   let d2 = date2.value;
@@ -41,25 +48,34 @@ submit.onclick = async function () {
     window.alert("The end date must be on or after the start date.");
     return;
   }
-  console.log("about to start loop");
-  for (let i = 0; i < tableNames.length; i++) {
-    axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, tableName: tableNames[i]})
-      .then(res => {
-        console.log("data: ");
-        console.log(res.data);
-        allData.push(res.data);
 
-        for (let x = 0; x < res.data.length; x++) {
-          if(students.includes(res.data[x]["username"]) === false){
-            students.push(res.data[x]["username"]);
-          }
-        }
-      })
+  console.log("about to start loop");
+  for (let u = 0; u < usernames.length; u++) {
+    categoryRowspans[u] = [];
+    //allData[u] = [];
+    for (let t = 0; t < tableNames.length; t++) {
+      await axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, username: usernames[u], tableName: tableNames[t]})
+        .then(res => {
+          console.log("data " + usernames[u] + ' ' + tableNames[t]);
+          console.log(res.data);
+          allData.push(res.data);
+          categoryRowspans[u].push(res.data.length);
+
+          // for (let x = 0; x < res.data.length; x++) {
+          //   if (usernames.includes(res.data[x]["username"]) === false) {
+          //     usernames.push(res.data[x]["username"]);
+          //   }
+          // }
+        })
+    }
   }
-  await new Promise(r => setTimeout(r, 1));
-  console.log("students:");
-  console.log(students);
-  generateTable(students);
+  console.log("category rowspans: ");
+  console.log(categoryRowspans);
+  console.log("alldata: ");
+  console.log(allData.length);
+  console.log(allData);
+  //await new Promise(r => setTimeout(r, 1));
+  generateTable(usernames, categoryRowspans);
 }
 
 if (logout !== null) {
@@ -74,7 +90,29 @@ if (logout !== null) {
   };
 }
 
-generateTable(["Student 1", "Student 2"], [[2,1], [0,1]]);
+//generateTable(["Student 1", "Student 2", "Student 3"], [[1,2,1], [2,1,0], [0,0,0]]);
+
+async function sortStudents() {
+  let uNames = [];
+  let sNames = [];
+
+  await axios.post("http://localhost:3000/getStudents").then((res) => {
+    // console.log("Students:");
+    // console.log(res.data);
+
+    for (let i = 0; i < res.data.length; i++) {
+      uNames.push(res.data[i]["username"]);
+      sNames.push(res.data[i]["first_name"] + " " + res.data[i]["last_name"]);
+    }
+    // console.log("usernames: " + usernames);
+    // console.log("names: " + studentNames);
+    // return {usernames: usernames, studentNames: studentNames};
+    usernames = uNames;
+    studentNames = sNames;
+  })
+  //await new Promise(r => setTimeout(r, 10));
+}
+
 
 //WORKS
 function calcRowspans(usernames, categoryRowspans) {
@@ -94,7 +132,6 @@ function calcRowspans(usernames, categoryRowspans) {
       //find the category at row i
       for (let k = 0; k < categoryRowspans[i][j]; k++){
         catAtRowI.push(j);
-        console.log("cat j: " + j);
       }
     }
   }
@@ -107,7 +144,7 @@ function calcRowspans(usernames, categoryRowspans) {
   }
   console.log("studnet rowspans: " + studentRowspans);
   console.log("student at i: " + studentAtRowI);
-  console.log("cat cat i: " + catAtRowI);
+  console.log("cat at i: " + catAtRowI);
   console.log("numrows: " + numRows);
   return {studentRowspans: studentRowspans, studentAtRowI: studentAtRowI, catAtRowI: catAtRowI, numRows: numRows};
 }
@@ -120,7 +157,9 @@ function generateTable(students, categoryRowspans) {
   let studentAtRowI = rowspanThings.studentAtRowI;
   let catAtRowI = rowspanThings.catAtRowI;
   let numRows = rowspanThings.numRows;
-  console.log("cat at i: " + catAtRowI);
+
+  console.log("test: ");
+  console.log(allData[0][0]["value"]);
 
 // create the table header
   const table = document.createElement("table");
@@ -150,18 +189,30 @@ function generateTable(students, categoryRowspans) {
           || (j === 1 && catAtRowI[i] === catAtRowI[i - 1]) && studentAtRowI[i] === studentAtRowI[i - 1])) {
         continue;
       }
-      // if (i > 0 && j === 1 && catAtRowI[i] === catAtRowI[i - 1]) {
-      //   continue;
-      // }
       const cell = document.createElement("td");
       if (j === 0) {
         cell.setAttribute("rowSpan", studentRowspans[studentAtRowI[i]].toString());
-        //console.log(studentRowspans[studentAtRowI[i]]);
       }
       else if (j === 1){
         cell.setAttribute("rowSpan", categoryRowspans[studentAtRowI[i]][catAtRowI[i]].toString());
       }
-      const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+      //const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+      let cellText;
+      if (j === 0){
+        cellText = document.createTextNode(studentNames[studentAtRowI[i]]);
+      }
+      else if (j === 1){
+        cellText = document.createTextNode(tableNames[catAtRowI[i]]);
+      }
+      else if (j === 2){
+        // console.log(i + ", " + j);
+        // console.log(studentAtRowI[i]);
+        cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+        console.log(document.createTextNode(allData[studentAtRowI[i]][catAtRowI[i]]));
+      }
+      else{
+        cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+      }
       cell.appendChild(cellText);
       row.appendChild(cell);
     }

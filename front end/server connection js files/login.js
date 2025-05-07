@@ -6,6 +6,8 @@ let login = document.getElementById("login");
 let username;
 
 login.onclick = function () {
+  // grabs inputted username and put it in session storage
+  //as well as if either the username or password is empty it prevents code moving forward
   console.log("login");
   username = uname.value;
   sessionStorage.setItem("username", uname.value);
@@ -14,6 +16,9 @@ login.onclick = function () {
     return;
   }
 
+  // sends the imputed username to the sever to check if the username exists and sends students to the
+  // patient selection page and teachers to the teacher page
+  //possible password work in later
   axios.post("http://localhost:3000/login", {username: username})
     .then(response => {
       console.log(response.data["admin"]);
