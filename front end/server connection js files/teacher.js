@@ -159,7 +159,7 @@ function generateTable(students, categoryRowspans) {
         //console.log(studentRowspans[studentAtRowI[i]]);
       }
       else if (j === 1){
-        cell.setAttribute("rowSpan", categoryRowspans[catAtRowI[i]].toString());
+        cell.setAttribute("rowSpan", categoryRowspans[studentAtRowI[i]][catAtRowI[i]].toString());
       }
       const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
       cell.appendChild(cellText);

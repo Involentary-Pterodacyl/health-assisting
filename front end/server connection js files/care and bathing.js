@@ -93,7 +93,11 @@ sumit.on("click", function(){
 
   if(assistA.checked) {assist = 1}
   else if(assistI.checked) {assist = 2}
-  
+  else if(assistD.checked) {assist = 3}
+
+  if(shaveA.checked) {shave = 1}
+  else if(shaveI.checked) {shave = 2}
+  else if(shaveD.checked) {shave = 3}
 
 
 })
