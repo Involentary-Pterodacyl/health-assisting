@@ -58,7 +58,8 @@ submit.onclick = async function () {
         .then(res => {
           console.log("data " + usernames[u] + ' ' + tableNames[t]);
           console.log(res.data);
-          allData.push(res.data);
+          //allData.push(res.data);
+          allData.push(...res.data);
           categoryRowspans[u].push(res.data.length);
 
           // for (let x = 0; x < res.data.length; x++) {
@@ -158,9 +159,6 @@ function generateTable(students, categoryRowspans) {
   let catAtRowI = rowspanThings.catAtRowI;
   let numRows = rowspanThings.numRows;
 
-  console.log("test: ");
-  console.log(allData[0][0]["value"]);
-
 // create the table header
   const table = document.createElement("table");
 
@@ -196,7 +194,6 @@ function generateTable(students, categoryRowspans) {
       else if (j === 1){
         cell.setAttribute("rowSpan", categoryRowspans[studentAtRowI[i]][catAtRowI[i]].toString());
       }
-      //const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
       let cellText;
       if (j === 0){
         cellText = document.createTextNode(studentNames[studentAtRowI[i]]);
@@ -205,10 +202,20 @@ function generateTable(students, categoryRowspans) {
         cellText = document.createTextNode(tableNames[catAtRowI[i]]);
       }
       else if (j === 2){
-        // console.log(i + ", " + j);
-        // console.log(studentAtRowI[i]);
-        cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
-        console.log(document.createTextNode(allData[studentAtRowI[i]][catAtRowI[i]]));
+        cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
+      }
+      else if (j === 3){
+        cellText = document.createTextNode(allData[i]["patient_id"]); //need to get patient names. maybe on patients page
+      }
+      else if (j === 4){
+        // need to format
+        // 2025-05-05T14:24:42.000Z
+        let date = allData[i]["date"];
+        let dateArr = date.split("T");
+        date = dateArr[0] + ", " + dateArr[1].substring(0,5);
+        // ^ this works okay but may need time zone stuff
+        // and its currently YYYY-MM-DD
+        cellText = document.createTextNode(date);
       }
       else{
         cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
@@ -216,13 +223,12 @@ function generateTable(students, categoryRowspans) {
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
-
     tableBody.appendChild(row);
   }
 
   table.appendChild(tableBody);
 
-//add the table to the page
+  //add the table to the page
   const tableStart = document.getElementById("tableStart");
   document.body.insertBefore(table, tableStart);
 }

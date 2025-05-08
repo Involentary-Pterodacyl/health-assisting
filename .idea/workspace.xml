@@ -7,19 +7,8 @@
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/eating.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/eating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/patients.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/patients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/toileting.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/toileting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/transfers.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/transfers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
-    </list>
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +201,8 @@
       <workItem from="1746203147072" duration="4469000" />
       <workItem from="1746453955740" duration="10566000" />
       <workItem from="1746547555112" duration="5110000" />
-      <workItem from="1746628451205" duration="8511000" />
+      <workItem from="1746628451205" duration="8736000" />
+      <workItem from="1746721539272" duration="1610000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -435,6 +425,18 @@
           <url>file://$PROJECT_DIR$/server.mjs</url>
           <line>86</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
+          <line>207</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
+          <line>204</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
