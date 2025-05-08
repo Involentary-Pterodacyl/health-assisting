@@ -12,17 +12,31 @@ let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
 // "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
 // "nails", "oral", "denture"]
 
+// tables with value from 1 to 6
+let tableSelf1to6 = ["bed_mobility_self"]
+
+// the values
+let valSelf1to6 = ["Totally Dependant", "Extensive Assist", "Limited Assist", "Supervision", "Independent", "Did Not Occur"];
+
 const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
 let usernames = [];
 let studentNames = [];
 let categoryRowspans = [];
 let allData = [];
+let patientNames = [];
+let patientIDs = [];
 
 await sortStudents();
 console.log("usernames:");
 console.log(usernames);
 console.log("studentNames:");
 console.log(studentNames);
+
+await getPatients();
+console.log("patientIDs:");
+console.log(patientIDs);
+console.log("patientNames :");
+console.log(patientNames);
 
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
@@ -150,8 +164,20 @@ function calcRowspans(usernames, categoryRowspans) {
   return {studentRowspans: studentRowspans, studentAtRowI: studentAtRowI, catAtRowI: catAtRowI, numRows: numRows};
 }
 
+async function getPatients() {
+  //gets all the names of the patients from the server
+  await axios.get("http://localhost:3000/getPatients")
+    .then(response => {
+      let res = response.data;
+      for (let i = 0; i < res.length; i++) {
+        patientNames.push(res[i]["first_name"] + " " + res[i]["last_name"]);
+        patientIDs.push(res[i]["patient_id"]);
+      }
+    });
+}
+
 function generateTable(students, categoryRowspans) {
-  console.log("students: " + students.length);
+  //console.log("students: " + students.length);
 
   let rowspanThings = calcRowspans(students, categoryRowspans);
   let studentRowspans = rowspanThings.studentRowspans;
@@ -196,25 +222,35 @@ function generateTable(students, categoryRowspans) {
       }
       let cellText;
       if (j === 0){
+        // student names
         cellText = document.createTextNode(studentNames[studentAtRowI[i]]);
       }
       else if (j === 1){
-        cellText = document.createTextNode(tableNames[catAtRowI[i]]);
+        // categories
+        // replaces underscores with spaces and capitalizes the first letter of each word
+        cellText = document.createTextNode(capitalize(tableNames[catAtRowI[i]].replace(/_/g, " ")));
       }
       else if (j === 2){
-        cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
+        // values
+        if (tableSelf1to6.includes(tableNames[catAtRowI[i]])){
+          cellText = document.createTextNode(valSelf1to6[allData[i]["value"] - 1]);
+        }
+        else {
+          cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
+        }
       }
       else if (j === 3){
-        cellText = document.createTextNode(allData[i]["patient_id"]); //need to get patient names. maybe on patients page
+        // patient names
+        cellText = document.createTextNode(patientNames[patientIDs.indexOf(allData[i]["patient_id"])]);
       }
       else if (j === 4){
-        // need to format
-        // 2025-05-05T14:24:42.000Z
         let date = allData[i]["date"];
         let dateArr = date.split("T");
         date = dateArr[0] + ", " + dateArr[1].substring(0,5);
         // ^ this works okay but may need time zone stuff
         // and its currently YYYY-MM-DD
+        // like 2025-05-08, 16:44
+        //(actual time was 12:44. off by 4 hours)
         cellText = document.createTextNode(date);
       }
       else{
@@ -231,4 +267,16 @@ function generateTable(students, categoryRowspans) {
   //add the table to the page
   const tableStart = document.getElementById("tableStart");
   document.body.insertBefore(table, tableStart);
+}
+
+function capitalize(str) {
+  let strArr = str.split(" ");
+  let result = "";
+  for (let i = 0; i < strArr.length; i++) {
+    result += strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1);
+    if (i < strArr.length - 1) {
+      result += " ";
+    }
+  }
+  return result;
 }

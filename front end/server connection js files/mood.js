@@ -56,7 +56,7 @@ let combatitive = document.getElementById("combatitive");
 
 // logs information from page
 calm.onclick = function(){sendData("mood",1)};
-happy.onclick = function(){sendData("mood", 1)};
+happy.onclick = function(){sendData("mood", 2)};
 depressed.onclick = function(){sendData("mood", 3)};
 agitation.onclick = function(){sendData("mood", 4)};
 sad.onclick = function(){sendData("mood", 5)};
