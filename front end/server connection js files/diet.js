@@ -8,16 +8,16 @@ let logout = document.getElementById("signout");
 
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
-window.onload = () => {
-  axios.post('http://localhost:3000/login_get', {username:username})
-    .then(response => {
-      console.log(response.data);
-      if (response.data === false){
-        console.log("not signed in");
-        window.location.href = "../index.html";
-      }
-    });
-}
+// window.onload = () => {
+//   axios.post('http://localhost:3000/login_get', {username:username})
+//     .then(response => {
+//       console.log(response.data);
+//       if (response.data === false){
+//         console.log("not signed in");
+//         window.location.href = "../index.html";
+//       }
+//     });
+// }
 
 // marks the student as logged out in the server and reroutes them to the sign in page
 if (logout !== null) {
@@ -35,28 +35,28 @@ if (logout !== null) {
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 //                                                                                         type           amount
-function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
-  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
-    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
-    .then(response => {
-      console.log('Response:', response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
+// function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
+//   axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
+//     patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
+//     .then(response => {
+//       console.log('Response:', response.data);
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+// }
 
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
-function sendMealData(valueB, valueL, valueD) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
-    .then(response => {
-      console.log('Response:', response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
+// function sendMealData(valueB, valueL, valueD) {
+//   axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
+//     .then(response => {
+//       console.log('Response:', response.data);
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+// }
 
 let brk1 = document.getElementById("brk1");
 let brk2 = document.getElementById("brk2");
@@ -122,7 +122,7 @@ submit.onclick = function(){
   }
 
   //sends the values for breakfast lunch and dinner
-  sendMealData(brk, lun, din);
+  // sendMealData(brk, lun, din);
 
   // checks the intake and outake radios and sets a numarical value for the type selected
   if(soft.checked){typeIn = 1}
@@ -140,12 +140,13 @@ submit.onclick = function(){
   else if(liqsto.checked){typeOut = 6}
 
     // makes sure an int was put into the imput box
-    if(typeof intake.value != "number" || typeof output.value != "number" || typeIn === null || typeOut === null){
+  console.log(Number(intake.value));
+    if(isNaN(Number(intake.value)) || isNaN(Number(output.value)) || typeIn === null || typeOut === null){
       window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
       return;
     }
     console.log("submitted meal");
     //submits intake and output values
-  sendTwoValues("dietary_intake_in", intake.value, typeIn, "amount", "type");
-  sendTwoValues("dietary_intake_out", output.value, typeOut, "amount", "type");
+  // sendTwoValues("dietary_intake_in", intake.value, typeIn, "amount", "type");
+  // sendTwoValues("dietary_intake_out", output.value, typeOut, "amount", "type");
   }

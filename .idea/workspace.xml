@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
@@ -20,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Involentary-Pterodacyl/health-assisting.git&quot;,
-    &quot;accountId&quot;: &quot;fd896de2-71f1-437a-a67a-798166768857&quot;
+    &quot;accountId&quot;: &quot;71adca24-98d7-44ef-a7e7-6ca8414c5187&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -57,65 +56,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Unnamed.executor&quot;: &quot;Debug&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.ADL.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.BED Mobility.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.BLADDER.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Create.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.DIETARY INTAKE.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.EATING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.PATIENTS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Student Work.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TOILETING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TRANSFERS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Teacher.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Vital Signs.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.signup.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.login.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.patients.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.server.mjs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.14&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/8015754/WebstormProjects/health-assisting/front end&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/2104663/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.ADL.html.executor": "Debug",
+    "JavaScript Debug.BED Mobility.html.executor": "Debug",
+    "JavaScript Debug.BLADDER.html.executor": "Debug",
+    "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
+    "JavaScript Debug.Create.html.executor": "Debug",
+    "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+    "JavaScript Debug.EATING.html.executor": "Run",
+    "JavaScript Debug.PATIENTS.html.executor": "Debug",
+    "JavaScript Debug.TOILETING.html.executor": "Debug",
+    "JavaScript Debug.TRANSFERS.html.executor": "Run",
+    "JavaScript Debug.Vital Signs.html.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Node.js.index.js.executor": "Debug",
+    "Node.js.index2.js.executor": "Run",
+    "Node.js.server.mjs.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "22.14.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.10",
+    "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end/js/css",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/2102400/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end" />
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
       <recent name="C:\Users\2102400\WebstormProjects\untitled1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\2104663\Documents\GitHub\health-assisting\front end" />
-      <recent name="C:\Users\2104663\Documents\GitHub\health-assisting\front end\img" />
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
@@ -126,20 +117,11 @@
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="server.mjs" type="NodeJSConfigurationType" path-to-node="$APPLICATION_CONFIG_DIR$/node/versions/22.14.0/node" nameIsGenerated="true" path-to-js-file="server.mjs" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Node.js.index.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -175,36 +157,8 @@
       <workItem from="1741969535441" duration="3820000" />
       <workItem from="1742227803506" duration="851000" />
       <workItem from="1742230250866" duration="1815000" />
-      <workItem from="1742491162606" duration="1411000" />
-      <workItem from="1743008588908" duration="3321000" />
-      <workItem from="1743092596860" duration="3248000" />
-      <workItem from="1743179477146" duration="2749000" />
-      <workItem from="1743182522874" duration="1217000" />
-      <workItem from="1743523168112" duration="5286000" />
-      <workItem from="1743610344838" duration="3151000" />
-      <workItem from="1743697791465" duration="4198000" />
-      <workItem from="1743784196823" duration="1502000" />
-      <workItem from="1744214932726" duration="4918000" />
-      <workItem from="1744302436904" duration="3862000" />
-      <workItem from="1744646677492" duration="1527000" />
-      <workItem from="1744733189494" duration="141000" />
-      <workItem from="1744733340530" duration="4871000" />
-      <workItem from="1744819789210" duration="4711000" />
-      <workItem from="1744907993667" duration="3739000" />
-      <workItem from="1745856159789" duration="166000" />
-      <workItem from="1745856334904" duration="5098000" />
-      <workItem from="1745939237929" duration="1085000" />
-      <workItem from="1745942743753" duration="554000" />
-      <workItem from="1745943556865" duration="6115000" />
-      <workItem from="1746031317212" duration="2934000" />
-      <workItem from="1746111382019" duration="2936000" />
-      <workItem from="1746116757335" duration="4175000" />
-      <workItem from="1746196429802" duration="4298000" />
-      <workItem from="1746203147072" duration="4469000" />
-      <workItem from="1746453955740" duration="10566000" />
-      <workItem from="1746547555112" duration="5110000" />
-      <workItem from="1746628451205" duration="8736000" />
-      <workItem from="1746721539272" duration="4392000" />
+      <workItem from="1742491162606" duration="6777000" />
+      <workItem from="1744392605695" duration="140000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -358,39 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742230273153</updated>
     </task>
-    <task id="LOCAL-00020" summary="friaday changes">
-      <option name="closed" value="true" />
-      <created>1744650553308</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1744650553308</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="85e223a8-739d-4082-be35-cc7da9ec75c8" value="TOOL_WINDOW" />
-        <entry key="08f52264-2278-4365-8b7f-76c1a2baaee6" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="08f52264-2278-4365-8b7f-76c1a2baaee6">
-          <value>
-            <State />
-          </value>
-        </entry>
-        <entry key="85e223a8-739d-4082-be35-cc7da9ec75c8">
-          <value>
-            <State />
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -414,27 +344,5 @@
     <MESSAGE value="Changes by 8000496" />
     <MESSAGE value="friaday changes" />
     <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>92</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>86</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>237</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
