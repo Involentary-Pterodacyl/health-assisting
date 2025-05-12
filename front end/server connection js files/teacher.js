@@ -35,7 +35,16 @@ let valOther = [
   ["Cane", "Walker", "Crutches", "Wheelchair", "Bedridden", "None"]
 ];
 
-const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
+// need to figure out how to display tables with more than one value
+// meal, dietary_intake, etc
+
+//const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", //"sundowning",
+  "meal", //"dietary_intake", "dietary_output",
+  "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
+  "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
+  "pulse", "respiration", "temperature", //"bathing",
+  "shaving","back_rub", "nails", "oral", "denture"];
 let usernames = [];
 let studentNames = [];
 let categoryRowspans = [];
@@ -44,16 +53,16 @@ let patientNames = [];
 let patientIDs = [];
 
 await sortStudents();
-console.log("usernames:");
-console.log(usernames);
-console.log("studentNames:");
-console.log(studentNames);
+// console.log("usernames:");
+// console.log(usernames);
+// console.log("studentNames:");
+// console.log(studentNames);
 
 await getPatients();
-console.log("patientIDs:");
-console.log(patientIDs);
-console.log("patientNames :");
-console.log(patientNames);
+// console.log("patientIDs:");
+// console.log(patientIDs);
+// console.log("patientNames :");
+// console.log(patientNames);
 
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
@@ -87,8 +96,8 @@ submit.onclick = async function () {
     for (let t = 0; t < tableNames.length; t++) {
       await axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, username: usernames[u], tableName: tableNames[t]})
         .then(res => {
-          console.log("data " + usernames[u] + ' ' + tableNames[t]);
-          console.log(res.data);
+          // console.log("data " + usernames[u] + ' ' + tableNames[t]);
+          // console.log(res.data);
           //allData.push(res.data);
           allData.push(...res.data);
           categoryRowspans[u].push(res.data.length);
@@ -101,11 +110,11 @@ submit.onclick = async function () {
         })
     }
   }
-  console.log("category rowspans: ");
-  console.log(categoryRowspans);
-  console.log("alldata: ");
-  console.log(allData.length);
-  console.log(allData);
+  // console.log("category rowspans: ");
+  // console.log(categoryRowspans);
+  // console.log("alldata: ");
+  // console.log(allData.length);
+  // console.log(allData);
   //await new Promise(r => setTimeout(r, 1));
   generateTable(usernames, categoryRowspans);
 }
@@ -174,10 +183,10 @@ function calcRowspans(usernames, categoryRowspans) {
       studentAtRowI.push(i);
     }
   }
-  console.log("studnet rowspans: " + studentRowspans);
-  console.log("student at i: " + studentAtRowI);
-  console.log("cat at i: " + catAtRowI);
-  console.log("numrows: " + numRows);
+  // console.log("studnet rowspans: " + studentRowspans);
+  // console.log("student at i: " + studentAtRowI);
+  // console.log("cat at i: " + catAtRowI);
+  // console.log("numrows: " + numRows);
   return {studentRowspans: studentRowspans, studentAtRowI: studentAtRowI, catAtRowI: catAtRowI, numRows: numRows};
 }
 
@@ -264,7 +273,7 @@ function generateTable(students, categoryRowspans) {
           cellText = document.createTextNode(valCare1to4[allData[i]["value"] - 1]);
         }
         else if (tableBool.includes(tableNames[catAtRowI[i]])){
-          cellText = document.createTextNode(["Yes", "No"][allData[i]["value"] - 1]);
+          cellText = document.createTextNode(["No", "Yes"][allData[i]["value"]]);
         }
         else if (tableOther.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valOther[tableOther.indexOf(tableNames[catAtRowI[i]])][allData[i]["value"] - 1]);
