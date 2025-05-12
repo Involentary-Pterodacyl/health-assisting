@@ -140,7 +140,8 @@ submit.onclick = function(){
   else if(liqsto.checked){typeOut = 6}
 
     // makes sure an int was put into the imput box
-    if(typeof intake.value != "number" || typeof output.value != "number" || typeIn === null || typeOut === null){
+  console.log(Number(intake.value));
+    if(isNaN(Number(intake.value)) || isNaN(Number(output.value)) || typeIn === null || typeOut === null){
       window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
       return;
     }
