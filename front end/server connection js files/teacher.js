@@ -12,11 +12,28 @@ let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
 // "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
 // "nails", "oral", "denture"]
 
-// tables with value from 1 to 6
-let tableSelf1to6 = ["bed_mobility_self"]
-
-// the values
+// tables with values in valSelf1to6
+let tableSelf1to6 = ["bed_mobility_self", "eating_self", "toileting_self", "transfers_self"];
+// the values for tables in tableSelf1to6
 let valSelf1to6 = ["Totally Dependant", "Extensive Assist", "Limited Assist", "Supervision", "Independent", "Did Not Occur"];
+
+let tableSupport1to6 = ["bed_mobility_support", "eating_support", "toileting_support", "transfers_support"];
+let valSupport2to6 = ["", "Two Person Assist", "One Person Assist", "Set-Up", "No Set-Up", "Did Not Occur"];
+let valSupport1 = ["Hoyer Lift", "Feeding Tube", "Colostomy Bag", "Hoyer Lift"];
+
+let tableCare1to4 = ["back_rub", "nails", "oral", "shaving", "denture"];
+let valCare1to4 = ["Assist", "Independent", "Dependent", "Not Applicable"];
+
+let tableBool = ["catheter"];
+
+let tableOther = ["bed_mobility_position", "bladder", "mood", "toileting_consistency", "transfers_device"];
+let valOther = [
+  ["Left Lateral", "Right Lateral", "Supine"],
+  ["Continent", "Incontinent", "Catheter", "Catheter Leakage", "Bathroom", "Bed Pan/Urinal", "Bedside Commode", "Pads/Briefs"],
+  ["Calm", "Happy", "Depressed", "Agitation", "Sad", "Yelling", "Anxiety", "Withdrawn", "Combative"],
+  ["Liquid", "Soft", "Formed", "Constipated"],
+  ["Cane", "Walker", "Crutches", "Wheelchair", "Bedridden", "None"]
+];
 
 const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
 let usernames = [];
@@ -234,6 +251,23 @@ function generateTable(students, categoryRowspans) {
         // values
         if (tableSelf1to6.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valSelf1to6[allData[i]["value"] - 1]);
+        }
+        else if (tableSupport1to6.includes(tableNames[catAtRowI[i]])){
+          if (allData[i]["value"] >= 2){
+            cellText = document.createTextNode(valSupport2to6[allData[i]["value"] - 1]);
+          }
+          else {
+            cellText = document.createTextNode(valSupport1[tableSupport1to6.indexOf(tableNames[catAtRowI[i]])]);
+          }
+        }
+        else if (tableCare1to4.includes(tableNames[catAtRowI[i]])){
+          cellText = document.createTextNode(valCare1to4[allData[i]["value"] - 1]);
+        }
+        else if (tableBool.includes(tableNames[catAtRowI[i]])){
+          cellText = document.createTextNode(["Yes", "No"][allData[i]["value"] - 1]);
+        }
+        else if (tableOther.includes(tableNames[catAtRowI[i]])){
+          cellText = document.createTextNode(valOther[tableOther.indexOf(tableNames[catAtRowI[i]])][allData[i]["value"] - 1]);
         }
         else {
           cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
