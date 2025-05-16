@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -145,38 +145,40 @@ app.post('/submit', (req, res) => {
 app.post('/teacher', (req, res) => {
     const conn = mariadb.createConnection(db_info);
     console.log(typeof(req.body.date1));
-    console.log(req.body.date1)
+    console.log(req.body.date1);
 
-    // const allTables = "bed_mobility_self, bed_mobility_support, bed_mobility_position, bladder"
-    //
-    // conn.query("SELECT * FROM " + allTables + " WHERE date >= " + req.body.date1 + " && date <= " + req.body.date2 + " GROUP BY username", (err, rows) => {
-    //
-    //     console.log(rows);
-    // })
-
-    // conn.query("SELECT * FROM bladder WHERE (date >= " + req.body.date1 + ") AND (date <= " + req.body.date2 + ")" , (err, rows) => {
-    //     console.log("err: " + err);
-    //     console.log("rows: " + rows.toString());
-    // })
-
-    //WORKS
-    // conn.query("SELECT * FROM bladder WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
-    //     console.log("err: " + err);
-    //     console.log("rows: " + rows);
-    //     console.log(rows[0]["username"]);
-    //     console.log(rows[0]);
-    // })
-
-    const allTablesArray = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder"];
-    for (let i = 0; i < allTablesArray.length; i++) {
-        conn.query("SELECT * FROM " + allTablesArray[i] + " WHERE DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
-            console.log(allTablesArray[i] + " rows:");
+        conn.query("SELECT * FROM " + req.body.tableName + " WHERE username = '" + req.body.username + "' AND DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+            console.log(req.body.tableName + " : " + rows);
             console.log(rows);
-        })
-    }
+            res.send(rows);
 
-
+    })
 })
+
+app.post('/getStudents', (req, res) => {
+    const conn = mariadb.createConnection(db_info);
+
+    conn.query("SELECT * FROM users WHERE is_administrator = 0 order by last_name", (err, rows) => {
+        res.send(rows);
+    })
+})
+
+app.post('/twoValues', (req, res) => {
+    console.log("in submit");
+    console.log("username: " + req.body.username);
+    console.log("patientId: " + req.body.patientId);
+    console.log("value one: " + req.body.val1);
+    console.log("value two: " + req.body.val2);
+    console.log("table sections: " + req.body.tableScetion1 + ", " + req.body.tableSection2)
+    const conn = mariadb.createConnection(db_info);
+
+    conn.query("insert into " + req.body.tableName + " (username, patient_id, " + req.body.tableScetion1 + ", " + req.body.tableScetion2 +") values('"
+        + req.body.username + "', " + req.body.patientId + ", " + req.body.val1 + ", " + req.body.val2
+        + ")", (err) => {
+        console.log("err: " + err);
+        console.log("submitted " + req.body.tableName);
+    });
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

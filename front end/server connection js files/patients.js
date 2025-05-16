@@ -1,8 +1,12 @@
+//imports the id number associated with the patient the student has selected variable created on patients page
+// as well as importing username variable created on sign in page
 let username = sessionStorage.getItem("username");
 console.log("username (in patients): " + username);
 
 let logout = document.getElementById("signout");
 
+// once the page has fully loaded a call is made to the server with the username variable
+// to check if the student has signed in
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username})
     .then(response => {
@@ -29,8 +33,7 @@ let pait9 = document.getElementById("pait9");
 let pait10 = document.getElementById("pait10");
 
 
-// we shouldn't hardcode the patient id
-
+//gets all the names of the patients from the server
 axios.get("http://localhost:3000/getPatients")
   .then(response => {
     let res = response.data;
@@ -41,7 +44,7 @@ axios.get("http://localhost:3000/getPatients")
     console.log(patientNames);
     console.log(patientIDs);
 
-
+//   sets the button text to the names in the array
     console.log(patientNames.length);
     pait1.innerText = patientNames[0];
     pait2.innerText = patientNames[1];
@@ -56,7 +59,7 @@ axios.get("http://localhost:3000/getPatients")
 
 
 
-
+//  sets a session storage vale for the selected patient
     pait1.onclick = function(){sessionStorage.setItem("patientval", patientIDs[0])};
     pait2.onclick = function(){sessionStorage.setItem("patientval", patientIDs[1])};
     pait3.onclick = function(){sessionStorage.setItem("patientval", patientIDs[2])};
@@ -70,6 +73,7 @@ axios.get("http://localhost:3000/getPatients")
 
   })
 
+// marks the student as logged out in the server and reroutes them to the sign in page
 if (logout !== null) {
   logout.onclick = function () {
     console.log("logging out");

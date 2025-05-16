@@ -1,8 +1,13 @@
+//imports the id number associated with the patient the student has selected variable created on patients page
+// as well as importing username variable created on sign in page
+
 let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");
 
+// once the page has fully loaded a call is made to the server with the username variable
+// to check if the student has signed in
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username:username})
     .then(response => {
@@ -14,6 +19,7 @@ window.onload = () => {
     });
 }
 
+// marks the student as logged out in the server and reroutes them to the sign in page
 if (logout !== null) {
   logout.onclick = function () {
     console.log("logging out");
@@ -26,19 +32,12 @@ if (logout !== null) {
   };
 }
 
-function sendData(tableName, value, patientNum) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
-    .then(response => {
-      console.log('Response:', response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  location.reload();
-}
-
-function sendInOutData(tableName, valueD, valueI, patientNum) {
-  axios.post('http://localhost:3000/submitInOut', {tableName: tableName, username: username,  ccIn: valueD, ccOut: valueI, patientId: patientNum})
+// function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
+// and the id number for the patient the student selected. this one has been modified to send multiple values
+//                                                                                         type           amount
+function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
+  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
+    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -47,8 +46,10 @@ function sendInOutData(tableName, valueD, valueI, patientNum) {
     });
 }
 
-function sendMealData(valueB, valueL, valueD, patientNum) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientNum})
+// function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
+// and the id number for the patient the student selected. this one has been modified to send multiple values
+function sendMealData(valueB, valueL, valueD) {
+  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -92,6 +93,7 @@ let lun;
 let din;
 let typeIn;
 let typeOut;
+//once the submit button is clicked the program sets the corresponding breakfast lunch and dinner variables to the value which has been selected
 submit.onclick = function(){
   if(brk1.checked){brk = true}
   else if(brk2.checked){brk = false}
@@ -105,6 +107,7 @@ submit.onclick = function(){
   else if (din2.checked){din = false}
   else if (sub3.checked){din = null}
 
+  // this checks if something has been selected and if it hasnt it will force you to
   if(brk1.checked === false && brk2.checked === false && sub1.checked === false){
     window.alert("Please select one of the 3 options in the Breakfast section")
     return;
@@ -118,8 +121,10 @@ submit.onclick = function(){
     return;
   }
 
-  sendMealData(brk, lun, din, patientval);
+  //sends the values for breakfast lunch and dinner
+  sendMealData(brk, lun, din);
 
+  // checks the intake and outake radios and sets a numarical value for the type selected
   if(soft.checked){typeIn = 1}
   else if(jui.checked){typeIn = 2}
   else if(wat.checked){typeIn = 3}
@@ -134,11 +139,14 @@ submit.onclick = function(){
   else if(wound.checked){typeOut = 5}
   else if(liqsto.checked){typeOut = 6}
 
-    if(typeof intake.value != "number" || typeof output.value != "number" || typeIn === null || typeOut === null){
+    // makes sure an int was put into the imput box
+  console.log(Number(intake.value));
+    if(isNaN(Number(intake.value)) || isNaN(Number(output.value)) || typeIn === null || typeOut === null){
       window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
       return;
     }
     console.log("submitted meal");
-  sendInOutData("dietary_intake_in", intake.value, typeIn);
-  sendInOutData("dietary_intake_out", output.value, typeOut);
+    //submits intake and output values
+  sendTwoValues("dietary_intake_in", intake.value, typeIn, "amount", "type");
+  sendTwoValues("dietary_intake_out", output.value, typeOut, "amount", "type");
   }

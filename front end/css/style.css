@@ -145,9 +145,16 @@ hr{
   left:0%;
 }
 
-table {
-  border: 1px solid black;
-  padding: 1rem;
+table{
+  border-collapse: collapse;
+  text-align: left;
+  margin: 1rem;
+}
+
+td, th {
+  border: 2px solid black;
+  padding: 1rem 3rem 1rem 1rem;
+  vertical-align: top;
 }
 
 

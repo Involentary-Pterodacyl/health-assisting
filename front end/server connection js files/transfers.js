@@ -1,8 +1,12 @@
+//imports the id number associated with the patient the student has selected variable created on patients page
+// as well as importing username variable created on sign in page
 let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");
 
+// once the page has fully loaded a call is made to the server with the username variable
+// to check if the student has signed in
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username:username})
     .then(response => {
@@ -14,6 +18,7 @@ window.onload = () => {
     });
 }
 
+// marks the student as logged out in the server and reroutes them to the sign in page
 if (logout !== null) {
   logout.onclick = function () {
     console.log("logging out");
@@ -26,8 +31,10 @@ if (logout !== null) {
   };
 }
 
-function sendData(tableName, value, patientNum) {
-  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientNum})
+// function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
+// and the id number for the patient the student selected
+function sendData(tableName, value) {
+  axios.post('http://localhost:3000/submit', {tableName: tableName, username: username,  value: value, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -58,24 +65,26 @@ let wheelchair = document.getElementById("wheel");
 let bedridden = document.getElementById("bedrid");
 let none3 = document.getElementById("nodevice");
 
+//logs the self portion of the page
+dependent.onclick = function(){sendData("transfers_self", 1)};
+extAssist.onclick = function(){sendData("transfers_self", 2)};
+limAssist.onclick = function(){sendData("transfers_self", 3)};
+supervision.onclick = function(){sendData("transfers_self", 4)};
+independent.onclick = function(){sendData("transfers_self", 5)};
+none1.onclick = function(){sendData("transfers_self", 6)};
 
-dependent.onclick = function(){sendData("transfers_self", 1, patientval)};
-extAssist.onclick = function(){sendData("transfers_self", 2, patientval)};
-limAssist.onclick = function(){sendData("transfers_self", 3, patientval)};
-supervision.onclick = function(){sendData("transfers_self", 4, patientval)};
-independent.onclick = function(){sendData("transfers_self", 5, patientval)};
-none1.onclick = function(){sendData("transfers_self", 6, patientval)};
+//logs support portion of the page
+hoyer.onclick = function(){sendData("transfers_support", 1)};
+twoPerson.onclick = function(){sendData("transfers_support", 2)};
+onePerson.onclick = function(){sendData("transfers_support", 3)};
+setup.onclick = function(){sendData("transfers_support", 4)};
+noSetup.onclick = function(){sendData("transfers_support", 5)};
+none2.onclick = function(){sendData("transfers_support", 6)};
 
-hoyer.onclick = function(){sendData("transfers_support", 1, patientval)};
-twoPerson.onclick = function(){sendData("transfers_support", 2, patientval)};
-onePerson.onclick = function(){sendData("transfers_support", 3, patientval)};
-setup.onclick = function(){sendData("transfers_support", 4, patientval)};
-noSetup.onclick = function(){sendData("transfers_support", 5, patientval)};
-none2.onclick = function(){sendData("transfers_support", 6, patientval)};
-
-cane.onclick = function(){sendData("transfers_device", 1, patientval)};
-walker.onclick = function(){sendData("transfers_device", 2, patientval)};
-crutches.onclick = function(){sendData("transfers_device", 3, patientval)};
-wheelchair.onclick = function(){sendData("transfers_device", 4, patientval)};
-bedridden.onclick = function(){sendData("transfers_device", 5, patientval)};
-none3.onclick = function(){sendData("transfers_device", 6, patientval)};
+//logs device portion of the page
+cane.onclick = function(){sendData("transfers_device", 1)};
+walker.onclick = function(){sendData("transfers_device", 2)};
+crutches.onclick = function(){sendData("transfers_device", 3)};
+wheelchair.onclick = function(){sendData("transfers_device", 4)};
+bedridden.onclick = function(){sendData("transfers_device", 5)};
+none3.onclick = function(){sendData("transfers_device", 6)};
