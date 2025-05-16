@@ -46,8 +46,8 @@ let valOther = [
 // need to figure out how to display tables with more than one value
 // meal, dietary_intake, etc
 
-const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood",
-  //"sundowning", "meal", "dietary_intake", "dietary_output",
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning",
+  //"meal", "dietary_intake", "dietary_output",
   "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
   "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
   "pulse", "respiration", "temperature", //"bathing",
@@ -288,7 +288,7 @@ function generateTable(students, categoryRowspans) {
         }
         else if (tableNames[catAtRowI[i]] === "meal"){
           // not tested
-          cellText = document.createTextNode(allData[i]["meal"] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"]]);
+          cellText = document.createTextNode(["Breakfast", "Lunch", "Dinner"][allData[i]["meal"]] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"]]);
         }
         //else if (tableNames[catAtRowI[i]] === "dietary_intake" || tableNames[catAtRowI[i]] === "dietary_output"){
         else if (tableDietInOut.includes(tableNames[catAtRowI[i]])){

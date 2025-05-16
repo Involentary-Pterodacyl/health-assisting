@@ -49,7 +49,7 @@ function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) 
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 function sendMealData(valueB, valueL, valueD) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "dietary_intake_meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
+  axios.post('http://localhost:3000/submitMeal', {tableName: "meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
@@ -95,17 +95,17 @@ let typeIn;
 let typeOut;
 //once the submit button is clicked the program sets the corresponding breakfast lunch and dinner variables to the value which has been selected
 submit.onclick = function(){
-  if(brk1.checked){brk = true}
-  else if(brk2.checked){brk = false}
-  else if (sub1.checked){brk = null}
+  if(brk1.checked){brk = 1}
+  else if(brk2.checked){brk = 2}
+  else if (sub1.checked){brk = 3}
 
-  if(lun1.checked){lun = true}
-  else if(lun2.checked){lun = false}
-  else if (sub2.checked){lun = null}
+  if(lun1.checked){lun = 1}
+  else if(lun2.checked){lun = 2}
+  else if (sub2.checked){lun = 3}
 
-  if (din1.checked){din = true}
-  else if (din2.checked){din = false}
-  else if (sub3.checked){din = null}
+  if (din1.checked){din = 1}
+  else if (din2.checked){din = 2}
+  else if (sub3.checked){din = 3}
 
   // this checks if something has been selected and if it hasnt it will force you to
   if(brk1.checked === false && brk2.checked === false && sub1.checked === false){
