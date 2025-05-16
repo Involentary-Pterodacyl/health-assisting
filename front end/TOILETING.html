@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Toileting</title>
-  <link rel="stylesheet" href="js/css/bed,trans,eat.css" />
+  <link rel="stylesheet" href="css/bed,trans,eat.css" />
 </head>
 <body>
   <header>
@@ -15,7 +15,7 @@
 <div id="container">
   <form action="/submit" method="post">
 <div class="section 1">
-  <p class="p2"> <em> Self performance</em></p>
+  <p class="p2"> ‎  Self performance ‎ </p>
 
   <p> <button type="button" class="button totdep" id="dependent"> 4. Totally Dependant </button></p>
   <p> <button type="button" class="button toiass" id="extAssist"> 3. Extensive Assist</button></p>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="section">
-  <p class="p3"> <em> Support provided </em></p>
+  <p class="p3"> ‎  Support provided ‎ </p>
   <p> <button type="button" class="button toicolo"  id="colostomy"> 4. Colostomy Bag </button></p>
   <p> <button type="button" class="button toitwo" id="twoPerson"> 3.Two Person Assist </button></p>
   <p> <button type="button" class="button toione" id="onePerson"> 2. One Person Assist </button></p>
@@ -50,7 +50,7 @@
       </tr>
     </table>
   </div>
-  <p class="p4"><em>Did the patient use a catheter?</em></p>
+  <div class="p4"><em>Did the patient use a catheter?</em></div>
   <div class="section2">
   <table>
     <tr>
@@ -62,7 +62,11 @@
 </div>
 
 <p class="back back4"> <a href="ADL.html"> <img src="img/arrow.png" alt="Back" width="50px" height="50px"></a></p>
-<p><a  id="signout" class="signout button" href="#" >Sign out</a></p>
+<div >
+  <hr>
+  <hr>
+  <p><a id="signout"  class="section3" href="#" >Sign out</a></p>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script src="server connection js files/toileting.js" type="module"></script>

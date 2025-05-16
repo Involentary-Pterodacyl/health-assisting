@@ -160,6 +160,7 @@ background-color: cornflowerblue;
   transform: scale(1.05);
 }
 
+
 .buttons2{
 
 }
@@ -184,6 +185,9 @@ background-color: cornflowerblue;
   font-size: 15px;
   align-items: center; /* Center text vertically */
   justify-content: center;
+  position: absolute;
+  bottom: -25%;
+  left:0%
 }
 
 
@@ -244,9 +248,10 @@ table{
   border-radius: 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   position:absolute;
-  bottom:-19%;
+  bottom:-25%;
   right:0%;
 }
+
 
 
 

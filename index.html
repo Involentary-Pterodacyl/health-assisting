@@ -16,7 +16,7 @@
 <p class="p1" id="id1"> CRLS Health Assisting documentation program.</p>
 
 <br>
-<p class ="p2">Welcome! Please enter your login credentials.</p>
+<p class ="p2">Welcome nurse! Please enter your login credentials.</p>
 <br>
 </header>
 <hr>
@@ -25,27 +25,27 @@
 
 <form>
   <div class="login-box">
-    <h2 class="text-2xl font-bold text-center">Login</h2>
+    <h2 class="logintext login">Login</h2>
     <form action="#" method="POST">
       <div class="container mb-4">
-        <label for="uname" class="user block mb-2 font-semibold">Username</label>
-        <input type="text" id="uname" placeholder="Enter Username" name="uname" class="w-full p-2 border rounded" required>
+        <label for="uname" class="logintext username">Username</label>
+        <input type="text" id="uname" placeholder="Enter Username" name="uname" class="border uname" required>
       </div>
-
+    <hr>
       <div class="container mb-4">
-        <label for="psw" class="pass block mb-2 font-semibold">Password</label>
-        <input type="password" id="psw" placeholder="Enter Password" name="psw" class="w-full p-2 border rounded" required>
+        <label for="psw" class="logintext password">Password</label>
+        <input type="password" id="psw" placeholder="Enter Password" name="psw" class="border passwrd" required>
       </div>
 
       <div class="container mb-4 text-center">
-        <h2><button type="button" class="w-full py-2 px-4 text-white rounded hover:bg-green-600" id="login">Login</button></h2>
+        <h2><button type="button" class="buttons login" id="login">Login</button></h2>
       </div>
     </form>
     <p class="text-center text-sm">Don't have an account? <a href="front%20end/signup.html" class="text-blue-400 hover:underline">Sign up</a></p>
   </div>
 </form>
 
-<p><a class="buttons nav" href="front%20end/PATIENTS.html"> patients </p></a>
+<p><a class="buttons nav" href="front%20end/PATIENTS.html"> patients </a></p>
 <script src="front%20end/js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
   <script src="front end/server connection js files/login.js" type="module"></script>
