@@ -24,7 +24,15 @@ let valSupport1 = ["Hoyer Lift", "Feeding Tube", "Colostomy Bag", "Hoyer Lift"];
 let tableCare1to4 = ["back_rub", "nails", "oral", "shaving", "denture"];
 let valCare1to4 = ["Assist", "Independent", "Dependent", "Not Applicable"];
 
-let tableBool = ["catheter"];
+let valBathing = ["Partial", "Tub", "Shower", "Complete Bed Bath"];
+
+let tableBool = ["sundowning", "catheter"];
+
+let tableDietInOut = ["dietary_intake", "dietary_output"];
+let valDietInOut = [
+  ["Soft drink", "Juice", "Water", "Tea or Coffee", "Liquid/Gelatin/Cream foods", "Milk", "IV Fluids"],
+  ["Urine", "Vomitus", "Excessive perspiration", "Blood", "Wound Drainage", "Liquid Stools"]
+];
 
 let tableOther = ["bed_mobility_position", "bladder", "mood", "toileting_consistency", "transfers_device"];
 let valOther = [
@@ -38,9 +46,8 @@ let valOther = [
 // need to figure out how to display tables with more than one value
 // meal, dietary_intake, etc
 
-//const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
-const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", //"sundowning",
-  "meal", //"dietary_intake", "dietary_output",
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood",
+  //"sundowning", "meal", "dietary_intake", "dietary_output",
   "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
   "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
   "pulse", "respiration", "temperature", //"bathing",
@@ -272,13 +279,27 @@ function generateTable(students, categoryRowspans) {
         else if (tableCare1to4.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valCare1to4[allData[i]["value"] - 1]);
         }
+        else if (tableNames[catAtRowI[i]] === "bathing"){
+          // not tested
+          cellText = document.createTextNode(valCare1to4[allData[i]["assist"] - 1] + ". Method: " + valBathing[allData[i]["method"] - 1]);
+        }
         else if (tableBool.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(["No", "Yes"][allData[i]["value"]]);
+        }
+        else if (tableNames[catAtRowI[i]] === "meal"){
+          // not tested
+          cellText = document.createTextNode(allData[i]["meal"] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"]]);
+        }
+        //else if (tableNames[catAtRowI[i]] === "dietary_intake" || tableNames[catAtRowI[i]] === "dietary_output"){
+        else if (tableDietInOut.includes(tableNames[catAtRowI[i]])){
+          // not tested
+          cellText = document.createTextNode(allData[i]["amount"] + " CCs, " + valDietInOut[tableDietInOut.indexOf(tableNames[catAtRowI[i]])][allData[i]["type"] - 1])
         }
         else if (tableOther.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valOther[tableOther.indexOf(tableNames[catAtRowI[i]])][allData[i]["value"] - 1]);
         }
         else {
+          // this is for weight, blood pressure, and oxygen. just displays the raw value. we should add units if there's time
           cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
         }
       }
