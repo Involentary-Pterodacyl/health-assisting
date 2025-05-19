@@ -13,8 +13,8 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    // the CORRECT ORIGIN is 'http://localhost:63342'
-    origin: 'http://localhost:63342',
+    // is it supposed to end in 2 or 3??
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -92,12 +92,12 @@ app.post('/logout', (req, res) => {
 });
 
 app.post('/submitMeal', (req, res) => {
-    console.log("sumbitMeal");
+    console.log("submitMeal");
     const conn = mariadb.createConnection(db_info);
-    conn.query("insert into meal (username, patient, breakfast, lunch, dinner) values("
-        + req.body.username + ""
+    conn.query("insert into meal (username, patient_id, meal, value) values('"
+        + req.body.username + "', " + req.body.patientId + ", " + req.body.meal + ", " + req.body.value
         + ")", (err) => {
-        //console.log(err);
+        console.log(err);
         console.log("submitted meal");
     });
 });
@@ -170,10 +170,10 @@ app.post('/twoValues', (req, res) => {
     console.log("patientId: " + req.body.patientId);
     console.log("value one: " + req.body.val1);
     console.log("value two: " + req.body.val2);
-    console.log("table sections: " + req.body.tableScetion1 + ", " + req.body.tableSection2)
+    console.log("table sections: " + req.body.colName1 + ", " + req.body.colName2)
     const conn = mariadb.createConnection(db_info);
 
-    conn.query("insert into " + req.body.tableName + " (username, patient_id, " + req.body.tableScetion1 + ", " + req.body.tableScetion2 +") values('"
+    conn.query("insert into " + req.body.tableName + " (username, patient_id, " + req.body.colName1 + ", " + req.body.colName2 +") values('"
         + req.body.username + "', " + req.body.patientId + ", " + req.body.val1 + ", " + req.body.val2
         + ")", (err) => {
         console.log("err: " + err);

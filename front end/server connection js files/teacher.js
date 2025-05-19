@@ -30,7 +30,7 @@ let tableBool = ["sundowning", "catheter"];
 
 let tableDietInOut = ["dietary_intake", "dietary_output"];
 let valDietInOut = [
-  ["Soft drink", "Juice", "Water", "Tea or Coffee", "Liquid/Gelatin/Cream foods", "Milk", "IV Fluids"],
+  ["Soft Drink", "Juice", "Water", "Tea or Coffee", "Liquid/Gelatin/Cream foods", "Milk", "IV Fluids"],
   ["Urine", "Vomitus", "Excessive perspiration", "Blood", "Wound Drainage", "Liquid Stools"]
 ];
 
@@ -43,11 +43,8 @@ let valOther = [
   ["Cane", "Walker", "Crutches", "Wheelchair", "Bedridden", "None"]
 ];
 
-// need to figure out how to display tables with more than one value
-// meal, dietary_intake, etc
-
 const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning",
-  //"meal", "dietary_intake", "dietary_output",
+  "meal", "dietary_intake", "dietary_output",
   "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
   "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
   "pulse", "respiration", "temperature", //"bathing",
@@ -287,12 +284,9 @@ function generateTable(students, categoryRowspans) {
           cellText = document.createTextNode(["No", "Yes"][allData[i]["value"]]);
         }
         else if (tableNames[catAtRowI[i]] === "meal"){
-          // not tested
-          cellText = document.createTextNode(["Breakfast", "Lunch", "Dinner"][allData[i]["meal"]] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"]]);
+          cellText = document.createTextNode(["Breakfast", "Lunch", "Dinner"][allData[i]["meal"] - 1] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"] - 1]);
         }
-        //else if (tableNames[catAtRowI[i]] === "dietary_intake" || tableNames[catAtRowI[i]] === "dietary_output"){
         else if (tableDietInOut.includes(tableNames[catAtRowI[i]])){
-          // not tested
           cellText = document.createTextNode(allData[i]["amount"] + " CCs, " + valDietInOut[tableDietInOut.indexOf(tableNames[catAtRowI[i]])][allData[i]["type"] - 1])
         }
         else if (tableOther.includes(tableNames[catAtRowI[i]])){

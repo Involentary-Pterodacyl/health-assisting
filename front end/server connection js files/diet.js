@@ -35,27 +35,30 @@ if (logout !== null) {
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 //                                                                                         type           amount
-function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
-  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
-    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
+function sendTwoValues(tableName, value1, value2, colName1, colName2) {
+  console.log("col1: " + colName1);
+  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: value1, val2: value2,
+    patientId: patientval, colName1: colName1, colName2: colName2})
     .then(response => {
       console.log('Response:', response.data);
     })
     .catch(error => {
       console.error('Error:', error);
     });
+  location.reload();
 }
 
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
-function sendMealData(valueB, valueL, valueD) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "meal", username:username,  breakfast: valueB, lunch: valueL, dinner: valueD, patientId: patientval})
+function sendMealData(meal, value) {
+  axios.post('http://localhost:3000/submitMeal', {tableName: "meal", username:username,  meal: meal, value: value, patientId: patientval})
     .then(response => {
       console.log('Response:', response.data);
     })
     .catch(error => {
       console.error('Error:', error);
     });
+  location.reload();
 }
 
 let brk1 = document.getElementById("brk1");
@@ -74,7 +77,8 @@ let intake = document.getElementById("intakeinput");
 let soft = document.getElementById("soft");
 let jui = document.getElementById("jui");
 let wat = document.getElementById("wat");
-let teaCoffee = document.getElementById("liq");
+let teaCoffee = document.getElementById("teco");
+let liq = document.getElementById("liq");
 let mil = document.getElementById("mil");
 let iv = document.getElementById("iv");
 
@@ -95,43 +99,48 @@ let typeIn;
 let typeOut;
 //once the submit button is clicked the program sets the corresponding breakfast lunch and dinner variables to the value which has been selected
 submit.onclick = function(){
-  if(brk1.checked){brk = 1}
-  else if(brk2.checked){brk = 2}
-  else if (sub1.checked){brk = 3}
-
-  if(lun1.checked){lun = 1}
-  else if(lun2.checked){lun = 2}
-  else if (sub2.checked){lun = 3}
-
-  if (din1.checked){din = 1}
-  else if (din2.checked){din = 2}
-  else if (sub3.checked){din = 3}
-
-  // this checks if something has been selected and if it hasnt it will force you to
-  if(brk1.checked === false && brk2.checked === false && sub1.checked === false){
-    window.alert("Please select one of the 3 options in the Breakfast section")
-    return;
-  }
-  if(lun1.checked === false && lun2.checked === false && sub2.checked === false){
-    window.alert("Please select one of the 3 options in the Lunch section")
-    return;
-  }
-  if(din1.checked === false && din2.checked === false && sub3.checked === false){
-    window.alert("Please select one of the 3 options in the Dinner section")
-    return;
-  }
-
   //sends the values for breakfast lunch and dinner
-  sendMealData(brk, lun, din);
+  if(brk1.checked){
+    sendMealData(1,1);
+  }
+  else if(brk2.checked){
+    sendMealData(1,2);
+  }
+  else if (sub1.checked){
+    sendMealData(1,3);
+  }
 
-  // checks the intake and outake radios and sets a numarical value for the type selected
+  if(lun1.checked){
+    sendMealData(2,1);
+  }
+  else if(lun2.checked){
+    sendMealData(2,2);
+  }
+  else if (sub2.checked){
+    sendMealData(2,3);
+  }
+
+  if(din1.checked){
+    sendMealData(3,1);
+  }
+  else if(din2.checked){
+    sendMealData(3,2);
+  }
+  else if (sub3.checked){
+    sendMealData(3,3);
+  }
+
+  // checks the intake and output radios and sets a numerical value for the type selected
+  typeIn = 0;
   if(soft.checked){typeIn = 1}
   else if(jui.checked){typeIn = 2}
   else if(wat.checked){typeIn = 3}
   else if(teaCoffee.checked){typeIn = 4}
-  else if(mil.checked){typeIn = 5}
-  else if(iv.checked){typeIn = 6}
+  else if(liq.checked){typeIn = 5}
+  else if(mil.checked){typeIn = 6}
+  else if(iv.checked){typeIn = 7}
 
+  typeOut = 0;
   if(uri.checked){typeOut = 1}
   else if(vom.checked){typeOut = 2}
   else if(excpersp.checked){typeOut = 3}
@@ -139,14 +148,40 @@ submit.onclick = function(){
   else if(wound.checked){typeOut = 5}
   else if(liqsto.checked){typeOut = 6}
 
-    // makes sure an int was put into the imput box
-  console.log(Number(intake.value));
-    if(isNaN(Number(intake.value)) || isNaN(Number(output.value)) || typeIn === null || typeOut === null){
-      window.alert("Invalid input please make sure you have enter numbers ONLY in the input fields")
-      return;
-    }
-    console.log("submitted meal");
-    //submits intake and output values
-  sendTwoValues("dietary_intake_in", intake.value, typeIn, "amount", "type");
-  sendTwoValues("dietary_intake_out", output.value, typeOut, "amount", "type");
+  // checks for things the user could do wrong:
+  // NaN in input field
+  // input but no type selected
+  // type but no input
+  // nothing entered or selected
+
+  if (isNaN(Number(intake.value)) || isNaN(Number(output.value))){
+    window.alert("Invalid input. Enter numbers ONLY in the input fields.");
+    return;
+  }
+  if (intake.value !== "" && typeIn == 0){
+    window.alert("Invalid input. Please select a type of intake.");
+    return;
+  }
+  if (output.value !== "" && typeOut == 0){
+    window.alert("Invalid input. Please select a type of output.");
+    return;
+  }
+  if (typeIn !== 0 && intake.value === ""){
+    window.alert("Invalid input. Please enter an intake amount.");
+    return;
+  }
+  if (typeOut !== 0 && output.value === ""){
+    window.alert("Invalid input. Please enter an output amount.");
+    return;
+  }
+  if (typeIn !== 0 && intake.value !== ""){
+    //submits intake values
+    sendTwoValues("dietary_intake", Number(intake.value), typeIn, "amount", "type");
+    console.log("submitted intake");
+  }
+  if (typeOut !== 0 && output.value !== ""){
+    //submits output values
+    sendTwoValues("dietary_output", Number(output.value), typeOut, "amount", "type");
+    console.log("submitted output");
+  }
   }

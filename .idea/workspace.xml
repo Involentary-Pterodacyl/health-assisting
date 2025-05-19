@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/mood.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/mood.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/Teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
@@ -206,7 +208,8 @@
       <workItem from="1746721539272" duration="4540000" />
       <workItem from="1747065694328" duration="243000" />
       <workItem from="1747065949623" duration="5075000" />
-      <workItem from="1747412736191" duration="4049000" />
+      <workItem from="1747412736191" duration="4278000" />
+      <workItem from="1747667438180" duration="6522000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -422,29 +425,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>93</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server.mjs</url>
           <line>87</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>302</line>
+          <line>296</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>295</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>283</line>
-          <properties lambdaOrdinal="-1" />
+          <line>280</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

@@ -52,7 +52,7 @@ function sendData(tableName, value, patientNum) {
   location.reload();
 }
 
-// checks propor values have peen put into the boxes. if they have it send the data to the server if not prevents code from continueing
+// checks proper values have peen put into the boxes. if they have it send the data to the server if not prevents code from continuing
 submit.onclick = () => {
   if(isNaN(Number.parseFloat(weight.value)) || isNaN(Number.parseFloat(temp.value)) || isNaN(Number.parseFloat(pulse.value)) || isNaN(Number.parseFloat(respratory.value))){
     window.alert("Please make sure you have filled in all input fields with numbers except BP")
