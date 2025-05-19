@@ -78,6 +78,7 @@ hr{
   font-weight: bold;
   font-family: "Roboto Condensed", sans-serif ;
 
+
   color:#454545;
 }
 
@@ -154,4 +155,19 @@ td, th {
   border: 2px solid black;
   padding: 1rem 3rem 1rem 1rem;
   vertical-align: top;
+}
+
+
+.logintext{
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.border{
+border-radius: 5px;
+  border-color: black;
+  mso-border-shadow: yes;
+}
+.placeholder{
+  color: red;
 }

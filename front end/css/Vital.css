@@ -100,9 +100,9 @@ input[type="text"]:focus {
   height: 40px;
   display:block;
   font-size: 15px;
-  margin:auto;
-  align-items: center; /* Center text vertically */
-  justify-content: center;
+  position:absolute;
+  bottom:0%;
+  left:0%;
 }
 
 #VitalTable{
@@ -110,7 +110,7 @@ input[type="text"]:focus {
   align-items:center;
 }
 
-/* Button general styling */
+
 .button {
   background-color: cornflowerblue;
   border: 2px solid #4682b4;
@@ -128,14 +128,7 @@ input[type="text"]:focus {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 10px;
 }
-
-.button:hover {
-  background-color: #4682b4;
-  transform: scale(1.05);
-}
-
 .signout{
   background-color: cornflowerblue;
   color:white;
