@@ -68,6 +68,11 @@ await getPatients();
 // console.log("patientNames :");
 // console.log(patientNames);
 
+// console.log("submit (outside): " + sessionStorage.getItem("submit"));
+// if (sessionStorage.getItem("submit") === "true") {
+//   await submitOnClick();
+// }
+
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
 window.onload = () => {
@@ -81,9 +86,37 @@ window.onload = () => {
     });
 }
 
+// function reload() {
+//   sessionStorage.setItem("date1", date1.value);
+//   sessionStorage.setItem("date2", date2.value);
+//   sessionStorage.setItem("submit", "true");
+//   location.reload();
+// }
+
+// submit.onclick = async function () {
+//   await submitOnClick();
+// }
+
+//async function submitOnClick () {
 submit.onclick = async function () {
   let d1 = date1.value;
   let d2 = date2.value;
+  //
+  // if (sessionStorage.getItem("submit") !== "true") {
+  //   console.log("reload");
+  //   sessionStorage.setItem("date1", date1.value);
+  //   sessionStorage.setItem("date2", date2.value);
+  //   sessionStorage.setItem("submit", "true");
+  //   console.log("submit (submitonclick): " + sessionStorage.getItem("submit"));
+  //   await new Promise(r => setTimeout(r, 2000));
+  //   reload();
+  //   return;
+  // }
+  //
+  // sessionStorage.setItem("submit", "false");
+  //
+  // let d1 = sessionStorage.getItem("date1");
+  // let d2 = sessionStorage.getItem("date2");
 
   if (d1 === "" || d2 === "") {
     window.alert("Please select both dates.");
@@ -111,9 +144,10 @@ submit.onclick = async function () {
           //     usernames.push(res.data[x]["username"]);
           //   }
           // }
-        })
+        });
     }
   }
+  console.log("finished loop");
   // console.log("category rowspans: ");
   // console.log(categoryRowspans);
   // console.log("alldata: ");
@@ -154,7 +188,7 @@ async function sortStudents() {
     // return {usernames: usernames, studentNames: studentNames};
     usernames = uNames;
     studentNames = sNames;
-  })
+  });
   //await new Promise(r => setTimeout(r, 10));
 }
 
