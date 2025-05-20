@@ -36,7 +36,6 @@ if (logout !== null) {
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 //                                                                                         type           amount
 function sendTwoValues(tableName, value1, value2, colName1, colName2) {
-  console.log("col1: " + colName1);
   axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: value1, val2: value2,
     patientId: patientval, colName1: colName1, colName2: colName2})
     .then(response => {

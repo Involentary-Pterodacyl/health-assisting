@@ -4,7 +4,7 @@
 let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
-let logout = document.getElementById("signout");
+let logout = document.getElementById("signout"); // this signout button not working
 let submit = document.getElementById("submit");
 
 // once the page has fully loaded a call is made to the server with the username variable
@@ -36,15 +36,16 @@ function sendData(tableName, value) {
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 //                                                                                          bathing       assist
-function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
-  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
-    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
+function sendTwoValues(tableName, value1, value2, colName1, colName2) {
+  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: value1, val2: value2,
+    patientId: patientval, colName1: colName1, colName2: colName2})
     .then(response => {
       console.log('Response:', response.data);
     })
     .catch(error => {
       console.error('Error:', error);
     });
+  location.reload();
 }
 
 // marks the student as logged out in the server and reroutes them to the sign in page
@@ -93,8 +94,10 @@ let dentureN = document.getElementById("N6");
 
 // this once the submit button has been pressed checks what has been selected prompts user to make all selections
 // if one or more is empty and sends the numerical data to the server
-submit.on("click", function(){
-  let bath;
+submit.onclick = function(){
+  // its not getting here for some reason
+  console.log("onclick");
+  let method;
   let assist;
   let shave;
   let rub;
@@ -102,10 +105,10 @@ submit.on("click", function(){
   let oral;
   let denture;
 
-  if (bath1.checked) {bath = 1}
-  else if(bath2.checked) {bath = 2}
-  else if(bath3.checked) {bath = 3}
-  else if(bath4.checked) {bath = 4}
+  if (bath1.checked) {method = 1}
+  else if(bath2.checked) {method = 2}
+  else if(bath3.checked) {method = 3}
+  else if(bath4.checked) {method = 4}
 
   if (assistA.checked) {assist = 1}
   else if(assistI.checked) {assist = 2}
@@ -133,19 +136,22 @@ submit.on("click", function(){
   else if (dentureD.checked) {denture = 3}
   else if (dentureN.checked) {denture = 4}
 
-  if(bath === null || assist === null || rub === null || nail === null || oral === null || denture === null){
-    window.alert("please make sure you have selected one option per category")
-    return;
+  // if(method === null || assist === null || rub === null || nail === null || oral === null || denture === null){
+  //   window.alert("please make sure you have selected one option per category")
+  //   return;
+  // }
+
+  //need alerts if user checks method but not assist etc
+  if (method !== null && assist !== null) {
+    sendTwoValues("bathing", method, assist, "method", "assist");
   }
+  //
+  // sendData("shaving", shave);
+  // sendData("back_rub", rub);
+  // sendData("nails", nail);
+  // sendData("oral", oral);
+  // sendData("denture", denture);
 
-  sendTwoValues("bathing", bath, assist, "method", "assist");
-  sendData("shaving", shave);
-  sendData("back_rub", rub);
-  sendData("nails", nail);
-  sendData("oral", oral);
-  sendData("denture", denture);
-
-
-})
+}
 
 
