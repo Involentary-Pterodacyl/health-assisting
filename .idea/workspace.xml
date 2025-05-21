@@ -8,9 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/Care and Bathing.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Care and Bathing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/care and bathing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
+      <change beforePath="$PROJECT_DIR$/front end/Teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/Teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
+    </list>
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +212,8 @@
       <workItem from="1747065949623" duration="5075000" />
       <workItem from="1747412736191" duration="4278000" />
       <workItem from="1747667438180" duration="6823000" />
-      <workItem from="1747762891624" duration="4497000" />
+      <workItem from="1747762891624" duration="4711000" />
+      <workItem from="1747844366736" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -425,28 +429,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>87</line>
+          <line>88</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>330</line>
+          <line>335</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>314</line>
+          <line>319</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>345</line>
+          <line>350</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/care and bathing.js</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

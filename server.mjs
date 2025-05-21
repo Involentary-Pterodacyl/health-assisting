@@ -29,12 +29,13 @@ app.use(express.json()); // Parse JSON data
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
 
 
-let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'}
+let db_info = {host: '127.0.0.1', user: 'db_user', password: 'HA-db', database: 'health_assisting'};
+const conn = mariadb.createConnection(db_info);
 
 //getting data
 app.post('/login', (req, res) => {
     console.log("in /login");
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
         console.log(err);
         console.log("in query");
@@ -55,7 +56,7 @@ app.post('/login', (req, res) => {
 
 app.post('/login_get', (req, res) => {
     console.log("checking if logged in");
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
         console.log("username: " + req.body.username);
         console.log("rows:");
@@ -83,7 +84,7 @@ app.post('/login_get', (req, res) => {
 //logout
 app.post('/logout', (req, res) => {
     console.log("in /logout");
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     //are we using this anymore?
     conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
         //console.log(err);
@@ -93,7 +94,7 @@ app.post('/logout', (req, res) => {
 
 app.post('/submitMeal', (req, res) => {
     console.log("submitMeal");
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     conn.query("insert into meal (username, patient_id, meal, value) values('"
         + req.body.username + "', " + req.body.patientId + ", " + req.body.meal + ", " + req.body.value
         + ")", (err) => {
@@ -104,7 +105,7 @@ app.post('/submitMeal', (req, res) => {
 
 app.get('/getPatients', (req, res) => {
     console.log("getPatients");
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     conn.query("SELECT * FROM patients", (err, rows) => {
         console.log(rows);
         res.send(rows);
@@ -134,7 +135,7 @@ app.post('/submit', (req, res) => {
     console.log("username: " + req.body.username);
     console.log("patientId: " + req.body.patientId);
     console.log("value: " + req.body.value);
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     conn.query("insert into " + req.body.tableName + " (username, patient_id, value) values('"
         + req.body.username + "', " + req.body.patientId + ", " + req.body.value
         + ")", (err) => {
@@ -144,22 +145,23 @@ app.post('/submit', (req, res) => {
 });
 
 app.post('/teacher', (req, res) => {
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
     console.log(typeof(req.body.date1));
     console.log(req.body.date1);
 
         conn.query("SELECT * FROM " + req.body.tableName + " WHERE username = '" + req.body.username + "' AND DATE(date) >= '" + req.body.date1 + "' AND DATE(date) <= '" + req.body.date2 + "'", (err, rows) => {
+            console.log("err (teacher): " + err);
             console.log(req.body.tableName + " : " + rows);
             console.log(rows);
             res.send(rows);
-
     })
 })
 
 app.post('/getStudents', (req, res) => {
-    const conn = mariadb.createConnection(db_info);
+   // const conn = mariadb.createConnection(db_info);
 
     conn.query("SELECT * FROM users WHERE is_administrator = 0 order by last_name", (err, rows) => {
+        console.log("err (getStudents): " + err);
         res.send(rows);
     })
 })
@@ -171,7 +173,7 @@ app.post('/twoValues', (req, res) => {
     console.log("value one: " + req.body.val1);
     console.log("value two: " + req.body.val2);
     console.log("table sections: " + req.body.colName1 + ", " + req.body.colName2)
-    const conn = mariadb.createConnection(db_info);
+    //const conn = mariadb.createConnection(db_info);
 
     conn.query("insert into " + req.body.tableName + " (username, patient_id, " + req.body.colName1 + ", " + req.body.colName2 +") values('"
         + req.body.username + "', " + req.body.patientId + ", " + req.body.val1 + ", " + req.body.val2

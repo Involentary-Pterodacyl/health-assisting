@@ -56,6 +56,10 @@ let allData = [];
 let patientNames = [];
 let patientIDs = [];
 
+let reload = document.getElementById("reload");
+
+reload.hidden = true;
+
 await sortStudents();
 // console.log("usernames:");
 // console.log(usernames);
@@ -86,19 +90,15 @@ window.onload = () => {
     });
 }
 
-// function reload() {
-//   sessionStorage.setItem("date1", date1.value);
-//   sessionStorage.setItem("date2", date2.value);
-//   sessionStorage.setItem("submit", "true");
-//   location.reload();
-// }
+reload.onclick = function () {
+  history.go(0);
+}
 
-// submit.onclick = async function () {
-//   await submitOnClick();
-// }
 
 //async function submitOnClick () {
 submit.onclick = async function () {
+  submit.hidden = true;
+  reload.hidden = false;
   let d1 = date1.value;
   let d2 = date2.value;
   //
@@ -128,14 +128,17 @@ submit.onclick = async function () {
 
   console.log("about to start loop");
   for (let u = 0; u < usernames.length; u++) {
+    console.log( "Outer loop:" + usernames[u]);
     categoryRowspans[u] = [];
     //allData[u] = [];
     for (let t = 0; t < tableNames.length; t++) {
+      console.log( "inner loop:" + t);
       await axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, username: usernames[u], tableName: tableNames[t]})
         .then(res => {
           // console.log("data " + usernames[u] + ' ' + tableNames[t]);
           // console.log(res.data);
           //allData.push(res.data);
+          console.log("pushed data");
           allData.push(...res.data);
           categoryRowspans[u].push(res.data.length);
 
@@ -156,6 +159,8 @@ submit.onclick = async function () {
   //await new Promise(r => setTimeout(r, 1));
   generateTable(usernames, categoryRowspans);
 }
+
+reload
 
 if (logout !== null) {
   logout.onclick = function () {

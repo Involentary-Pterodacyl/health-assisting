@@ -95,15 +95,13 @@ let dentureN = document.getElementById("N6");
 // this once the submit button has been pressed checks what has been selected prompts user to make all selections
 // if one or more is empty and sends the numerical data to the server
 submit.onclick = function(){
-  // its not getting here for some reason
-  console.log("onclick");
-  let method;
-  let assist;
-  let shave;
-  let rub;
-  let nail;
-  let oral;
-  let denture;
+  let method = 0;
+  let assist = 0;
+  let shave = 0;
+  let rub = 0;
+  let nails = 0;
+  let oral = 0;
+  let denture = 0;
 
   if (bath1.checked) {method = 1}
   else if(bath2.checked) {method = 2}
@@ -123,9 +121,9 @@ submit.onclick = function(){
   else if (rubI.checked) {rub = 2}
   else if (rubD.checked) {rub = 3}
 
-  if (nailA.checked) {nail = 1}
-  else if(nailI.checked) {nail = 2}
-  else if(nailD.checked) {nail = 3}
+  if (nailA.checked) {nails = 1}
+  else if(nailI.checked) {nails = 2}
+  else if(nailD.checked) {nails = 3}
 
   if (oralA.checked) {oral = 1}
   else if (oralI.checked) {oral = 2}
@@ -142,9 +140,25 @@ submit.onclick = function(){
   // }
 
   //need alerts if user checks method but not assist etc
-  if (method !== null && assist !== null) {
+  if (method !== 0 && assist !== 0) {
     sendTwoValues("bathing", method, assist, "method", "assist");
   }
+  if (shave !== 0) {
+    sendData("shaving", shave);
+  }
+  if (rub !== 0) {
+    sendData("back_rub", rub);
+  }
+  if (nails !== 0) {
+    sendData("nails", nails);
+  }
+  if (oral !== 0) {
+    sendData("oral", oral);
+  }
+  if (denture !== 0) {
+    sendData("denture", denture);
+  }
+
   //
   // sendData("shaving", shave);
   // sendData("back_rub", rub);
