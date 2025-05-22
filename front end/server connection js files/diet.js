@@ -173,6 +173,7 @@ submit.onclick = function(){
     window.alert("Invalid input. Please enter an output amount.");
     return;
   }
+
   if (typeIn !== 0 && intake.value !== ""){
     //submits intake values
     sendTwoValues("dietary_intake", Number(intake.value), typeIn, "amount", "type");
