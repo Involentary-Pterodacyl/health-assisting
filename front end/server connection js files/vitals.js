@@ -60,7 +60,7 @@ submit.onclick = () => {
   //   return;
   // }
 
-  // need to ckeck if number, make sure its int or double
+
 
   if (weight.value !== "") {
     if (isNaN(Number(weight.value))) {

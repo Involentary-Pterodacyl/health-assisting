@@ -17,28 +17,33 @@
       <div class="container mb-4">
     <div class="mb-4">
       <Label For="username">Username</Label><br>
-      <Input id="username" type="text" placeholder="Enter your username" required />
+      <Input id="username" type="text" placeholder="Enter your username" required>
     </div>
 
     <div class="mb-4">
       <Label For="password">Password</Label><br>
-      <Input id="password" type="password" placeholder="Enter your password" required />
+      <Input id="password" type="password" placeholder="Enter your password" required>
+    </div>
+
+    <div class="mb-4">
+      <Label For="password2">Renter Password</Label><br>
+      <Input id="password2" type="password" placeholder="Renter your password" required>
     </div>
 
     <div class="mb-4">
       <Label For="firstName">First Name</Label><br>
-      <Input id="firstName" type="text" placeholder="Enter your first name" required />
+      <Input id="firstName" type="text" placeholder="Enter your first name" required>
     </div>
 
     <div class="mb-4">
       <Label For="lastName">Last Name</Label><br>
-      <Input id="lastName" type="text" placeholder="Enter your last name" required />
+      <Input id="lastName" type="text" placeholder="Enter your last name" required>
     </div>
 
-    <div class="mb-4">
-      <Label For="schoolDistrict">School District</Label><br>
-      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required />
-    </div>
+<!--    <div class="mb-4">-->
+<!--      <Label For="schoolDistrict">School District</Label><br>-->
+<!--      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required>-->
+<!--    </div>-->
 
     <div class=" mb-4">
       <Label  class="flex items-center">
@@ -50,11 +55,17 @@
       <label>No</label>
     </div>
 
-    <Button class="w-full mt-4" type="submit">
+    <Button id="submit" class="w-full mt-4" type="submit">
       Create Account
     </Button>
       </div>
     </div>
   </form>
+
+  <p><a class="arrow" href="../index.html"><img src="img/arrow.png" alt="Back" width="50px" height="50px"></a></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  <script src="server connection js files/Signup.js" type="module"></script>
+  <script defer nomodule src="classic-Signup.js-bundle.js"></script>
 </body>
 </html>

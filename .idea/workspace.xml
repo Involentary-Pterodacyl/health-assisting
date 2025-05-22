@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
+      <change afterPath="$PROJECT_DIR$/front end/server connection js files/Signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/diet.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/diet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front end/server connection js files/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/teacher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/vitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/vitals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
-    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="">
+      <change beforePath="$PROJECT_DIR$/front end/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/signup.html" afterDir="false" />
+    </list>
     <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,56 +61,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Unnamed.executor&quot;: &quot;Debug&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.ADL.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.BED Mobility.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.BLADDER.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Create.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.DIETARY INTAKE.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.EATING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.PATIENTS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Student Work.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TOILETING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TRANSFERS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Teacher.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Vital Signs.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.signup.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.login.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.patients.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.server.mjs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.14&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/8015754/WebstormProjects/health-assisting/front end&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/2104663/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Attach to Node.js/Chrome.Unnamed.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.ADL.html.executor": "Debug",
+    "JavaScript Debug.BED Mobility.html.executor": "Run",
+    "JavaScript Debug.BLADDER.html.executor": "Run",
+    "JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor": "Debug",
+    "JavaScript Debug.Create.html.executor": "Debug",
+    "JavaScript Debug.DIETARY INTAKE.html.executor": "Debug",
+    "JavaScript Debug.EATING.html.executor": "Run",
+    "JavaScript Debug.PATIENTS.html.executor": "Run",
+    "JavaScript Debug.Student Work.html.executor": "Run",
+    "JavaScript Debug.TOILETING.html.executor": "Run",
+    "JavaScript Debug.TRANSFERS.html.executor": "Run",
+    "JavaScript Debug.Teacher.html.executor": "Run",
+    "JavaScript Debug.Vital Signs.html.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.signup.html.executor": "Debug",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.index2.js.executor": "Run",
+    "Node.js.login.js.executor": "Run",
+    "Node.js.patients.js.executor": "Run",
+    "Node.js.server.mjs.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
+    "git-widget-placeholder": "master",
+    "javascript.nodejs.core.library.configured.version": "22.14.0",
+    "javascript.nodejs.core.library.typings.version": "22.13.14",
+    "last_opened_file_path": "C:/Users/8015754/WebstormProjects/health-assisting/front end",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/2104663/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end" />
@@ -211,7 +215,7 @@
       <workItem from="1747667438180" duration="6823000" />
       <workItem from="1747762891624" duration="4711000" />
       <workItem from="1747844366736" duration="4605000" />
-      <workItem from="1747924212049" duration="4989000" />
+      <workItem from="1747924212049" duration="9502000" />
     </task>
     <task id="LOCAL-00001" summary="starting the project">
       <option name="closed" value="true" />
@@ -427,34 +431,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>85</line>
+          <line>84</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>335</line>
+          <line>291</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>319</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/front end/server connection js files/teacher.js</url>
-          <line>350</line>
+          <line>306</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/front end/server connection js files/care and bathing.js</url>
           <line>6</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server.mjs</url>
-          <line>16</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

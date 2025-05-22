@@ -13,7 +13,6 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    // is it supposed to end in 2 or 3??
     origin: 'http://localhost:63342',
 }
 app.use(cors(corsOrigin));
@@ -48,7 +47,7 @@ app.post('/login', (req, res) => {
         }
         else {
             console.log("Invalid username."); // this should be displayed to the user somehow
-            return res.send(false);
+            return res.send({user: false});
         }
     });
 });
@@ -89,16 +88,6 @@ app.post('/logout', (req, res) => {
     });
 });
 
-app.post('/submitMeal', (req, res) => {
-    console.log("submitMeal");
-    conn.query("insert into meal (username, patient_id, meal, value) values('"
-        + req.body.username + "', " + req.body.patientId + ", " + req.body.meal + ", " + req.body.value
-        + ")", (err) => {
-        console.log(err);
-        console.log("submitted meal");
-    });
-});
-
 app.get('/getPatients', (req, res) => {
     console.log("getPatients");
     conn.query("SELECT * FROM patients", (err, rows) => {
@@ -108,20 +97,14 @@ app.get('/getPatients', (req, res) => {
         //console.log(err);
 })
 
-//
-// app.post('/signup', (req, res) => {
-//     conn.query("SELECT * FROM users where username='" + req.body.username + "'", (err, rows) => {
-//         //console.log(rows);
-//         if (rows.length > 0) {
-//             console.log("That username is already taken."); // this should be displayed to the user somehow
-//         }
-//         else {
-//             console.log("Good username");
-//         }
-//         conn.end();
-//     })
-//     //"INSERT INTO users (is_administrator, first_name, last_name, username) values (req.body.is_administrator, req.body.first_name, req.body.last_name, req.body.username)"
-// });
+app.post('/signup', (req, res) => {
+    console.log("creating account");
+    conn.query("INSERT INTO users (is_administrator, first_name, last_name, username) values (" +
+        req.body.admin + ", '" + req.body.firstName + "', '" + req.body.lastName + "', '" + req.body.username + "')", (err, rows) => {
+        console.log("signup error: " + err);
+        res.end;
+    })
+});
 
 // Handle POST requests
 app.post('/submit', (req, res) => {

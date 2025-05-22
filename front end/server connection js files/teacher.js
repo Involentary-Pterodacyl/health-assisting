@@ -7,11 +7,6 @@ let date2 = document.getElementById("date2");
 
 let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
 
-// all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
-// "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-// "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
-// "nails", "oral", "denture"]
-
 // tables with values in valSelf1to6
 let tableSelf1to6 = ["bed_mobility_self", "eating_self", "toileting_self", "transfers_self"];
 // the values for tables in tableSelf1to6
@@ -44,11 +39,10 @@ let valOther = [
 ];
 
 const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning",
-  "meal", "dietary_intake", "dietary_output",
-  "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-  "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
-  "pulse", "respiration", "temperature", //"bathing",
-  "shaving","back_rub", "nails", "oral", "denture"];
+  "meal", "dietary_intake", "dietary_output", "eating_self", "eating_support", "toileting_self", "toileting_support",
+  "toileting_consistency", "catheter", "transfers_self", "transfers_support", "transfers_device", "weight", "blood_pressure",
+  "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub", "nails", "oral", "denture"];
+
 let usernames = [];
 let studentNames = [];
 let categoryRowspans = [];
@@ -71,11 +65,6 @@ await getPatients();
 // console.log(patientIDs);
 // console.log("patientNames :");
 // console.log(patientNames);
-
-// console.log("submit (outside): " + sessionStorage.getItem("submit"));
-// if (sessionStorage.getItem("submit") === "true") {
-//   await submitOnClick();
-// }
 
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in
@@ -101,22 +90,6 @@ submit.onclick = async function () {
   reload.hidden = false;
   let d1 = date1.value;
   let d2 = date2.value;
-  //
-  // if (sessionStorage.getItem("submit") !== "true") {
-  //   console.log("reload");
-  //   sessionStorage.setItem("date1", date1.value);
-  //   sessionStorage.setItem("date2", date2.value);
-  //   sessionStorage.setItem("submit", "true");
-  //   console.log("submit (submitonclick): " + sessionStorage.getItem("submit"));
-  //   await new Promise(r => setTimeout(r, 2000));
-  //   reload();
-  //   return;
-  // }
-  //
-  // sessionStorage.setItem("submit", "false");
-  //
-  // let d1 = sessionStorage.getItem("date1");
-  // let d2 = sessionStorage.getItem("date2");
 
   if (d1 === "" || d2 === "") {
     window.alert("Please select both dates.");
@@ -141,12 +114,6 @@ submit.onclick = async function () {
           console.log("pushed data");
           allData.push(...res.data);
           categoryRowspans[u].push(res.data.length);
-
-          // for (let x = 0; x < res.data.length; x++) {
-          //   if (usernames.includes(res.data[x]["username"]) === false) {
-          //     usernames.push(res.data[x]["username"]);
-          //   }
-          // }
         });
     }
   }
@@ -160,8 +127,6 @@ submit.onclick = async function () {
   generateTable(usernames, categoryRowspans);
 }
 
-reload
-
 if (logout !== null) {
   logout.onclick = function () {
     console.log("logging out");
@@ -173,8 +138,6 @@ if (logout !== null) {
     window.location.href = "../index.html";
   };
 }
-
-//generateTable(["Student 1", "Student 2", "Student 3"], [[1,2,1], [2,1,0], [0,0,0]]);
 
 async function sortStudents() {
   let uNames = [];
@@ -198,11 +161,7 @@ async function sortStudents() {
 }
 
 
-//WORKS
 function calcRowspans(usernames, categoryRowspans) {
-  // let usernames = ["Student 1", "Student 2"]; // string usernames
-  // let categoryRowspans = [[2,1], [0,1]]; // each inner array is for a student, each value is for a category
-
   let studentRowspans = []; // the rowspan corresponding to each student
   let studentAtRowI = [];
   let catAtRowI = [];
@@ -246,8 +205,6 @@ async function getPatients() {
 }
 
 function generateTable(students, categoryRowspans) {
-  //console.log("students: " + students.length);
-
   let rowspanThings = calcRowspans(students, categoryRowspans);
   let studentRowspans = rowspanThings.studentRowspans;
   let studentAtRowI = rowspanThings.studentAtRowI;
@@ -316,7 +273,6 @@ function generateTable(students, categoryRowspans) {
           cellText = document.createTextNode(valCare1to4[allData[i]["value"] - 1]);
         }
         else if (tableNames[catAtRowI[i]] === "bathing"){
-          // not tested
           cellText = document.createTextNode(valCare1to4[allData[i]["assist"] - 1] + ". Method: " + valBathing[allData[i]["method"] - 1]);
         }
         else if (tableBool.includes(tableNames[catAtRowI[i]])){
@@ -332,7 +288,7 @@ function generateTable(students, categoryRowspans) {
           cellText = document.createTextNode(valOther[tableOther.indexOf(tableNames[catAtRowI[i]])][allData[i]["value"] - 1]);
         }
         else {
-          // this is for weight, blood pressure, and oxygen. just displays the raw value. we should add units if there's time
+          // this is for weight, blood pressure,  oxygen, pulse, respiration, temperature. just displays the raw value. we should add units if there's time
           cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
         }
       }

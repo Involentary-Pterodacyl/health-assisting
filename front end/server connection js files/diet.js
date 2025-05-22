@@ -47,19 +47,6 @@ function sendTwoValues(tableName, value1, value2, colName1, colName2) {
   location.reload();
 }
 
-// function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
-// and the id number for the patient the student selected. this one has been modified to send multiple values
-function sendMealData(meal, value) {
-  axios.post('http://localhost:3000/submitMeal', {tableName: "meal", username:username,  meal: meal, value: value, patientId: patientval})
-    .then(response => {
-      console.log('Response:', response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  location.reload();
-}
-
 let brk1 = document.getElementById("brk1");
 let brk2 = document.getElementById("brk2");
 let sub1 = document.getElementById("sub1");
@@ -91,42 +78,39 @@ let liqsto = document.getElementById("liqsto");
 
 let submit = document.getElementById("submit");
 
-let brk;
-let lun;
-let din;
 let typeIn;
 let typeOut;
 //once the submit button is clicked the program sets the corresponding breakfast lunch and dinner variables to the value which has been selected
 submit.onclick = function(){
   //sends the values for breakfast lunch and dinner
   if(brk1.checked){
-    sendMealData(1,1);
+    sendTwoValues("meal", 1,1, "meal", "value");
   }
   else if(brk2.checked){
-    sendMealData(1,2);
+    sendTwoValues("meal", 1,2, "meal", "value");
   }
   else if (sub1.checked){
-    sendMealData(1,3);
+    sendTwoValues("meal", 1,3, "meal", "value");
   }
 
   if(lun1.checked){
-    sendMealData(2,1);
+    sendTwoValues("meal", 2,1, "meal", "value");
   }
   else if(lun2.checked){
-    sendMealData(2,2);
+    sendTwoValues("meal", 2,2, "meal", "value");
   }
   else if (sub2.checked){
-    sendMealData(2,3);
+    sendTwoValues("meal", 2,3, "meal", "value");
   }
 
   if(din1.checked){
-    sendMealData(3,1);
+    sendTwoValues("meal", 3,1, "meal", "value");
   }
   else if(din2.checked){
-    sendMealData(3,2);
+    sendTwoValues("meal", 3,2, "meal", "value");
   }
   else if (sub3.checked){
-    sendMealData(3,3);
+    sendTwoValues("meal", 3,3, "meal", "value");
   }
 
   // checks the intake and output radios and sets a numerical value for the type selected
@@ -184,4 +168,4 @@ submit.onclick = function(){
     sendTwoValues("dietary_output", Number(output.value), typeOut, "amount", "type");
     console.log("submitted output");
   }
-  }
+}
