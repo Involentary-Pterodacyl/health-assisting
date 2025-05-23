@@ -102,8 +102,10 @@ app.post('/signup', (req, res) => {
     conn.query("INSERT INTO users (is_administrator, first_name, last_name, username) values (" +
         req.body.admin + ", '" + req.body.firstName + "', '" + req.body.lastName + "', '" + req.body.username + "')", (err, rows) => {
         console.log("signup error: " + err);
-        res.send(err);
     })
+    conn.query("update users set logged_in=1 where username='" + req.body.username + "'", (err,rows) => {
+        res.send(err);
+    });
 });
 
 // Handle POST requests
