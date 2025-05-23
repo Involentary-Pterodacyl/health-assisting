@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 
 const corsOrigin = {
-    origin: 'http://localhost:63342',
+    origin: 'http://localhost:63343',
 }
 app.use(cors(corsOrigin));
 
@@ -95,14 +95,14 @@ app.get('/getPatients', (req, res) => {
         res.send(rows);
     })
         //console.log(err);
-})
+});
 
 app.post('/signup', (req, res) => {
     console.log("creating account");
     conn.query("INSERT INTO users (is_administrator, first_name, last_name, username) values (" +
         req.body.admin + ", '" + req.body.firstName + "', '" + req.body.lastName + "', '" + req.body.username + "')", (err, rows) => {
         console.log("signup error: " + err);
-        res.end;
+        res.send(err);
     })
 });
 
