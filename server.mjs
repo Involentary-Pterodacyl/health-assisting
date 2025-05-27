@@ -1,12 +1,6 @@
 import express from "express";
 import cors from "cors";
 import mariadb from "mariadb/callback.js";
-import axios from "axios";
-
-let username;
-let isAdmin;
-let patientId;
-
 
 const app = express();
 
@@ -39,8 +33,6 @@ app.post('/login', (req, res) => {
         console.log("in query");
         console.log(rows);
         if (rows.length > 0) {
-            // username = rows[0]["username"];
-            // isAdmin = Boolean(rows[0]["is_administrator"]);
             conn.query("update users set logged_in=1 where username='" + req.body.username + "'", (err,rows) => {});
             console.log("logged in");
             return res.send({user: true, admin: rows[0]["is_administrator"]});
@@ -83,7 +75,6 @@ app.post('/logout', (req, res) => {
     console.log("in /logout");
     //are we using this anymore?
     conn.query("update users set logged_in=0 where username='" + req.body.username + "'", (err) => {
-        //console.log(err);
         console.log("tried to log out");
     });
 });
@@ -94,7 +85,6 @@ app.get('/getPatients', (req, res) => {
         console.log(rows);
         res.send(rows);
     })
-        //console.log(err);
 });
 
 app.post('/signup', (req, res) => {
@@ -153,10 +143,20 @@ app.post('/twoValues', (req, res) => {
     conn.query("insert into " + req.body.tableName + " (username, patient_id, " + req.body.colName1 + ", " + req.body.colName2 +") values('"
         + req.body.username + "', " + req.body.patientId + ", " + req.body.val1 + ", " + req.body.val2
         + ")", (err) => {
-        console.log("err: " + err);
+        console.log("err (twoValues): " + err);
         console.log("submitted " + req.body.tableName);
     });
 });
+
+app.post('/getHash', (req, res) => {
+    conn.query("SELECT password_hash FROM users WHERE username='" + req.body.username + "'", (err, rows) => {
+        if (err){
+            console.log("err (getHash): " + err);
+        }
+        console.log("hash rows: " + rows);
+        return res.send(rows);
+    })
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

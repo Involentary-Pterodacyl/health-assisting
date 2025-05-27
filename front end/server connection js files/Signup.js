@@ -1,3 +1,5 @@
+import bcrypt from "../node_modules/b";
+
 let username =  document.getElementById("username");
 let password = document.getElementById("password");
 let password2 = document.getElementById("password2");
@@ -10,10 +12,31 @@ let teacher = document.getElementById("isTeacher");
 let unique;
 let isAdmin;
 
-console.log("hi");
+const saltRounds = 10;
 
-async function sendData (){
+function hashPassword(password) {
+  let salt = bcrypt.genSalt(saltRounds, (err, salt) => {
+    if (err) {
+      // Handle error
+      console.log("salt error: " + err);
+      return;
+    }
 
+    // Salt generation successful, proceed to hash the password
+    console.log("salt: " + salt);
+    return salt;
+  });
+
+  return bcrypt.hash(password, salt, (err, hash) => {
+    if (err) {
+      // Handle error
+      console.log("hash error: " + err);
+      return;
+    }
+    // Hashing successful, 'hash' contains the hashed password
+    console.log('Hashed password:', hash);
+    return hash;
+  });
 }
 
 submit.onclick = async function() {
@@ -44,12 +67,14 @@ if (student.checked) {isAdmin = 0}
     return;
 
   }
-  console.log(password.value + " " + password2.value);
+  // console.log(password.value + " " + password2.value);
   if (password.value !== password2.value) {
     window.alert("Please make sure both passwords match.");
     return;
-
   }
+
+  let hashedPassword = hashPassword(password.value);
+  console.log("hashed password: " + hashedPassword);
 
   await axios.post('http://localhost:3000/signup', {username: username.value,  password: password.value, firstName: firstName.value, lastName: lastName.value
     , admin: isAdmin})
@@ -70,20 +95,4 @@ if (student.checked) {isAdmin = 0}
     window.location.href = "PATIENTS.html"; // student page
   }
 
-  // axios.post("http://localhost:3000/login", {username: username})
-  //   .then(response => {
-  //     console.log(response.data["admin"]);
-  //     if (response.data["user"] === true && response.data["admin"] === 0) {
-  //       window.location.href = "front%20end/PATIENTS.html";
-  //     }
-  //     else if (response.data["user"] === true && response.data["admin"] === 1) {
-  //       window.location.href = "front%20end/Teacher.html"; //teacher page
-  //     }
-  //     else {
-  //       window.alert("Username or password is incorrect.");
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.error('Error:', error);
-  //   });
 }

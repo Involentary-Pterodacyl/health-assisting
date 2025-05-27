@@ -80,7 +80,9 @@ let submit = document.getElementById("submit");
 
 let typeIn;
 let typeOut;
+
 //once the submit button is clicked the program sets the corresponding breakfast lunch and dinner variables to the value which has been selected
+
 submit.onclick = function(){
   //sends the values for breakfast lunch and dinner
   if(brk1.checked){
