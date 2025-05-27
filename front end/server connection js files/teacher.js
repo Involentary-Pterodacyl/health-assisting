@@ -7,11 +7,6 @@ let date2 = document.getElementById("date2");
 
 let headerNames = ["Student", "Category", "Value", "Patient", "Date"];
 
-// all table names ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning", "meal", "dietary_intake", "dietary_output",
-// "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-// "transfers_support", "transfers_device", "weight", "blood_pressure", "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub",
-// "nails", "oral", "denture"]
-
 // tables with values in valSelf1to6
 let tableSelf1to6 = ["bed_mobility_self", "eating_self", "toileting_self", "transfers_self"];
 // the values for tables in tableSelf1to6
@@ -24,7 +19,15 @@ let valSupport1 = ["Hoyer Lift", "Feeding Tube", "Colostomy Bag", "Hoyer Lift"];
 let tableCare1to4 = ["back_rub", "nails", "oral", "shaving", "denture"];
 let valCare1to4 = ["Assist", "Independent", "Dependent", "Not Applicable"];
 
-let tableBool = ["catheter"];
+let valBathing = ["Partial", "Tub", "Shower", "Complete Bed Bath"];
+
+let tableBool = ["sundowning", "catheter"];
+
+let tableDietInOut = ["dietary_intake", "dietary_output"];
+let valDietInOut = [
+  ["Soft Drink", "Juice", "Water", "Tea or Coffee", "Liquid/Gelatin/Cream foods", "Milk", "IV Fluids"],
+  ["Urine", "Vomitus", "Excessive perspiration", "Blood", "Wound Drainage", "Liquid Stools"]
+];
 
 let tableOther = ["bed_mobility_position", "bladder", "mood", "toileting_consistency", "transfers_device"];
 let valOther = [
@@ -35,22 +38,21 @@ let valOther = [
   ["Cane", "Walker", "Crutches", "Wheelchair", "Bedridden", "None"]
 ];
 
-// need to figure out how to display tables with more than one value
-// meal, dietary_intake, etc
+const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", "sundowning",
+  "meal", "dietary_intake", "dietary_output", "eating_self", "eating_support", "toileting_self", "toileting_support",
+  "toileting_consistency", "catheter", "transfers_self", "transfers_support", "transfers_device", "weight", "blood_pressure",
+  "oxygen_levels", "pulse", "respiration", "temperature", "bathing", "shaving","back_rub", "nails", "oral", "denture"];
 
-//const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood"];
-const tableNames = ["bed_mobility_self", "bed_mobility_support", "bed_mobility_position", "bladder", "mood", //"sundowning",
-  "meal", //"dietary_intake", "dietary_output",
-  "eating_self", "eating_support", "toileting_self", "toileting_support", "toileting_consistency", "catheter", "transfers_self",
-  "transfers_support", "transfers_device", //"weight", "blood_pressure", "oxygen_levels",
-  "pulse", "respiration", "temperature", //"bathing",
-  "shaving","back_rub", "nails", "oral", "denture"];
 let usernames = [];
 let studentNames = [];
 let categoryRowspans = [];
 let allData = [];
 let patientNames = [];
 let patientIDs = [];
+
+let reload = document.getElementById("reload");
+
+reload.hidden = true;
 
 await sortStudents();
 // console.log("usernames:");
@@ -77,7 +79,15 @@ window.onload = () => {
     });
 }
 
+reload.onclick = function () {
+  history.go(0);
+}
+
+
+//async function submitOnClick () {
 submit.onclick = async function () {
+  submit.hidden = true;
+  reload.hidden = false;
   let d1 = date1.value;
   let d2 = date2.value;
 
@@ -91,25 +101,23 @@ submit.onclick = async function () {
 
   console.log("about to start loop");
   for (let u = 0; u < usernames.length; u++) {
+    console.log( "Outer loop:" + usernames[u]);
     categoryRowspans[u] = [];
     //allData[u] = [];
     for (let t = 0; t < tableNames.length; t++) {
+      console.log( "inner loop:" + t);
       await axios.post("http://localhost:3000/teacher", {date1: d1, date2: d2, username: usernames[u], tableName: tableNames[t]})
         .then(res => {
           // console.log("data " + usernames[u] + ' ' + tableNames[t]);
           // console.log(res.data);
           //allData.push(res.data);
+          console.log("pushed data");
           allData.push(...res.data);
           categoryRowspans[u].push(res.data.length);
-
-          // for (let x = 0; x < res.data.length; x++) {
-          //   if (usernames.includes(res.data[x]["username"]) === false) {
-          //     usernames.push(res.data[x]["username"]);
-          //   }
-          // }
-        })
+        });
     }
   }
+  console.log("finished loop");
   // console.log("category rowspans: ");
   // console.log(categoryRowspans);
   // console.log("alldata: ");
@@ -131,8 +139,6 @@ if (logout !== null) {
   };
 }
 
-//generateTable(["Student 1", "Student 2", "Student 3"], [[1,2,1], [2,1,0], [0,0,0]]);
-
 async function sortStudents() {
   let uNames = [];
   let sNames = [];
@@ -150,16 +156,12 @@ async function sortStudents() {
     // return {usernames: usernames, studentNames: studentNames};
     usernames = uNames;
     studentNames = sNames;
-  })
+  });
   //await new Promise(r => setTimeout(r, 10));
 }
 
 
-//WORKS
 function calcRowspans(usernames, categoryRowspans) {
-  // let usernames = ["Student 1", "Student 2"]; // string usernames
-  // let categoryRowspans = [[2,1], [0,1]]; // each inner array is for a student, each value is for a category
-
   let studentRowspans = []; // the rowspan corresponding to each student
   let studentAtRowI = [];
   let catAtRowI = [];
@@ -203,8 +205,6 @@ async function getPatients() {
 }
 
 function generateTable(students, categoryRowspans) {
-  //console.log("students: " + students.length);
-
   let rowspanThings = calcRowspans(students, categoryRowspans);
   let studentRowspans = rowspanThings.studentRowspans;
   let studentAtRowI = rowspanThings.studentAtRowI;
@@ -272,13 +272,23 @@ function generateTable(students, categoryRowspans) {
         else if (tableCare1to4.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valCare1to4[allData[i]["value"] - 1]);
         }
+        else if (tableNames[catAtRowI[i]] === "bathing"){
+          cellText = document.createTextNode(valCare1to4[allData[i]["assist"] - 1] + ". Method: " + valBathing[allData[i]["method"] - 1]);
+        }
         else if (tableBool.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(["No", "Yes"][allData[i]["value"]]);
+        }
+        else if (tableNames[catAtRowI[i]] === "meal"){
+          cellText = document.createTextNode(["Breakfast", "Lunch", "Dinner"][allData[i]["meal"] - 1] + ": " + ["Yes", "No", "Substitute"][allData[i]["value"] - 1]);
+        }
+        else if (tableDietInOut.includes(tableNames[catAtRowI[i]])){
+          cellText = document.createTextNode(allData[i]["amount"] + " CCs, " + valDietInOut[tableDietInOut.indexOf(tableNames[catAtRowI[i]])][allData[i]["type"] - 1])
         }
         else if (tableOther.includes(tableNames[catAtRowI[i]])){
           cellText = document.createTextNode(valOther[tableOther.indexOf(tableNames[catAtRowI[i]])][allData[i]["value"] - 1]);
         }
         else {
+          // this is for weight, blood pressure,  oxygen, pulse, respiration, temperature. just displays the raw value. we should add units if there's time
           cellText = document.createTextNode(allData[i]["value"]); //we need to translate from the numbers to the words
         }
       }

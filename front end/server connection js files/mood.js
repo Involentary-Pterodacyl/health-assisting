@@ -54,6 +54,9 @@ let anxiety = document.getElementById("anxiety");
 let withdrawn = document.getElementById("withdrawn");
 let combatitive = document.getElementById("combatitive");
 
+let sundowningYes = document.getElementById("ys");
+let sundowningNo = document.getElementById("ns");
+
 // logs information from page
 calm.onclick = function(){sendData("mood",1)};
 happy.onclick = function(){sendData("mood", 2)};
@@ -64,3 +67,7 @@ yelling.onclick = function(){sendData("mood", 6)};
 anxiety.onclick = function(){sendData("mood", 7)};
 withdrawn.onclick = function(){sendData("mood", 8)};
 combatitive.onclick = function(){sendData("mood", 9)};
+
+sundowningYes.onclick = function(){sendData("sundowning", 1)};
+sundowningNo.onclick = function(){sendData("sundowning", 0)};
+

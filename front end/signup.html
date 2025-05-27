@@ -26,21 +26,26 @@
     </div>
 
     <div class="logintext fname">
-      <Label For="firstName">First Name</Label><br>
-      <Input id="firstName" type="text" placeholder="Enter your first name" required />
+      <Label For="password2">Renter Password</Label><br>
+      <Input id="password2" type="password" placeholder="Renter your password" required>
     </div>
 
     <div class="logintext lname">
-      <Label For="lastName">Last Name</Label><br>
-      <Input id="lastName" type="text" placeholder="Enter your last name" required />
+      <Label For="firstName">First Name</Label><br>
+      <Input id="firstName" type="text" placeholder="Enter your first name" required>
     </div>
 
     <div class="logintext sd">
-      <Label For="schoolDistrict">School District</Label><br>
-      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required />
+      <Label For="lastName">Last Name</Label><br>
+      <Input id="lastName" type="text" placeholder="Enter your last name" required>
     </div>
 
-    <div class=" logintext ruat">
+<!--    <div class="logintext ruat">-->
+<!--      <Label For="schoolDistrict">School District</Label><br>-->
+<!--      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required>-->
+<!--    </div>-->
+
+    <div class=" mb-4">
       <Label  class="flex items-center">
         Are you a teacher?
       </Label><br>
@@ -50,12 +55,17 @@
       <label>No</label>
     </div>
     <hr>
-    <Button class="buttons create" type="submit">
+    <Button id="submit" class="buttons create" type="button">
       Create Account
     </Button>
       </div>
     </div>
   </form>
-  <p class="back 8"><a href="ADL.html"><img src="img/arrow.png" alt="Back" width="50px" height="50px"></a></p>
+
+  <p><a class="arrow" href="../index.html"><img src="img/arrow.png" alt="Back" width="50px" height="50px"></a></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  <script src="server connection js files/Signup.js" type="module"></script>
+  <script defer nomodule src="classic-Signup.js-bundle.js"></script>
 </body>
 </html>

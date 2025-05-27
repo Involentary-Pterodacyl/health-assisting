@@ -41,11 +41,8 @@ axios.get("http://localhost:3000/getPatients")
       patientNames.push(res[i]["first_name"] + " " + res[i]["last_name"]);
       patientIDs.push(res[i]["patient_id"]);
     }
-    console.log(patientNames);
-    console.log(patientIDs);
 
 //   sets the button text to the names in the array
-    console.log(patientNames.length);
     pait1.innerText = patientNames[0];
     pait2.innerText = patientNames[1];
     pait3.innerText = patientNames[2];

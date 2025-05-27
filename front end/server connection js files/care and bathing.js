@@ -4,7 +4,7 @@
 let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
-let logout = document.getElementById("signout");
+let logout = document.getElementById("signout"); // this signout button not working
 let submit = document.getElementById("submit");
 
 // once the page has fully loaded a call is made to the server with the username variable
@@ -36,15 +36,16 @@ function sendData(tableName, value) {
 // function allows sending the numerical values assigned to each input to the server using the name of the destination table, current students username
 // and the id number for the patient the student selected. this one has been modified to send multiple values
 //                                                                                          bathing       assist
-function sendTwoValues(tableName, valueD, valueI, tableScetion1, tableScetion2) {
-  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: valueD, val2: valueI,
-    patientId: patientval, tableScetion1: tableScetion1, tableScetion2: tableScetion2})
+function sendTwoValues(tableName, value1, value2, colName1, colName2) {
+  axios.post('http://localhost:3000/twoValues', {tableName: tableName, username: username,  val1: value1, val2: value2,
+    patientId: patientval, colName1: colName1, colName2: colName2})
     .then(response => {
       console.log('Response:', response.data);
     })
     .catch(error => {
       console.error('Error:', error);
     });
+  location.reload();
 }
 
 // marks the student as logged out in the server and reroutes them to the sign in page
@@ -93,19 +94,19 @@ let dentureN = document.getElementById("N6");
 
 // this once the submit button has been pressed checks what has been selected prompts user to make all selections
 // if one or more is empty and sends the numerical data to the server
-submit.on("click", function(){
-  let bath;
-  let assist;
-  let shave;
-  let rub;
-  let nail;
-  let oral;
-  let denture;
+submit.onclick = function(){
+  let method = 0;
+  let assist = 0;
+  let shave = 0;
+  let rub = 0;
+  let nails = 0;
+  let oral = 0;
+  let denture = 0;
 
-  if (bath1.checked) {bath = 1}
-  else if(bath2.checked) {bath = 2}
-  else if(bath3.checked) {bath = 3}
-  else if(bath4.checked) {bath = 4}
+  if (bath1.checked) {method = 1}
+  else if(bath2.checked) {method = 2}
+  else if(bath3.checked) {method = 3}
+  else if(bath4.checked) {method = 4}
 
   if (assistA.checked) {assist = 1}
   else if(assistI.checked) {assist = 2}
@@ -120,9 +121,9 @@ submit.on("click", function(){
   else if (rubI.checked) {rub = 2}
   else if (rubD.checked) {rub = 3}
 
-  if (nailA.checked) {nail = 1}
-  else if(nailI.checked) {nail = 2}
-  else if(nailD.checked) {nail = 3}
+  if (nailA.checked) {nails = 1}
+  else if(nailI.checked) {nails = 2}
+  else if(nailD.checked) {nails = 3}
 
   if (oralA.checked) {oral = 1}
   else if (oralI.checked) {oral = 2}
@@ -133,19 +134,31 @@ submit.on("click", function(){
   else if (dentureD.checked) {denture = 3}
   else if (dentureN.checked) {denture = 4}
 
-  if(bath === null || assist === null || rub === null || nail === null || oral === null || denture === null){
+  if(method === 0 || assist === 0 || rub === 0 || nails === 0 || oral === 0 || denture === 0){
     window.alert("please make sure you have selected one option per category")
     return;
   }
 
-  sendTwoValues("bathing", bath, assist, "method", "assist");
-  sendData("shaving", shave);
-  sendData("back_rub", rub);
-  sendData("nails", nail);
-  sendData("oral", oral);
-  sendData("denture", denture);
 
+  if (method !== 0 && assist !== 0) {
+    sendTwoValues("bathing", method, assist, "method", "assist");
+  }
+  if (shave !== 0) {
+    sendData("shaving", shave);
+  }
+  if (rub !== 0) {
+    sendData("back_rub", rub);
+  }
+  if (nails !== 0) {
+    sendData("nails", nails);
+  }
+  if (oral !== 0) {
+    sendData("oral", oral);
+  }
+  if (denture !== 0) {
+    sendData("denture", denture);
+  }
 
-})
+}
 
 
