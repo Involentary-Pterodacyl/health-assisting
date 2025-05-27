@@ -1,4 +1,3 @@
-import bcrypt from "../node_modules/b";
 
 let username =  document.getElementById("username");
 let password = document.getElementById("password");
