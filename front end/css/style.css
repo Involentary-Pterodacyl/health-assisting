@@ -14,7 +14,7 @@ header{
   padding:10px;
 }
 
-h1{
+header h1{
   color:lightskyblue;
   font-family: "Roboto Condensed", serif ;
   font-optical-sizing: auto;
@@ -28,9 +28,9 @@ h1{
 
 .p1{
   text-align: center;
-  font-size: 23px;
+  font-size: 26px;
   color:white;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px royalblue;
   margin-bottom: 0;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -40,8 +40,8 @@ hr{
 }
 .p2 {
   text-align: center;
-  font-size: 23px;
-  text-shadow: 2px 2px black;
+  font-size: 26px;
+  text-shadow: 2px 2px royalblue;
   color: white;
 
 }
@@ -110,7 +110,7 @@ hr{
   text-decoration: none;
   font-size: 18px;
   width: 120px; /* Fixed width for equal size */
-  height: 40px; /* Fixed height for equal size */
+  height: 50px; /* Fixed height for equal size */
   display: grid;
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
@@ -140,7 +140,7 @@ hr{
   text-decoration: none;
   border-radius: 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
- position:absolute;
+  position:absolute;
   top:95%;
   left:0%;
 }
@@ -159,15 +159,30 @@ td, th {
 
 
 .logintext{
+  font-size: 20px;
+  text-shadow: 2px 2px royalblue;
   color: white;
-  text-shadow: 2px 2px black;
+  font-weight: normal;
+
 }
 
+
+
 .border{
-border-radius: 5px;
+  border-radius: 5px;
   border-color: black;
   mso-border-shadow: yes;
 }
 .placeholder{
   color: red;
+}
+
+
+.createhead{
+  font-family: "Roboto Condensed", sans-serif ;
+}
+.back {
+  position: absolute;
+  bottom: -2%;
+  left: 0%;
 }

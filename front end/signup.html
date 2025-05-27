@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="create.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="header">
-    <h1 class="h1" >Create an account</h1>
+    <h1 class="createhead" >Create an account</h1>
     <p class="p1"> Welcome nurse! Please register the following information. </p>
   </header>
 <hr>
@@ -15,32 +15,32 @@
     <div class="login-box">
 
       <div class="container mb-4">
-    <div class="mb-4">
+    <div class="logintext username2">
       <Label For="username">Username</Label><br>
-      <Input id="username" type="text" placeholder="Enter your username" required>
+      <Input id="username" type="text" placeholder="Enter your username" required />
     </div>
 
-    <div class="mb-4">
+    <div class="logintext pword2">
       <Label For="password">Password</Label><br>
-      <Input id="password" type="password" placeholder="Enter your password" required>
+      <Input id="password" type="password" placeholder="Enter your password" required />
     </div>
 
-    <div class="mb-4">
+    <div class="logintext fname">
       <Label For="password2">Renter Password</Label><br>
       <Input id="password2" type="password" placeholder="Renter your password" required>
     </div>
 
-    <div class="mb-4">
+    <div class="logintext lname">
       <Label For="firstName">First Name</Label><br>
       <Input id="firstName" type="text" placeholder="Enter your first name" required>
     </div>
 
-    <div class="mb-4">
+    <div class="logintext sd">
       <Label For="lastName">Last Name</Label><br>
       <Input id="lastName" type="text" placeholder="Enter your last name" required>
     </div>
 
-<!--    <div class="mb-4">-->
+<!--    <div class="logintext ruat">-->
 <!--      <Label For="schoolDistrict">School District</Label><br>-->
 <!--      <Input id="schoolDistrict" type="text" placeholder="Enter your school district" required>-->
 <!--    </div>-->
@@ -54,8 +54,8 @@
       <label for="isntTeacher"> </label><input type ="radio" id="isntTeacher" name="isTeacher" value="no" />
       <label>No</label>
     </div>
-
-    <Button id="submit" class="w-full mt-4" type="button">
+    <hr>
+    <Button id="submit" class="buttons create" type="button">
       Create Account
     </Button>
       </div>
