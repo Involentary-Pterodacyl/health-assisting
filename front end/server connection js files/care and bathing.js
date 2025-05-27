@@ -134,12 +134,12 @@ submit.onclick = function(){
   else if (dentureD.checked) {denture = 3}
   else if (dentureN.checked) {denture = 4}
 
-  // if(method === null || assist === null || rub === null || nail === null || oral === null || denture === null){
-  //   window.alert("please make sure you have selected one option per category")
-  //   return;
-  // }
+  if(method === 0 || assist === 0 || rub === 0 || nails === 0 || oral === 0 || denture === 0){
+    window.alert("please make sure you have selected one option per category")
+    return;
+  }
 
-  //need alerts if user checks method but not assist etc
+
   if (method !== 0 && assist !== 0) {
     sendTwoValues("bathing", method, assist, "method", "assist");
   }
@@ -158,13 +158,6 @@ submit.onclick = function(){
   if (denture !== 0) {
     sendData("denture", denture);
   }
-
-  //
-  // sendData("shaving", shave);
-  // sendData("back_rub", rub);
-  // sendData("nails", nail);
-  // sendData("oral", oral);
-  // sendData("denture", denture);
 
 }
 
