@@ -4,56 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75486a3f-0c82-4fe5-a8b2-de94cbbacbe1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="friaday changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/PATIENTS.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/PATIENTS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/.github/workflows/build-pack-publish.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/.github/workflows/ci.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/Dockerfile-alpine" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/SECURITY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/bcrypt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/binding.gyp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/build-all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/examples/async_compare.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/examples/forever_gen_salt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/darwin-arm64/bcrypt.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/darwin-x64/bcrypt.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-arm/bcrypt.glibc.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-arm/bcrypt.musl.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-arm64/bcrypt.glibc.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-arm64/bcrypt.musl.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-x64/bcrypt.glibc.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/linux-x64/bcrypt.musl.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/win32-arm64/bcrypt.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/prebuilds/win32-x64/bcrypt.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/promises.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/src/bcrypt.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/src/bcrypt_node.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/src/blowfish.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/src/node_blf.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/test/async.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/test/implementation.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/test/promise.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/test/repetitions.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/test/sync.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
-    <list id="c9553f21-425a-4afc-9f79-2b031a542f77" name="Changes by 2102400" comment="">
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list id="f8ffd418-8527-4c4f-9b20-7e1418c4ee46" name="Changes by 2102400" comment="" />
+    <list id="c9977f09-bfc1-4fb3-beaf-8bc96d7bc1e5" name="Changes by 8000496" comment="Changes by 8000496" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,102 +23,12 @@
     &quot;assignee&quot;: &quot;Involentary-Pterodacyl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Involentary-Pterodacyl/health-assisting.git&quot;,
-    &quot;accountId&quot;: &quot;71adca24-98d7-44ef-a7e7-6ca8414c5187&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Involentary-Pterodacyl/health-assisting.git",
+    "accountId": "fd896de2-71f1-437a-a67a-798166768857"
   }
-}&lt;/component&gt;
-  &lt;component name=&quot;LineStatusTrackerManager&quot;&gt;
-    &lt;file path=&quot;C:/Users/2104663/Documents/GitHub/health-assisting/front end/server connection js files/Signup.js&quot;&gt;
-      &lt;ranges&gt;
-        &lt;range start1=&quot;0&quot; end1=&quot;0&quot; start2=&quot;0&quot; end2=&quot;2&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;12&quot; end1=&quot;13&quot; start2=&quot;14&quot; end2=&quot;15&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;14&quot; end1=&quot;15&quot; start2=&quot;16&quot; end2=&quot;23&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;16&quot; end1=&quot;16&quot; start2=&quot;24&quot; end2=&quot;39&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;46&quot; end1=&quot;47&quot; start2=&quot;69&quot; end2=&quot;70&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;50&quot; end1=&quot;51&quot; start2=&quot;73&quot; end2=&quot;73&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;52&quot; end1=&quot;52&quot; start2=&quot;74&quot; end2=&quot;77&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;72&quot; end1=&quot;88&quot; start2=&quot;97&quot; end2=&quot;97&quot; changelist=&quot;f8ffd418-8527-4c4f-9b20-7e1418c4ee46&quot; /&gt;
-      &lt;/ranges&gt;
-    &lt;/file&gt;
-    &lt;file path=&quot;C:/Users/2104663/Documents/GitHub/health-assisting/server.mjs&quot;&gt;
-      &lt;ranges&gt;
-        &lt;range start1=&quot;3&quot; end1=&quot;9&quot; start2=&quot;3&quot; end2=&quot;3&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;41&quot; end1=&quot;43&quot; start2=&quot;35&quot; end2=&quot;35&quot; changelist=&quot;f8ffd418-8527-4c4f-9b20-7e1418c4ee46&quot; /&gt;
-        &lt;range start1=&quot;85&quot; end1=&quot;86&quot; start2=&quot;77&quot; end2=&quot;77&quot; changelist=&quot;f8ffd418-8527-4c4f-9b20-7e1418c4ee46&quot; /&gt;
-        &lt;range start1=&quot;96&quot; end1=&quot;97&quot; start2=&quot;87&quot; end2=&quot;87&quot; changelist=&quot;f8ffd418-8527-4c4f-9b20-7e1418c4ee46&quot; /&gt;
-        &lt;range start1=&quot;155&quot; end1=&quot;156&quot; start2=&quot;145&quot; end2=&quot;146&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-        &lt;range start1=&quot;159&quot; end1=&quot;159&quot; start2=&quot;149&quot; end2=&quot;159&quot; changelist=&quot;714df66f-b124-4ee3-83b4-93fb167f3d2f&quot; /&gt;
-      &lt;/ranges&gt;
-    &lt;/file&gt;
-  &lt;/component&gt;
-  &lt;component name=&quot;ProblemsViewState&quot;&gt;
-    &lt;option name=&quot;selectedTabId&quot; value=&quot;CurrentFile&quot; /&gt;
-  &lt;/component&gt;
-  &lt;component name=&quot;ProjectColorInfo&quot;&gt;{
-  &amp;quot;associatedIndex&amp;quot;: 2
-}&lt;/component&gt;
-  &lt;component name=&quot;ProjectId&quot; id=&quot;2oa6cZ3EASDu7lknMaQz3GmN7Do&quot; /&gt;
-  &lt;component name=&quot;ProjectLevelVcsManager&quot; settingsEditedManually=&quot;true&quot;&gt;
-    &lt;ConfirmationsSetting value=&quot;2&quot; id=&quot;Add&quot; /&gt;
-  &lt;/component&gt;
-  &lt;component name=&quot;ProjectViewState&quot;&gt;
-    &lt;option name=&quot;autoscrollToSource&quot; value=&quot;true&quot; /&gt;
-    &lt;option name=&quot;hideEmptyMiddlePackages&quot; value=&quot;true&quot; /&gt;
-    &lt;option name=&quot;showLibraryContents&quot; value=&quot;true&quot; /&gt;
-  &lt;/component&gt;
-  &lt;component name=&quot;PropertiesComponent&quot;&gt;&lt;![CDATA[{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Attach to Node.js/Chrome.Unnamed.executor&quot;: &quot;Debug&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.ADL.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.BED Mobility.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.BLADDER.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.COGNITIVE,MOOD,BEHAVIOUR.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Care and Bathing.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.Create.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.DIETARY INTAKE.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.EATING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.PATIENTS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Student Work.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TOILETING.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TRANSFERS.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Teacher.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Vital Signs.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.signup.html.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.login.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.patients.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.server.mjs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.13.14&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/8015754/WebstormProjects/health-assisting/front end&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\2104663\\AppData\\Local\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
-  }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -207,7 +72,7 @@
       <recent name="C:\Users\8015754\WebstormProjects\health-assisting\front end\js\css" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/health-assisting/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -234,16 +99,291 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="75486a3f-0c82-4fe5-a8b2-de94cbbacbe1" name="Changes" comment="" />
-      <created>1748365423820</created>
+      <changelist id="714df66f-b124-4ee3-83b4-93fb167f3d2f" name="Changes" comment="" />
+      <created>1731095419152</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1748365423820</updated>
-      <workItem from="1748365425344" duration="1537000" />
+      <updated>1731095419152</updated>
+      <workItem from="1731095420181" duration="618000" />
+      <workItem from="1732045303930" duration="272000" />
+      <workItem from="1732045626552" duration="2996000" />
+      <workItem from="1732128976249" duration="10139000" />
+      <workItem from="1732646075718" duration="3131000" />
+      <workItem from="1733337307565" duration="4280000" />
+      <workItem from="1733511309527" duration="914000" />
+      <workItem from="1733512269297" duration="4771000" />
+      <workItem from="1733771803077" duration="11414000" />
+      <workItem from="1734115777274" duration="9411000" />
+      <workItem from="1737999938880" duration="2389000" />
+      <workItem from="1738170428034" duration="2802000" />
+      <workItem from="1738173267652" duration="623000" />
+      <workItem from="1738951027610" duration="2210000" />
+      <workItem from="1738953268055" duration="83000" />
+      <workItem from="1739467484354" duration="1851000" />
+      <workItem from="1739469578097" duration="2179000" />
+      <workItem from="1740417220259" duration="806000" />
+      <workItem from="1741108249817" duration="5626000" />
+      <workItem from="1741368607456" duration="3859000" />
+      <workItem from="1741883199067" duration="4484000" />
+      <workItem from="1741969535441" duration="3820000" />
+      <workItem from="1742227803506" duration="851000" />
+      <workItem from="1742230250866" duration="1815000" />
+      <workItem from="1742491162606" duration="1411000" />
+      <workItem from="1743008588908" duration="3321000" />
+      <workItem from="1743092596860" duration="3248000" />
+      <workItem from="1743179477146" duration="2749000" />
+      <workItem from="1743182522874" duration="1217000" />
+      <workItem from="1743523168112" duration="5286000" />
+      <workItem from="1743610344838" duration="3151000" />
+      <workItem from="1743697791465" duration="4198000" />
+      <workItem from="1743784196823" duration="1502000" />
+      <workItem from="1744214932726" duration="4918000" />
+      <workItem from="1744302436904" duration="3862000" />
+      <workItem from="1744646677492" duration="1527000" />
+      <workItem from="1744733189494" duration="141000" />
+      <workItem from="1744733340530" duration="4871000" />
+      <workItem from="1744819789210" duration="4711000" />
+      <workItem from="1744907993667" duration="3739000" />
+      <workItem from="1745856159789" duration="166000" />
+      <workItem from="1745856334904" duration="5098000" />
+      <workItem from="1745939237929" duration="1085000" />
+      <workItem from="1745942743753" duration="554000" />
+      <workItem from="1745943556865" duration="6115000" />
+      <workItem from="1746031317212" duration="2934000" />
+      <workItem from="1746111382019" duration="2936000" />
+      <workItem from="1746116757335" duration="4175000" />
+      <workItem from="1746196429802" duration="4298000" />
+      <workItem from="1746203147072" duration="4469000" />
+      <workItem from="1746453955740" duration="10566000" />
+      <workItem from="1746547555112" duration="5110000" />
+      <workItem from="1746628451205" duration="8736000" />
+      <workItem from="1746721539272" duration="4540000" />
+      <workItem from="1747065694328" duration="243000" />
+      <workItem from="1747065949623" duration="5075000" />
+      <workItem from="1747412736191" duration="4278000" />
+      <workItem from="1747667438180" duration="6823000" />
+      <workItem from="1747762891624" duration="4711000" />
+      <workItem from="1747844366736" duration="4605000" />
+      <workItem from="1747924212049" duration="9533000" />
+      <workItem from="1748014123178" duration="3961000" />
+      <workItem from="1748449238724" duration="340000" />
     </task>
+    <task id="LOCAL-00001" summary="starting the project">
+      <option name="closed" value="true" />
+      <created>1733341605417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733341605417</updated>
+    </task>
+    <task id="LOCAL-00002" summary="day 1 of daily pushes">
+      <option name="closed" value="true" />
+      <created>1733774190109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733774190109</updated>
+    </task>
+    <task id="LOCAL-00003" summary="day 2 of daily pushes - got connection to server working">
+      <option name="closed" value="true" />
+      <created>1733945345127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733945345127</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test run of files">
+      <option name="closed" value="true" />
+      <created>1734032072188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734032072188</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1734032373828</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734032373828</updated>
+    </task>
+    <task id="LOCAL-00006" summary="day 3, daily pushes">
+      <option name="closed" value="true" />
+      <created>1734033394336</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734033394336</updated>
+    </task>
+    <task id="LOCAL-00007" summary="day 4, daily pushes">
+      <option name="closed" value="true" />
+      <created>1734118406895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734118406895</updated>
+    </task>
+    <task id="LOCAL-00008" summary="day 5, daily pushes">
+      <option name="closed" value="true" />
+      <created>1734378986452</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734378986452</updated>
+    </task>
+    <task id="LOCAL-00009" summary="day 7, daily pushes - pd 3">
+      <option name="closed" value="true" />
+      <created>1738002194733</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738002194733</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2/28/25">
+      <option name="closed" value="true" />
+      <created>1740766815394</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740766815394</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2/28/25">
+      <option name="closed" value="true" />
+      <created>1740766868264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740766868264</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2/28/25">
+      <option name="closed" value="true" />
+      <created>1741195949932</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741195949932</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by 8000496">
+      <option name="closed" value="true" />
+      <created>1741369804922</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741369804922</updated>
+    </task>
+    <task id="LOCAL-00014" summary="3/10/25">
+      <option name="closed" value="true" />
+      <created>1741801331318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741801331318</updated>
+    </task>
+    <task id="LOCAL-00015" summary="3/10/25">
+      <option name="closed" value="true" />
+      <created>1741887107646</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741887107646</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changes by 8000496">
+      <option name="closed" value="true" />
+      <created>1741887714555</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1741887714555</updated>
+    </task>
+    <task id="LOCAL-00017" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1742227824578</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227824578</updated>
+    </task>
+    <task id="LOCAL-00018" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1742227842964</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227842964</updated>
+    </task>
+    <task id="LOCAL-00019" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1742230273153</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230273153</updated>
+    </task>
+    <task id="LOCAL-00020" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1744650553308</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1744650553308</updated>
+    </task>
+    <task id="LOCAL-00021" summary="friaday changes">
+      <option name="closed" value="true" />
+      <created>1748449428065</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1748449428065</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="85e223a8-739d-4082-be35-cc7da9ec75c8" value="TOOL_WINDOW" />
+        <entry key="08f52264-2278-4365-8b7f-76c1a2baaee6" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="08f52264-2278-4365-8b7f-76c1a2baaee6">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="85e223a8-739d-4082-be35-cc7da9ec75c8">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="starting the project" />
+    <MESSAGE value="day 1 of daily pushes" />
+    <MESSAGE value="day 2 of daily pushes - got connection to server working" />
+    <MESSAGE value="test run of files" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="day 3, daily pushes" />
+    <MESSAGE value="day 4, daily pushes" />
+    <MESSAGE value="day 5, daily pushes" />
+    <MESSAGE value="day 7, daily pushes - pd 3" />
+    <MESSAGE value="2/28/25" />
+    <MESSAGE value="3/10/25" />
+    <MESSAGE value="Changes by 8000496" />
+    <MESSAGE value="Last changes" />
+    <MESSAGE value="friaday changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="friaday changes" />
   </component>
 </project>
