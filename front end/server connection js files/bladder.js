@@ -1,9 +1,13 @@
 //imports the id number associated with the patient the student has selected variable created on patients page
 // as well as importing username variable created on sign in page
+
+
 let patientval = sessionStorage.getItem("patientval");
 let username = sessionStorage.getItem("username");
 
 let logout = document.getElementById("signout");
+
+
 
 // once the page has fully loaded a call is made to the server with the username variable
 // to check if the student has signed in

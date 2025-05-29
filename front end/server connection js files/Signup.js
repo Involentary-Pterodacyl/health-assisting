@@ -1,3 +1,4 @@
+import bcrypt from "/bcrypt";
 
 let username =  document.getElementById("username");
 let password = document.getElementById("password");
@@ -8,10 +9,13 @@ let submit = document.getElementById("submit");
 let student = document.getElementById("isntTeacher");
 let teacher = document.getElementById("isTeacher");
 
+
 let unique;
 let isAdmin;
 
 const saltRounds = 10;
+
+bcrypt.genSalt(10, function (err, salt) {})
 
 function hashPassword(password) {
   let salt = bcrypt.genSalt(saltRounds, (err, salt) => {
@@ -64,7 +68,6 @@ if (student.checked) {isAdmin = 0}
   {
     window.alert("Please fill out all fields.");
     return;
-
   }
   // console.log(password.value + " " + password2.value);
   if (password.value !== password2.value) {
