@@ -1,3 +1,4 @@
+import bcrypt from "/bcrypt";
 
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");
@@ -5,10 +6,13 @@ let login = document.getElementById("login");
 
 let username;
 
+
+
 async function verifyPassword(password) {
   await axios.post("http://localhost:3000/getHash", {username: username})
     .then((response) => {
       bcrypt.compare(password, response.data, function (err, result) {
+        console.log("in bcrypt verifyPassword");
         if (err) {
           console.error("error (verifyPassword): " + err);
           return;
@@ -21,6 +25,9 @@ async function verifyPassword(password) {
         }
         return result;
       });
+    })
+    .catch(error => {
+      console.error('Error:', error);
     });
 }
 
