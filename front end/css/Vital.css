@@ -32,17 +32,17 @@ hr {
   text-align: center;
   font-size: 20px;
   color:white;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px royalblue;
   margin-bottom: 0;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 .p2 {
   font-size: 20px;
-  color: white;
-  text-shadow: 2px 2px black;
+  color:white;
+  text-shadow: 2px 2px royalblue;
   margin-bottom: 20px;
-  font-weight: bold;
+  text-align: center;
 
 }
 
