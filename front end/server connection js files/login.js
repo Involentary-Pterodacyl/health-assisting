@@ -1,4 +1,3 @@
-import bcrypt from "/bcrypt";
 
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");

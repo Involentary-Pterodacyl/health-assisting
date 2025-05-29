@@ -5,56 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/front end/server connection js files/Signup.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front end/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <list id="bd360857-64c0-41c1-aee1-cb640c147577" name="Changes by 2102400" comment="">
       <change beforePath="$PROJECT_DIR$/front end/server connection js files/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/bladder.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/bladder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front end/server connection js files/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front end/server connection js files/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front end/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/front end/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/front end/signup.html">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="11" changelist="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" />
-        <range start1="67" end1="68" start2="67" end2="68" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/index.html">
-      <ranges>
-        <range start1="47" end1="48" start2="47" end2="49" changelist="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" />
-        <range start1="50" end1="51" start2="51" end2="52" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/front end/server connection js files/login.js">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-        <range start1="6" end1="6" start2="7" end2="9" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-        <range start1="11" end1="11" start2="14" end2="15" changelist="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" />
-        <range start1="23" end1="23" start2="27" end2="30" changelist="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/front end/server connection js files/Signup.js">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-        <range start1="15" end1="15" start2="16" end2="18" changelist="bd360857-64c0-41c1-aee1-cb640c147577" />
-        <range start1="66" end1="67" start2="69" end2="69" changelist="e8569b5b-472c-49e1-ada0-b9e5a1766dd5" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,7 +37,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JavaScript Debug.BLADDER.html.executor": "Run",
-    "JavaScript Debug.signup.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.signup.html.executor": "Debug",
+    "Node.js.server.mjs.executor": "Run",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
