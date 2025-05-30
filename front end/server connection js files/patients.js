@@ -1,7 +1,6 @@
 //imports the id number associated with the patient the student has selected variable created on patients page
 // as well as importing username variable created on sign in page
 let username = sessionStorage.getItem("username");
-console.log("username (in patients): " + username);
 
 let logout = document.getElementById("signout");
 
@@ -10,7 +9,6 @@ let logout = document.getElementById("signout");
 window.onload = () => {
   axios.post('http://localhost:3000/login_get', {username})
     .then(response => {
-      console.log("response.data (patients): " + response.data);
       if (response.data === false){
         console.log("not signed in");
         window.location.href = "../index.html";

@@ -1,39 +1,12 @@
-
 let uname = document.getElementById("uname");
 let psw = document.getElementById("psw");
 let login = document.getElementById("login");
 
 let username;
 
-
-
-async function verifyPassword(password) {
-  await axios.post("http://localhost:3000/getHash", {username: username})
-    .then((response) => {
-      bcrypt.compare(password, response.data, function (err, result) {
-        console.log("in bcrypt verifyPassword");
-        if (err) {
-          console.error("error (verifyPassword): " + err);
-          return;
-        }
-        if (result) {
-          console.log("Password is correct!");
-        }
-        else {
-          console.log("Password is incorrect!");
-        }
-        return result;
-      });
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
-
 login.onclick = function () {
   // grabs inputted username and put it in session storage
   // as well as if either the username or password is empty it prevents code moving forward
-  console.log("login");
   username = uname.value;
   sessionStorage.setItem("username", uname.value);
   if (username === "" || psw.value === "") {
@@ -47,10 +20,10 @@ login.onclick = function () {
   axios.post("http://localhost:3000/login", {username: username})
     .then(response => {
       if (response.data["user"] === true){
-        if (verifyPassword(psw.value) === false) {
-          window.alert("Incorrect password.\nThis app does not have a \"reset password\" feature. If you have forgotten your password, please create a new account.");
-          return;
-        }
+        // if (verifyPassword(psw.value) === false) {
+        //   window.alert("Incorrect password.\nThis app does not have a \"reset password\" feature. If you have forgotten your password, please create a new account.");
+        //   return;
+        // }
         if (response.data["admin"] === 0) {
           window.location.href = "front%20end/PATIENTS.html";
         }
@@ -66,6 +39,29 @@ login.onclick = function () {
       console.error('Error:', error);
     });
 };
+
+// async function verifyPassword(password) {
+//   await axios.post("http://localhost:3000/getHash", {username: username})
+//     .then((response) => {
+//       bcrypt.compare(password, response.data, function (err, result) {
+//         console.log("in bcrypt verifyPassword");
+//         if (err) {
+//           console.error("error (verifyPassword): " + err);
+//           return;
+//         }
+//         if (result) {
+//           console.log("Password is correct!");
+//         }
+//         else {
+//           console.log("Password is incorrect!");
+//         }
+//         return result;
+//       });
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+// }
 
 //
 // const userPassword = "";
@@ -115,9 +111,6 @@ login.onclick = function () {
 //     console.log('Passwords do not match! Authentication failed.');
 //   }
 // });
-
-
-
 
 // axios.get("http://localhost:3000/login_get")
 //   .then(response => {
