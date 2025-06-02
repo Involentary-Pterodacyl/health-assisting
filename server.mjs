@@ -82,7 +82,6 @@ app.post('/logout', (req, res) => {
 app.get('/getPatients', (req, res) => {
     console.log("getPatients");
     conn.query("SELECT * FROM patients", (err, rows) => {
-        console.log(rows);
         res.send(rows);
     })
 });

@@ -1,5 +1,3 @@
-import bcrypt from "/bcrypt";
-
 let username =  document.getElementById("username");
 let password = document.getElementById("password");
 let password2 = document.getElementById("password2");
@@ -9,38 +7,8 @@ let submit = document.getElementById("submit");
 let student = document.getElementById("isntTeacher");
 let teacher = document.getElementById("isTeacher");
 
-
 let unique;
 let isAdmin;
-
-const saltRounds = 10;
-
-bcrypt.genSalt(10, function (err, salt) {})
-
-function hashPassword(password) {
-  let salt = bcrypt.genSalt(saltRounds, (err, salt) => {
-    if (err) {
-      // Handle error
-      console.log("salt error: " + err);
-      return;
-    }
-
-    // Salt generation successful, proceed to hash the password
-    console.log("salt: " + salt);
-    return salt;
-  });
-
-  return bcrypt.hash(password, salt, (err, hash) => {
-    if (err) {
-      // Handle error
-      console.log("hash error: " + err);
-      return;
-    }
-    // Hashing successful, 'hash' contains the hashed password
-    console.log('Hashed password:', hash);
-    return hash;
-  });
-}
 
 submit.onclick = async function() {
   console.log("submit clicked");
@@ -55,8 +23,9 @@ submit.onclick = async function() {
       }
     });
 
-if (student.checked) {isAdmin = 0}
+  if (student.checked) {isAdmin = 0}
   else if (teacher.checked) {isAdmin = 1}
+  else {isAdmin = null}
 
   if (unique === false) {
     window.alert("This username already exists.");
@@ -69,16 +38,15 @@ if (student.checked) {isAdmin = 0}
     window.alert("Please fill out all fields.");
     return;
   }
-  // console.log(password.value + " " + password2.value);
   if (password.value !== password2.value) {
     window.alert("Please make sure both passwords match.");
     return;
   }
 
-  let hashedPassword = hashPassword(password.value);
-  console.log("hashed password: " + hashedPassword);
+  // let hashedPassword = hashPassword(password.value);
+  // console.log("hashed password: " + hashedPassword);
 
-  await axios.post('http://localhost:3000/signup', {username: username.value,  password: password.value, firstName: firstName.value, lastName: lastName.value
+  await axios.post('http://localhost:3000/signup', {username: username.value, firstName: firstName.value, lastName: lastName.value
     , admin: isAdmin})
     .then(async response => {
       console.log('Response:', response.data);
@@ -96,5 +64,32 @@ if (student.checked) {isAdmin = 0}
   else {
     window.location.href = "PATIENTS.html"; // student page
   }
-
 }
+
+// const saltRounds = 10;
+// bcrypt.genSalt(10, function (err, salt) {})
+
+// function hashPassword(password) {
+//   let salt = bcrypt.genSalt(saltRounds, (err, salt) => {
+//     if (err) {
+//       // Handle error
+//       console.log("salt error: " + err);
+//       return;
+//     }
+//
+//     // Salt generation successful, proceed to hash the password
+//     console.log("salt: " + salt);
+//     return salt;
+//   });
+//
+//   return bcrypt.hash(password, salt, (err, hash) => {
+//     if (err) {
+//       // Handle error
+//       console.log("hash error: " + err);
+//       return;
+//     }
+//     // Hashing successful, 'hash' contains the hashed password
+//     console.log('Hashed password:', hash);
+//     return hash;
+//   });
+// }
